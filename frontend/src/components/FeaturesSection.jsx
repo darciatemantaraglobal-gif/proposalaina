@@ -168,7 +168,7 @@ const FeaturesSection = () => {
           {/* CENTER NODE — logo AINA */}
           <div className="relative flex items-center justify-center">
             <img
-              src="/AIGHYPT-MEYUALA.png"
+              src="/AIGHYPT MEYUALA.png"
               alt="AINA Logo"
               className="w-40 h-auto object-contain drop-shadow-[0_0_40px_rgba(124,58,237,0.5)]"
             />
