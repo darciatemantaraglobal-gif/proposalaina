@@ -80,7 +80,7 @@ const Navbar = () => {
         {/* Logo AINA */}
         <div className="flex items-center gap-3 relative z-50">
           <img
-            src="/AIGHYPT-MEYUALA.png"
+            src="/AIGHYPT MEYUALA.png"
             alt="AINA Logo"
             className="h-10 w-auto object-contain hover:scale-105 transition-transform duration-300"
           />
