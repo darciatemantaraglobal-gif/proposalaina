@@ -43,7 +43,7 @@ const Navbar = () => {
         {/* Logo AINA */}
         <div className="flex items-center gap-3 relative z-50">
           <img 
-            src="https://ibb.co.com/fdy93mkj"><img src="https://i.ibb.co.com/whP7nDS5/AIGHYPT-MEYUALA.png" alt="AIGHYPT-MEYUALA" border="0"></a>" 
+            src="frontend\public\AIGHYPT MEYUALA.png" 
             alt="AINA Logo" 
             className="h-10 w-auto object-contain hover:scale-105 transition-transform duration-300"
           />
