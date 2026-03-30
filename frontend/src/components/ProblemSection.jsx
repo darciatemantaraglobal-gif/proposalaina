@@ -43,7 +43,7 @@ const ProblemSection = () => (
         {problems.map((p, i) => {
           const Icon = p.icon;
           return (
-            <div key={i} className="group bg-[#0c0c14] border border-white/6 rounded-2xl p-5 hover:border-purple-500/25 transition-all duration-300">
+            <div key={i} className="group bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-5 hover:border-purple-500/25 transition-all duration-300">
               <div className="flex items-start justify-between mb-4">
                 <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 flex-shrink-0">
                   <Icon size={18} />
@@ -57,7 +57,7 @@ const ProblemSection = () => (
         })}
       </div>
 
-      <div className="mt-8 flex items-center gap-3 bg-[#0c0c14] border border-white/6 rounded-2xl p-4">
+      <div className="mt-8 flex items-center gap-3 bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-4">
         <div className="w-2 h-2 rounded-full bg-purple-400 animate-pulse flex-shrink-0" />
         <p className="text-xs text-slate-400">
           Masalah ini dialami <span className="text-white font-semibold">ribuan Masisir setiap tahun</span> — dan AINA dibangun untuk mengatasinya.

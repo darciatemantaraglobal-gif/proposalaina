@@ -2,7 +2,7 @@ import React from 'react';
 import { Mail, Phone, MapPin, Bot } from 'lucide-react';
 
 const AinaHeroSection = () => (
-  <footer className="bg-[#0a0a0f] border-t border-white/5 py-10 px-4 md:px-6">
+  <footer className="bg-[#0a0a0f] border-t border-purple-500/15 py-10 px-4 md:px-6">
     <div className="max-w-5xl mx-auto">
       <div className="flex flex-col md:flex-row items-start justify-between gap-8">
         {/* Brand */}
@@ -51,7 +51,7 @@ const AinaHeroSection = () => (
         </div>
       </div>
 
-      <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div className="mt-8 pt-6 border-t border-purple-500/15 flex flex-col sm:flex-row items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />

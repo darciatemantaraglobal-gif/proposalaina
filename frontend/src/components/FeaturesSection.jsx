@@ -69,7 +69,7 @@ const FeaturesSection = () => (
           const Icon = f.icon;
           const isPurple = i % 2 === 0;
           return (
-            <div key={i} className="group bg-[#0c0c14] border border-white/6 rounded-2xl p-4 hover:border-purple-500/25 transition-all duration-300 hover:-translate-y-0.5">
+            <div key={i} className="group bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-4 hover:border-purple-500/25 transition-all duration-300 hover:-translate-y-0.5">
               <div className="flex items-start justify-between mb-3">
                 <div className={`w-9 h-9 rounded-xl flex items-center justify-center border flex-shrink-0 ${isPurple ? 'bg-purple-500/10 border-purple-500/20 text-purple-400' : 'bg-cyan-500/10 border-cyan-500/20 text-cyan-400'}`}>
                   <Icon size={16} />

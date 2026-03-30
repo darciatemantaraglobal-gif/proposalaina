@@ -18,7 +18,7 @@ const SolutionSection = () => (
         {/* LEFT: System status card */}
         <div className="w-full lg:w-[360px] flex-shrink-0">
           <div className="bg-[#0c0c14] border border-purple-500/20 rounded-2xl overflow-hidden">
-            <div className="px-5 py-4 border-b border-white/5 flex items-center justify-between">
+            <div className="px-5 py-4 border-b border-purple-500/15 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center">
                   <Bot size={15} className="text-white" />
@@ -38,7 +38,7 @@ const SolutionSection = () => (
               {pillars.map((p, i) => {
                 const Icon = p.icon;
                 return (
-                  <div key={i} className="flex items-center justify-between bg-[#141420] rounded-xl px-3 py-2.5 border border-white/4">
+                  <div key={i} className="flex items-center justify-between bg-[#141420] rounded-xl px-3 py-2.5 border border-purple-500/12">
                     <div className="flex items-center gap-2.5">
                       <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${i % 2 === 0 ? 'bg-purple-400' : 'bg-cyan-400'}`} />
                       <span className="text-xs text-slate-300 font-medium">{p.title}</span>

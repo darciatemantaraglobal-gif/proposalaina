@@ -62,7 +62,7 @@ const ProgressSection = () => (
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
         {stats.map((s, i) => (
-          <div key={i} className="bg-[#0c0c14] border border-white/6 rounded-2xl px-4 py-4 text-center">
+          <div key={i} className="bg-[#0c0c14] border border-purple-500/20 rounded-2xl px-4 py-4 text-center">
             <p className={`text-2xl font-bold ${s.color}`}>{s.value}</p>
             <p className="text-xs text-slate-500 mt-1">{s.label}</p>
           </div>
@@ -74,10 +74,10 @@ const ProgressSection = () => (
         {milestones.map((m, i) => {
           const Icon = m.icon;
           return (
-            <div key={i} className="bg-[#0c0c14] border border-white/6 rounded-2xl p-4">
+            <div key={i} className="bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-4">
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-xl bg-white/4 border border-white/8 flex items-center justify-center text-slate-400 flex-shrink-0">
+                  <div className="w-9 h-9 rounded-xl bg-white/4 border border-purple-500/20 flex items-center justify-center text-slate-400 flex-shrink-0">
                     <Icon size={16} />
                   </div>
                   <p className="text-sm font-bold text-white">{m.phase}</p>
@@ -101,11 +101,11 @@ const ProgressSection = () => (
       </div>
 
       <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/5 bg-white/4 px-4 py-2 text-xs text-slate-400">
+        <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/15 bg-white/4 px-4 py-2 text-xs text-slate-400">
           <RefreshCw size={12} className="text-purple-400 animate-spin" style={{ animationDuration: '4s' }} />
           Sistem diperbarui secara aktif
         </div>
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/5 bg-white/4 px-4 py-2 text-xs text-slate-400">
+        <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/15 bg-white/4 px-4 py-2 text-xs text-slate-400">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />

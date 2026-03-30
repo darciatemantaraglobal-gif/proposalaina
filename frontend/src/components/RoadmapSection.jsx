@@ -49,7 +49,7 @@ const RoadmapSection = () => (
           const Icon = d.icon;
           const isPurple = d.color === 'purple';
           return (
-            <div key={i} className="group bg-[#0c0c14] border border-white/6 rounded-2xl p-5 hover:border-purple-500/20 transition-all duration-300">
+            <div key={i} className="group bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-5 hover:border-purple-500/20 transition-all duration-300">
               <div className="flex items-start gap-3 mb-3">
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center border flex-shrink-0 ${isPurple ? 'bg-purple-500/10 border-purple-500/20 text-purple-400' : 'bg-cyan-500/10 border-cyan-500/20 text-cyan-400'}`}>
                   <Icon size={18} />

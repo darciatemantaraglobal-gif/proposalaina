@@ -4,8 +4,8 @@ import { Sparkles, GitMerge, Mail, Bot, Send, User, ArrowRight } from 'lucide-re
 const waLink = "https://wa.me/6281311506025?text=Halo%20Daru,%20saya%20ingin%20berkontribusi%20untuk%20AINA.";
 
 const ChatDemo = () => (
-  <div className="w-full max-w-[300px] mx-auto bg-[#0c0c14] border border-white/8 rounded-[32px] overflow-hidden shadow-2xl shadow-purple-900/30">
-    <div className="px-4 pt-8 pb-3 bg-[#111118] border-b border-white/5 flex items-center gap-3">
+  <div className="w-full max-w-[300px] mx-auto bg-[#0c0c14] border border-purple-500/20 rounded-[32px] overflow-hidden shadow-2xl shadow-purple-900/30">
+    <div className="px-4 pt-8 pb-3 bg-[#111118] border-b border-purple-500/15 flex items-center gap-3">
       <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center">
         <Bot size={15} className="text-white" />
       </div>
@@ -20,7 +20,7 @@ const ChatDemo = () => (
         <div className="w-6 h-6 rounded-full bg-purple-600/30 flex items-center justify-center flex-shrink-0">
           <Bot size={11} className="text-purple-400" />
         </div>
-        <div className="bg-[#141420] border border-white/5 p-2.5 rounded-xl rounded-tl-none max-w-[85%]">
+        <div className="bg-[#141420] border border-purple-500/15 p-2.5 rounded-xl rounded-tl-none max-w-[85%]">
           <p className="text-[11px] text-slate-300 leading-relaxed">AINA sudah aktif! Ada yang bisa saya bantu seputar kehidupan Masisir? 🚀</p>
         </div>
       </div>
@@ -38,15 +38,15 @@ const ChatDemo = () => (
         <div className="w-6 h-6 rounded-full bg-purple-600/30 flex items-center justify-center flex-shrink-0">
           <Bot size={11} className="text-purple-400" />
         </div>
-        <div className="bg-[#141420] border border-white/5 p-2.5 rounded-xl rounded-tl-none max-w-[85%]">
+        <div className="bg-[#141420] border border-purple-500/15 p-2.5 rounded-xl rounded-tl-none max-w-[85%]">
           <p className="text-[11px] text-slate-300 leading-relaxed mb-1.5">Banyak cara — isi knowledge base, moderasi diskusi, atau cukup pakai AINA sehari-hari!</p>
           <span className="text-[9px] px-2 py-0.5 bg-cyan-500/10 text-cyan-400 rounded border border-cyan-500/20">Open Collaboration ✅</span>
         </div>
       </div>
     </div>
 
-    <div className="p-3 bg-[#111118] border-t border-white/5">
-      <div className="flex items-center gap-2 bg-[#0a0a0f] border border-white/8 rounded-full px-3 py-2">
+    <div className="p-3 bg-[#111118] border-t border-purple-500/15">
+      <div className="flex items-center gap-2 bg-[#0a0a0f] border border-purple-500/20 rounded-full px-3 py-2">
         <span className="text-[10px] text-slate-600 flex-1">Tulis pesan...</span>
         <div className="w-5 h-5 rounded-full bg-purple-600 flex items-center justify-center">
           <Send size={9} className="text-white" />
@@ -80,7 +80,7 @@ const ClosingSection = () => (
               Jadi Kontributor
             </a>
             <a href={waLink} target="_blank" rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-white/10 bg-white/5 text-white font-semibold text-sm hover:bg-white/8 hover:border-purple-500/40 transition-all">
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-purple-500/25 bg-white/5 text-white font-semibold text-sm hover:bg-white/8 hover:border-purple-500/40 transition-all">
               <Mail size={15} />
               Hubungi Tim AINA
             </a>

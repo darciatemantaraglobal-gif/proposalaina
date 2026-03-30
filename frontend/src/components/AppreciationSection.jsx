@@ -65,7 +65,7 @@ const AppreciationSection = () => (
           })}
 
           {/* Wide card */}
-          <div className="col-span-2 bg-[#0c0c14] border border-white/6 rounded-2xl p-4 flex items-start gap-3">
+          <div className="col-span-2 bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-4 flex items-start gap-3">
             <div className="w-9 h-9 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
               <Star size={15} className="text-purple-400" />
             </div>

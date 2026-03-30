@@ -48,16 +48,16 @@ const WhyAINASection = () => (
         </div>
 
         {/* Right: Comparison table */}
-        <div className="bg-[#0c0c14] border border-white/6 rounded-2xl overflow-hidden">
+        <div className="bg-[#0c0c14] border border-purple-500/20 rounded-2xl overflow-hidden">
           <div className="overflow-x-auto">
             <div className="min-w-[380px]">
-              <div className="grid grid-cols-3 bg-[#111118] border-b border-white/5 px-4 py-3">
+              <div className="grid grid-cols-3 bg-[#111118] border-b border-purple-500/15 px-4 py-3">
                 <span className="text-[10px] text-slate-600 font-bold uppercase tracking-wider">Aspek</span>
                 <span className="text-[10px] text-purple-300 font-bold uppercase tracking-wider text-center">AINA</span>
                 <span className="text-[10px] text-slate-600 font-bold uppercase tracking-wider text-center">AI Umum</span>
               </div>
               {rows.map((row, i) => (
-                <div key={i} className={`grid grid-cols-3 px-4 py-3 border-b border-white/4 last:border-0 ${i % 2 === 0 ? '' : 'bg-white/[0.01]'}`}>
+                <div key={i} className={`grid grid-cols-3 px-4 py-3 border-b border-purple-500/12 last:border-0 ${i % 2 === 0 ? '' : 'bg-white/[0.01]'}`}>
                   <span className="text-xs text-slate-500 font-medium flex items-center pr-2">{row.aspect}</span>
                   <div className="flex items-center justify-center gap-1.5">
                     <CheckCircle2 size={11} className="text-emerald-400 flex-shrink-0" />

@@ -54,7 +54,7 @@ const FundingSection = () => (
           const Icon = way.icon;
           const isCyan = way.color === 'cyan';
           return (
-            <div key={i} className={`relative flex flex-col rounded-2xl p-5 border transition-all duration-300 ${way.highlight ? 'bg-[#0c0c14] border-cyan-500/30 shadow-[0_0_30px_-10px_rgba(34,211,238,0.2)]' : 'bg-[#0c0c14] border-white/6 hover:border-purple-500/20'}`}>
+            <div key={i} className={`relative flex flex-col rounded-2xl p-5 border transition-all duration-300 ${way.highlight ? 'bg-[#0c0c14] border-cyan-500/30 shadow-[0_0_30px_-10px_rgba(34,211,238,0.2)]' : 'bg-[#0c0c14] border-purple-500/20 hover:border-purple-500/20'}`}>
               {way.highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 text-black text-[10px] font-bold px-3 py-1 rounded-full whitespace-nowrap">
@@ -84,7 +84,7 @@ const FundingSection = () => (
                 href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(way.waText)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-full py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${way.highlight ? 'bg-gradient-to-r from-cyan-400 to-purple-400 text-black hover:from-cyan-300 hover:to-purple-300' : 'bg-white/5 hover:bg-white/8 text-white border border-white/10'}`}
+                className={`w-full py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${way.highlight ? 'bg-gradient-to-r from-cyan-400 to-purple-400 text-black hover:from-cyan-300 hover:to-purple-300' : 'bg-white/5 hover:bg-white/8 text-white border border-purple-500/25'}`}
               >
                 {way.cta}
                 <ArrowRight size={14} />
@@ -94,7 +94,7 @@ const FundingSection = () => (
         })}
       </div>
 
-      <div className="bg-[#0c0c14] border border-white/6 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
             <MessageSquare size={14} className="text-purple-400" />
@@ -106,7 +106,7 @@ const FundingSection = () => (
           href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent('Halo, saya ingin berdiskusi tentang AINA.')}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full text-white font-semibold text-sm hover:bg-white/10 hover:border-purple-500/30 transition-all"
+          className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 border border-purple-500/25 rounded-full text-white font-semibold text-sm hover:bg-white/10 hover:border-purple-500/30 transition-all"
         >
           Mulai Percakapan
           <ArrowRight size={14} className="text-slate-400" />

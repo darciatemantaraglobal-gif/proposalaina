@@ -36,7 +36,7 @@ const SidebarItem = ({ icon: Icon, active = false }) => (
 );
 
 const StatCard = ({ title, value, sub, color }) => (
-  <div className="bg-[#13131a] border border-white/5 p-4 rounded-2xl flex flex-col gap-2 relative overflow-hidden group hover:border-white/10 transition-all w-full">
+  <div className="bg-[#13131a] border border-purple-500/15 p-4 rounded-2xl flex flex-col gap-2 relative overflow-hidden group hover:border-purple-500/25 transition-all w-full">
     <div
       className={`absolute top-0 right-0 p-20 ${color} opacity-[0.03] blur-xl rounded-full group-hover:opacity-[0.08] transition-opacity`}
     />
@@ -65,7 +65,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || isOpen
-          ? "py-4 bg-[#050509]/90 backdrop-blur-xl border-b border-white/5"
+          ? "py-4 bg-[#050509]/90 backdrop-blur-xl border-b border-purple-500/15"
           : "py-6 bg-transparent border-transparent"
       }`}
     >
@@ -86,7 +86,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full px-2 py-1.5 backdrop-blur-md">
+        <div className="hidden md:flex items-center gap-1 bg-white/5 border border-purple-500/25 rounded-full px-2 py-1.5 backdrop-blur-md">
           {["Masalah", "Solusi", "Fitur", "Roadmap", "Kolaborasi"].map(
             (item) => (
               <button
@@ -122,7 +122,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`absolute top-full left-0 right-0 bg-[#050509]/95 border-b border-white/10 backdrop-blur-xl transition-all duration-300 md:hidden overflow-hidden origin-top ${
+        className={`absolute top-full left-0 right-0 bg-[#050509]/95 border-b border-purple-500/25 backdrop-blur-xl transition-all duration-300 md:hidden overflow-hidden origin-top ${
           isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -131,13 +131,13 @@ const Navbar = () => {
             (item) => (
               <button
                 key={item}
-                className="text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg text-left transition-all border-b border-white/5 last:border-0"
+                className="text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg text-left transition-all border-b border-purple-500/15 last:border-0"
               >
                 {item}
               </button>
             )
           )}
-          <div className="pt-2 mt-2 border-t border-white/5 flex flex-col gap-3">
+          <div className="pt-2 mt-2 border-t border-purple-500/15 flex flex-col gap-3">
             <a
               href={waLink}
               target="_blank"
@@ -299,7 +299,7 @@ const HeroSection = () => {
 
           <button
             onClick={scrollToDashboard}
-            className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 text-white rounded-full font-semibold flex items-center justify-center gap-3 transition-all group backdrop-blur-sm"
+            className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-purple-500/25 hover:bg-white/10 text-white rounded-full font-semibold flex items-center justify-center gap-3 transition-all group backdrop-blur-sm"
           >
             <div className="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-purple-500 group-hover:border-purple-500 transition-all">
               <Play size={10} fill="currentColor" className="ml-0.5" />
@@ -319,7 +319,7 @@ const HeroSection = () => {
           ].map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1.5 rounded-lg bg-[#1a1a24] border border-white/5 text-[10px] md:text-xs font-medium text-slate-400 uppercase tracking-wider"
+              className="px-3 py-1.5 rounded-lg bg-[#1a1a24] border border-purple-500/15 text-[10px] md:text-xs font-medium text-slate-400 uppercase tracking-wider"
             >
               {tag}
             </span>
@@ -334,15 +334,15 @@ const HeroSection = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent blur-3xl -z-10 translate-y-20 scale-90" />
 
-        <div className="bg-[#0a0a0f] rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl shadow-black/50 overflow-hidden transform md:rotate-x-12 transition-transform duration-700 ease-out md:hover:rotate-x-0 md:hover:translate-y-[-10px]">
+        <div className="bg-[#0a0a0f] rounded-2xl md:rounded-3xl border border-purple-500/25 shadow-2xl shadow-black/50 overflow-hidden transform md:rotate-x-12 transition-transform duration-700 ease-out md:hover:rotate-x-0 md:hover:translate-y-[-10px]">
           {/* Window Controls */}
-          <div className="h-10 md:h-12 bg-[#13131a] border-b border-white/5 flex items-center justify-between px-4 md:px-6">
+          <div className="h-10 md:h-12 bg-[#13131a] border-b border-purple-500/15 flex items-center justify-between px-4 md:px-6">
             <div className="flex gap-1.5 md:gap-2">
               <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
               <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
               <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
             </div>
-            <div className="flex items-center gap-2 px-3 py-1 bg-black/40 rounded-lg border border-white/5 hidden sm:flex">
+            <div className="flex items-center gap-2 px-3 py-1 bg-black/40 rounded-lg border border-purple-500/15 hidden sm:flex">
               <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
               <span className="text-[10px] text-slate-400 font-mono">
                 aina.masisir.app
@@ -357,7 +357,7 @@ const HeroSection = () => {
           {/* App Content */}
           <div className="flex flex-col md:flex-row h-auto md:h-[600px]">
             {/* Sidebar */}
-            <div className="hidden md:flex w-20 border-r border-white/5 bg-[#0e0e12] flex-col items-center py-6 gap-4">
+            <div className="hidden md:flex w-20 border-r border-purple-500/15 bg-[#0e0e12] flex-col items-center py-6 gap-4">
               <SidebarItem icon={LayoutDashboard} active />
               <SidebarItem icon={BookOpen} />
               <SidebarItem icon={Wallet} />
@@ -404,7 +404,7 @@ const HeroSection = () => {
                   />
                 </div>
 
-                <div className="bg-[#13131a] rounded-xl border border-white/5 p-4 md:p-5 flex-1">
+                <div className="bg-[#13131a] rounded-xl border border-purple-500/15 p-4 md:p-5 flex-1">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="text-white font-semibold text-sm md:text-base">
                       To-do List
@@ -419,7 +419,7 @@ const HeroSection = () => {
                     ].map((task, i) => (
                       <div
                         key={i}
-                        className="flex items-center justify-between p-3 rounded-xl bg-white/5 cursor-pointer transition-colors group border border-transparent hover:border-white/5"
+                        className="flex items-center justify-between p-3 rounded-xl bg-white/5 cursor-pointer transition-colors group border border-transparent hover:border-purple-500/15"
                       >
                         <div className="flex items-center gap-3">
                           <div
@@ -431,7 +431,7 @@ const HeroSection = () => {
                             {task.title}
                           </span>
                         </div>
-                        <span className="text-[10px] px-2 py-1 rounded bg-black/30 text-slate-500 border border-white/5">
+                        <span className="text-[10px] px-2 py-1 rounded bg-black/30 text-slate-500 border border-purple-500/15">
                           {task.tag}
                         </span>
                       </div>
@@ -441,10 +441,10 @@ const HeroSection = () => {
               </div>
 
               {/* Right: Live Chat */}
-              <div className="w-full md:w-[350px] bg-[#0e0e12] rounded-xl md:rounded-2xl border border-white/5 flex flex-col shadow-xl min-h-[400px] md:min-h-0 relative">
-                <div className="p-3 md:p-4 border-b border-white/5 flex items-center justify-between bg-[#13131a]/50">
+              <div className="w-full md:w-[350px] bg-[#0e0e12] rounded-xl md:rounded-2xl border border-purple-500/15 flex flex-col shadow-xl min-h-[400px] md:min-h-0 relative">
+                <div className="p-3 md:p-4 border-b border-purple-500/15 flex items-center justify-between bg-[#13131a]/50">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center border border-white/10">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center border border-purple-500/25">
                       <Bot size={14} className="text-white" />
                     </div>
                     <div>
@@ -458,7 +458,7 @@ const HeroSection = () => {
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] text-slate-400 bg-white/5 px-2 py-1 rounded-full border border-white/5">
+                    <span className="text-[10px] text-slate-400 bg-white/5 px-2 py-1 rounded-full border border-purple-500/15">
                       {MAX_CHATS - chatCount} chat left
                     </span>
                   </div>
@@ -474,12 +474,12 @@ const HeroSection = () => {
                       className={`flex gap-3 ${msg.role === "user" ? "flex-row-reverse" : ""}`}
                     >
                       {msg.role === "model" && (
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center border border-white/10 flex-shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center border border-purple-500/25 flex-shrink-0">
                           <Bot size={14} className="text-white" />
                         </div>
                       )}
                       {msg.role === "user" && (
-                        <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center border border-white/10 flex-shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center border border-purple-500/25 flex-shrink-0">
                           <User size={14} className="text-white" />
                         </div>
                       )}
@@ -487,7 +487,7 @@ const HeroSection = () => {
                         className={`p-3 rounded-2xl text-xs md:text-sm shadow-sm max-w-[85%] border ${
                           msg.role === "user"
                             ? "bg-gradient-to-r from-purple-600 to-purple-500 rounded-tr-none text-white border-purple-400/20"
-                            : "bg-[#1a1a24] rounded-tl-none text-slate-300 border-white/5"
+                            : "bg-[#1a1a24] rounded-tl-none text-slate-300 border-purple-500/15"
                         }`}
                       >
                         <p className="leading-relaxed">{msg.text}</p>
@@ -497,10 +497,10 @@ const HeroSection = () => {
 
                   {isLoading && (
                     <div className="flex gap-3">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center border border-white/10 flex-shrink-0">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center border border-purple-500/25 flex-shrink-0">
                         <Bot size={14} className="text-white" />
                       </div>
-                      <div className="p-3 rounded-2xl rounded-tl-none bg-[#1a1a24] border border-white/5 flex items-center gap-1.5">
+                      <div className="p-3 rounded-2xl rounded-tl-none bg-[#1a1a24] border border-purple-500/15 flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></span>
                         <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce" style={{ animationDelay: "150ms" }}></span>
                         <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce" style={{ animationDelay: "300ms" }}></span>
@@ -527,9 +527,9 @@ const HeroSection = () => {
                   <div ref={messagesEndRef} />
                 </div>
 
-                <div className="p-3 md:p-4 border-t border-white/5 bg-[#13131a]/50">
+                <div className="p-3 md:p-4 border-t border-purple-500/15 bg-[#13131a]/50">
                   {chatCount < MAX_CHATS ? (
-                    <div className="flex items-center gap-2 bg-[#050509] border border-white/10 rounded-xl px-3 py-2 focus-within:border-purple-500/50 transition-colors">
+                    <div className="flex items-center gap-2 bg-[#050509] border border-purple-500/25 rounded-xl px-3 py-2 focus-within:border-purple-500/50 transition-colors">
                       <input
                         type="text"
                         value={input}
