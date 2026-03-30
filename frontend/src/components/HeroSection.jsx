@@ -126,18 +126,27 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-[#050509] overflow-hidden pt-20 pb-14 md:pt-28 md:pb-20 px-6 md:px-8 flex flex-col items-center justify-center">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full blur-[130px] opacity-70" style={{ background: 'hsl(270 60% 45% / 0.28)' }} />
-        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[500px] h-[350px] rounded-full blur-[90px] opacity-50" style={{ background: 'hsl(270 80% 60% / 0.18)' }} />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] rounded-full blur-[120px] opacity-40" style={{ background: 'hsl(270 60% 40% / 0.22)' }} />
-        <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-cyan-900/10 rounded-full blur-[100px] opacity-40" />
-        <div className="absolute inset-0 dot-grid opacity-30" />
+    <section className="relative min-h-screen bg-[#03020a] overflow-hidden pt-16 pb-20 md:pt-20 md:pb-28 px-6 md:px-8 flex flex-col items-center justify-center">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Deep space nebula — main glow */}
+        <div className="absolute top-[-35%] left-1/2 -translate-x-1/2 w-[1100px] h-[750px] rounded-full blur-[170px]" style={{ background: 'hsl(258 65% 18% / 0.70)' }} />
+        {/* Left nebula arm */}
+        <div className="absolute top-[5%] left-[25%] w-[450px] h-[320px] rounded-full blur-[110px]" style={{ background: 'hsl(265 55% 22% / 0.40)' }} />
+        {/* Right nebula arm — cool blue tint */}
+        <div className="absolute top-[10%] right-[20%] w-[350px] h-[250px] rounded-full blur-[90px]" style={{ background: 'hsl(240 55% 18% / 0.30)' }} />
+        {/* Deep core — small bright center */}
+        <div className="absolute top-[8%] left-1/2 -translate-x-1/2 w-[280px] h-[220px] rounded-full blur-[60px]" style={{ background: 'hsl(268 60% 28% / 0.35)' }} />
+        {/* Bottom space depth */}
+        <div className="absolute bottom-[-15%] left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full blur-[160px]" style={{ background: 'hsl(255 60% 15% / 0.45)' }} />
+        {/* Starfield dot grid */}
+        <div className="absolute inset-0 dot-grid opacity-50" />
+        {/* Faint vignette */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, #03020a 100%)' }} />
       </div>
 
       <Navbar />
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center -mt-10 md:-mt-16">
         {/* Proposal Program badge */}
         <div className="relative inline-flex items-center gap-2 px-4 py-2 mb-8 overflow-hidden" style={{ borderRadius: '4px' }}>
           <span className="absolute inset-0 bg-[#0c0a1a] border border-purple-500/45" style={{ borderRadius: '4px' }} />
