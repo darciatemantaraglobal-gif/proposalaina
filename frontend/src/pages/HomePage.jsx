@@ -9,6 +9,7 @@ import SystemArchitectureSection from '../components/SystemArchitectureSection';
 import ProgressSection from '../components/ProgressSection';
 import RoadmapSection from '../components/RoadmapSection';
 import FundingSection from '../components/FundingSection';
+import PricingSection from '../components/PricingSection';
 import AppreciationSection from '../components/AppreciationSection';
 import ClosingSection from '../components/ClosingSection';
 import Footer from '../components/Footer';
@@ -26,6 +27,7 @@ const HomePage = () => {
       <ProgressSection />
       <RoadmapSection />
       <FundingSection />
+      <PricingSection />
       <AppreciationSection />
       <ClosingSection />
       <Footer />
