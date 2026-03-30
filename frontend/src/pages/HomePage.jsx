@@ -5,12 +5,7 @@ import SolutionSection from '../components/SolutionSection';
 import WhyAINASection from '../components/WhyAINASection';
 import FeaturesSection from '../components/FeaturesSection';
 import HowItWorksSection from '../components/HowItWorksSection';
-import SystemArchitectureSection from '../components/SystemArchitectureSection';
-import SecurityReadinessSection from '../components/SecurityReadinessSection';
-import MarketSection from '../components/MarketSection';
 import ProgressSection from '../components/ProgressSection';
-import FutureFeaturesSection from '../components/FutureFeaturesSection';
-import BenefitsSection from '../components/BenefitsSection';
 import RoadmapSection from '../components/RoadmapSection';
 import FundingSection from '../components/FundingSection';
 import AppreciationSection from '../components/AppreciationSection';
@@ -26,12 +21,7 @@ const HomePage = () => {
       <WhyAINASection />
       <FeaturesSection />
       <HowItWorksSection />
-      <SystemArchitectureSection />
-      <SecurityReadinessSection />
-      <MarketSection />
       <ProgressSection />
-      <FutureFeaturesSection />
-      <BenefitsSection />
       <RoadmapSection />
       <FundingSection />
       <AppreciationSection />

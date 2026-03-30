@@ -1,159 +1,83 @@
 import React from 'react';
-import { MessageSquare, Database, Info, Users, Heart, LayoutGrid, Sparkles, Bot, CheckCircle2 } from 'lucide-react';
+import { Bot, Sparkles, CheckCircle2, MessageSquare, BookOpen, Newspaper, LayoutDashboard, Users2, Bookmark } from 'lucide-react';
 
-const SolutionSection = () => {
-  const pillars = [
-    { 
-      icon: MessageSquare, 
-      text: 'AI Assistant', 
-      desc: 'Jawab pertanyaan Masisir secara kontekstual — dari birokrasi, akademik, hingga kehidupan sehari-hari di Mesir.',
-      color: 'purple'
-    },
-    { 
-      icon: Database, 
-      text: 'Knowledge Base', 
-      desc: 'Basis pengetahuan terstruktur tentang prosedur Visa, Tasjil, Iqamah, dan regulasi Al-Azhar yang selalu diperbarui.',
-      color: 'cyan'
-    },
-    { 
-      icon: Info, 
-      text: 'Sistem Informasi', 
-      desc: 'Informasi terpadu soal lokasi, layanan kesehatan, transportasi, dan kebutuhan hidup di Kairo.',
-      color: 'purple'
-    },
-    { 
-      icon: Users, 
-      text: 'Komunitas', 
-      desc: 'Ruang berbagi pengalaman antar Masisir — dari tips survival hingga rekomendasi peer-to-peer yang terverifikasi.',
-      color: 'cyan'
-    },
-    { 
-      icon: Heart, 
-      text: 'Pendampingan Adaptasi', 
-      desc: 'Panduan living guide untuk mahasiswa baru — navigasi kota, budaya lokal, dan tips aman hidup di Mesir.',
-      color: 'purple'
-    },
-    { 
-      icon: LayoutGrid, 
-      text: 'Dashboard Produktivitas', 
-      desc: 'Tracking progres belajar, target hafalan, keuangan bulanan, dan to-do list dalam satu tampilan.',
-      color: 'cyan'
-    }
-  ];
+const pillars = [
+  { icon: MessageSquare, title: 'AI Chat Kontekstual', desc: 'Jawaban berbasis knowledge base Masisir, bukan AI generik.' },
+  { icon: BookOpen, title: 'Knowledge Base Terstruktur', desc: 'Data dikurasi kontributor — prosedur, info kampus, kehidupan.' },
+  { icon: Newspaper, title: 'Info & Berita Masisir', desc: 'Pengumuman kampus, organisasi, dan komunitas dalam satu feed.' },
+  { icon: LayoutDashboard, title: 'Ruang Produktif', desc: 'Tasks, catatan, dan tracking target belajar terintegrasi.' },
+  { icon: Users2, title: 'Komunitas Threads', desc: 'Diskusi peer-to-peer yang termoderasi per topik.' },
+  { icon: Bookmark, title: 'Saved Answers', desc: 'Simpan jawaban penting untuk diakses kapan saja.' },
+];
 
-  const modules = ['AI Assistant', 'Knowledge Base', 'Info Lokasi'];
+const SolutionSection = () => (
+  <section className="bg-[#050509] py-14 md:py-20 px-4 md:px-6">
+    <div className="max-w-5xl mx-auto">
+      <div className="flex flex-col lg:flex-row gap-10 md:gap-14 items-start">
 
-  return (
-    <section className="relative bg-[#050509] py-16 md:py-24 px-4 md:px-6 font-sans text-slate-300 overflow-hidden">
-      
-      <div className="absolute top-1/4 -left-40 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 -right-40 w-[600px] h-[600px] bg-cyan-900/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTM5LCA5MiwgMjQ2LCAwLjA1KSIvPjwvc3ZnPg==')] opacity-40 pointer-events-none" />
-
-      <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 md:gap-16 lg:flex-row lg:items-center">
-        
-        {/* LEFT: System Card */}
-        <div className="w-full max-w-md mx-auto lg:mx-0 relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-[35px] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-          
-          <div className="relative bg-[#0e0e12] border border-white/10 rounded-[32px] overflow-hidden shadow-2xl">
-            <div className="bg-[#13131a]/80 backdrop-blur-md px-6 py-4 border-b border-white/5 flex items-center justify-between">
+        {/* LEFT: System status card */}
+        <div className="w-full lg:w-[360px] flex-shrink-0">
+          <div className="bg-[#0c0c14] border border-purple-500/20 rounded-2xl overflow-hidden">
+            <div className="px-5 py-4 border-b border-white/5 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center text-white border border-white/10">
-                  <Bot size={16} />
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center">
+                  <Bot size={15} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold text-xs md:text-sm">AINA System</h4>
-                  <p className="text-[10px] text-emerald-400 font-medium tracking-wide flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <p className="text-white font-bold text-sm">AINA System</p>
+                  <p className="text-emerald-400 text-[10px] flex items-center gap-1 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse inline-block" />
                     Aktif & Berjalan
                   </p>
                 </div>
               </div>
-              <Sparkles size={16} className="text-purple-400 opacity-50" />
+              <Sparkles size={14} className="text-purple-400 opacity-60" />
             </div>
 
-            <div className="p-4 md:p-8 space-y-4 md:space-y-6">
-              <div>
-                <p className="text-xs text-slate-500 uppercase tracking-widest mb-2 font-semibold">Modul Aktif</p>
-                <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight">
-                  Satu Sistem,{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-                    Enam Pilar
-                  </span>{" "}
-                  Penunjang Masisir.
-                </h3>
-              </div>
-
-              <div className="space-y-3">
-                {modules.map((item, i) => (
-                  <div key={i} className="bg-[#1a1a24] rounded-xl p-3 flex items-center justify-between border border-white/5">
-                    <div className="flex items-center gap-3">
-                      <div className={`w-2 h-2 rounded-full ${i===0 ? 'bg-purple-500' : i===1 ? 'bg-cyan-400' : 'bg-indigo-500'}`}></div>
-                      <span className="text-xs font-medium text-slate-300">{item}</span>
+            <div className="p-5 space-y-3">
+              {pillars.map((p, i) => {
+                const Icon = p.icon;
+                return (
+                  <div key={i} className="flex items-center justify-between bg-[#141420] rounded-xl px-3 py-2.5 border border-white/4">
+                    <div className="flex items-center gap-2.5">
+                      <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${i % 2 === 0 ? 'bg-purple-400' : 'bg-cyan-400'}`} />
+                      <span className="text-xs text-slate-300 font-medium">{p.title}</span>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <CheckCircle2 size={12} className="text-emerald-400" />
-                      <span className="text-[10px] text-emerald-400 font-mono font-semibold">READY</span>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 size={11} className="text-emerald-400" />
+                      <span className="text-[10px] text-emerald-400 font-mono font-bold">READY</span>
                     </div>
                   </div>
-                ))}
-              </div>
-
-              <div className="pt-2">
-                <div className="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 text-white text-xs md:text-sm flex items-center justify-center gap-2">
-                  <Sparkles size={14} className="text-purple-400" />
-                  <span className="text-slate-300">Dibangun khusus untuk konteks Masisir</span>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>
 
-        {/* RIGHT: 6 Pillars */}
+        {/* RIGHT: Text */}
         <div className="flex-1">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-900/20 px-3 py-1 backdrop-blur-md">
-            <Sparkles size={12} className="text-cyan-400" />
-            <span className="text-[10px] md:text-xs font-bold text-purple-200 uppercase tracking-widest">
-              Solusi AINA
-            </span>
-          </div>
-
-          <h2 className="mb-4 text-3xl md:text-5xl font-bold text-white leading-tight">
-            AINA Bukan Sekadar Chatbot.{" "}
-            <br className="hidden md:block"/>
+          <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400">Solusi</span>
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+            AINA bukan sekadar chatbot.{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-              Ini Ekosistem Digital Masisir.
+              Ini ekosistem digital Masisir.
             </span>
           </h2>
-
-          <p className="mb-6 md:mb-10 text-sm md:text-base text-slate-400 max-w-xl leading-relaxed">
-            AINA menggabungkan AI assistant, knowledge base terstruktur, sistem informasi lokal, komunitas, dan tools produktivitas — dirancang dari nol untuk memahami realita mahasiswa Indonesia di Mesir.
+          <p className="text-sm text-slate-400 leading-relaxed mb-8">
+            Satu sistem yang menggabungkan AI assistant, knowledge base, informasi komunitas, dan tools produktivitas — semuanya dirancang dari nol untuk konteks Masisir di Mesir.
           </p>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {pillars.map((cap, index) => {
-              const Icon = cap.icon;
-              const isPurple = cap.color === 'purple';
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {pillars.map((p, i) => {
+              const Icon = p.icon;
               return (
-                <div 
-                  key={index} 
-                  className="group flex items-start gap-4 p-4 rounded-2xl border border-transparent hover:bg-[#0e0e12] hover:border-white/5 transition-all duration-300"
-                >
-                  <div className={`mt-1 flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${
-                    isPurple 
-                      ? 'bg-purple-500/10 text-purple-400 group-hover:bg-purple-500/20' 
-                      : 'bg-cyan-500/10 text-cyan-400 group-hover:bg-cyan-500/20'
-                  }`}>
-                    <Icon size={18} />
+                <div key={i} className="flex items-start gap-3">
+                  <div className={`mt-0.5 w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${i % 2 === 0 ? 'bg-purple-500/10 text-purple-400' : 'bg-cyan-500/10 text-cyan-400'}`}>
+                    <Icon size={15} />
                   </div>
                   <div>
-                    <h4 className="text-sm md:text-base font-bold text-white mb-1 transition-colors">
-                      {cap.text}
-                    </h4>
-                    <p className="text-xs text-slate-500 leading-relaxed group-hover:text-slate-400 transition-colors">
-                      {cap.desc}
-                    </p>
+                    <p className="text-sm font-semibold text-white">{p.title}</p>
+                    <p className="text-xs text-slate-500 leading-relaxed mt-0.5">{p.desc}</p>
                   </div>
                 </div>
               );
@@ -161,8 +85,8 @@ const SolutionSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default SolutionSection;

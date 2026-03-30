@@ -1,6 +1,6 @@
 # AINA - Asisten Masisir
 
-An AI-powered assistant proposal and landing page for Indonesian students studying in Egypt (Masisir). The app showcases a proposal for AINA, a digital assistant that helps students navigate bureaucracy, academics, and daily life in Cairo.
+A live landing page for AINA, an AI-powered digital assistant and ecosystem for Indonesian students in Egypt (Masisir). Positioned as a LIVE, growing system — not a proposal or ChatGPT clone. Stack: React frontend (port 5000) + FastAPI backend (port 8000).
 
 ## Architecture
 
