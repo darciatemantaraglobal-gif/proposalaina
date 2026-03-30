@@ -66,16 +66,16 @@ const HowItWorksSection = () => (
           return (
             <div key={i} className="flex-1 flex flex-col items-center text-center relative px-2">
               {!isLast && (
-                <div className="absolute top-[22px] left-1/2 right-0 h-px" style={{ background: 'linear-gradient(to right, hsl(270 60% 55% / 0.3), hsl(270 60% 55% / 0.05))' }} />
+                <div className="absolute top-[26px] left-1/2 right-0 h-px" style={{ background: 'linear-gradient(to right, hsl(270 60% 55% / 0.3), hsl(270 60% 55% / 0.05))' }} />
               )}
-              <div className={`relative z-10 w-11 h-11 rounded-2xl flex items-center justify-center mb-3 border ${isPurple ? 'bg-purple-500/10 border-purple-500/25 text-purple-400' : 'bg-cyan-500/10 border-cyan-500/25 text-cyan-400'}`}>
-                <Icon size={16} />
-                <div className={`absolute -top-2 -right-2 w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-black ${isPurple ? 'bg-purple-600' : 'bg-cyan-600'} text-white`}>
+              <div className={`relative z-10 w-12 h-12 rounded-2xl flex items-center justify-center mb-3 border ${isPurple ? 'bg-purple-500/10 border-purple-500/25 text-purple-400' : 'bg-cyan-500/10 border-cyan-500/25 text-cyan-400'}`}>
+                <Icon size={20} />
+                <div className={`absolute -top-2 -right-2 w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-black ${isPurple ? 'bg-purple-600' : 'bg-cyan-600'} text-white`}>
                   {i + 1}
                 </div>
               </div>
-              <h4 className="text-[11px] font-bold text-white mb-1 font-display leading-tight">{step.title}</h4>
-              <p className="text-[10px] text-muted-foreground leading-relaxed">{step.desc}</p>
+              <h4 className="text-sm font-bold text-white mb-1.5 font-display leading-tight">{step.title}</h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">{step.desc}</p>
             </div>
           );
         })}

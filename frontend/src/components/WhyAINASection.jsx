@@ -40,21 +40,22 @@ const WhyAINASection = () => (
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6 md:gap-8 items-start">
 
         {/* Left: 6 differentiator cards 3x2 grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 md:gap-4">
           {differentiators.map((d, i) => {
             const Icon = d.icon;
             const isPurple = d.color === 'purple';
             return (
               <div
                 key={i}
-                className={`flex flex-col gap-2 p-3 rounded-xl border ${isPurple ? 'bg-purple-500/4 border-purple-500/15 hover:border-purple-500/30' : 'bg-cyan-500/4 border-cyan-500/12 hover:border-cyan-500/25'} transition-colors`}
+                className={`flex flex-col gap-2 md:gap-3 p-3 md:p-5 rounded-xl md:rounded-2xl border ${isPurple ? 'bg-purple-500/4 border-purple-500/15 hover:border-purple-500/30' : 'bg-cyan-500/4 border-cyan-500/12 hover:border-cyan-500/25'} transition-colors`}
               >
-                <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${isPurple ? 'bg-purple-500/12 text-purple-400' : 'bg-cyan-500/12 text-cyan-400'}`}>
-                  <Icon size={14} />
+                <div className={`w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center flex-shrink-0 ${isPurple ? 'bg-purple-500/12 text-purple-400' : 'bg-cyan-500/12 text-cyan-400'}`}>
+                  <Icon size={14} className="md:hidden" />
+                  <Icon size={18} className="hidden md:block" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-white font-display leading-tight mb-0.5">{d.title}</p>
-                  <p className="text-[10px] text-muted-foreground leading-relaxed">{d.desc}</p>
+                  <p className="text-xs md:text-sm font-bold text-white font-display leading-tight mb-0.5">{d.title}</p>
+                  <p className="text-[10px] md:text-xs text-muted-foreground leading-relaxed">{d.desc}</p>
                 </div>
               </div>
             );

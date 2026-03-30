@@ -79,19 +79,20 @@ const FeaturesSection = () => (
             const Icon = f.icon;
             const isPurple = f.color === 'purple';
             return (
-              <div key={i} className={`relative group rounded-2xl p-3 md:p-4 border transition-all duration-300 hover:-translate-y-0.5 overflow-hidden ${isPurple ? 'bg-purple-500/5 border-purple-500/25 hover:border-purple-500/40 hover:bg-purple-500/8' : 'bg-cyan-500/5 border-cyan-500/20 hover:border-cyan-500/35 hover:bg-cyan-500/8'}`}>
+              <div key={i} className={`relative group rounded-2xl p-3 md:p-5 border transition-all duration-300 hover:-translate-y-0.5 overflow-hidden ${isPurple ? 'bg-purple-500/5 border-purple-500/25 hover:border-purple-500/40 hover:bg-purple-500/8' : 'bg-cyan-500/5 border-cyan-500/20 hover:border-cyan-500/35 hover:bg-cyan-500/8'}`}>
                 <div className="pointer-events-none absolute -right-3 -bottom-3 select-none font-display text-[4.5rem] font-black leading-none" style={{ color: isPurple ? 'hsl(270 60% 55% / 0.05)' : 'hsl(185 80% 55% / 0.05)' }}>
                   {String(i + 1).padStart(2, '0')}
                 </div>
                 <div className="relative">
                   <div className="flex items-start justify-between mb-3">
-                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center border flex-shrink-0 ${isPurple ? 'bg-purple-500/15 border-purple-500/25 text-purple-400' : 'bg-cyan-500/15 border-cyan-500/25 text-cyan-400'}`}>
-                      <Icon size={14} />
+                    <div className={`w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center border flex-shrink-0 ${isPurple ? 'bg-purple-500/15 border-purple-500/25 text-purple-400' : 'bg-cyan-500/15 border-cyan-500/25 text-cyan-400'}`}>
+                      <Icon size={14} className="md:hidden" />
+                      <Icon size={18} className="hidden md:block" />
                     </div>
-                    <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full border ${isPurple ? 'bg-purple-500/10 border-purple-500/25 text-purple-300' : 'bg-cyan-500/10 border-cyan-500/25 text-cyan-300'}`}>CORE</span>
+                    <span className={`text-[9px] md:text-[10px] font-bold px-2 py-0.5 rounded-full border ${isPurple ? 'bg-purple-500/10 border-purple-500/25 text-purple-300' : 'bg-cyan-500/10 border-cyan-500/25 text-cyan-300'}`}>CORE</span>
                   </div>
-                  <h3 className="text-xs font-bold text-white mb-1.5 font-display">{f.title}</h3>
-                  <p className="text-[11px] text-muted-foreground leading-relaxed">{f.desc}</p>
+                  <h3 className="text-xs md:text-sm font-bold text-white mb-1.5 font-display">{f.title}</h3>
+                  <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
                 </div>
               </div>
             );
@@ -112,15 +113,16 @@ const FeaturesSection = () => (
             const Icon = f.icon;
             const isPurple = f.color === 'purple';
             return (
-              <div key={i} className="group bg-[#0f0f18]/80 backdrop-blur-sm border border-purple-500/15 rounded-2xl p-3 hover:border-purple-500/30 hover:bg-[#0f0f18] transition-all duration-300">
+              <div key={i} className="group bg-[#0f0f18]/80 backdrop-blur-sm border border-purple-500/15 rounded-2xl p-3 md:p-4 hover:border-purple-500/30 hover:bg-[#0f0f18] transition-all duration-300">
                 <div className="flex items-start justify-between mb-2">
-                  <div className={`w-7 h-7 rounded-lg flex items-center justify-center border flex-shrink-0 ${isPurple ? 'bg-purple-500/10 border-purple-500/15 text-purple-400' : 'bg-cyan-500/10 border-cyan-500/15 text-cyan-400'}`}>
-                    <Icon size={12} />
+                  <div className={`w-7 h-7 md:w-9 md:h-9 rounded-lg md:rounded-xl flex items-center justify-center border flex-shrink-0 ${isPurple ? 'bg-purple-500/10 border-purple-500/15 text-purple-400' : 'bg-cyan-500/10 border-cyan-500/15 text-cyan-400'}`}>
+                    <Icon size={12} className="md:hidden" />
+                    <Icon size={15} className="hidden md:block" />
                   </div>
-                  <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-md bg-emerald-500/8 border border-emerald-500/15 text-emerald-400/80">LIVE</span>
+                  <span className="text-[9px] md:text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-emerald-500/8 border border-emerald-500/15 text-emerald-400/80">LIVE</span>
                 </div>
-                <h3 className="text-[11px] font-bold text-white mb-1 font-display">{f.title}</h3>
-                <p className="text-[10px] text-muted-foreground leading-relaxed">{f.desc}</p>
+                <h3 className="text-[11px] md:text-sm font-bold text-white mb-1 font-display">{f.title}</h3>
+                <p className="text-[10px] md:text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
               </div>
             );
           })}

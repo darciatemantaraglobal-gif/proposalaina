@@ -77,18 +77,19 @@ const SolutionSection = () => (
             AI Assistant, Knowledge Base, Informasi, Komunitas, dan Tools Produktivitas — dibangun satu ekosistem khusus Masisir.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
             {pillars.map((p, i) => {
               const Icon = p.icon;
               const isPurple = p.color === 'purple';
               return (
-                <div key={i} className={`flex items-start gap-2.5 p-3 rounded-xl border ${isPurple ? 'bg-purple-500/4 border-purple-500/12' : 'bg-cyan-500/4 border-cyan-500/10'}`}>
-                  <div className={`mt-0.5 w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 ${isPurple ? 'bg-purple-500/12 text-purple-400' : 'bg-cyan-500/12 text-cyan-400'}`}>
-                    <Icon size={13} />
+                <div key={i} className={`flex items-start gap-2.5 md:gap-3 p-3 md:p-4 rounded-xl md:rounded-2xl border ${isPurple ? 'bg-purple-500/4 border-purple-500/12' : 'bg-cyan-500/4 border-cyan-500/10'}`}>
+                  <div className={`mt-0.5 w-7 h-7 md:w-9 md:h-9 rounded-lg md:rounded-xl flex items-center justify-center flex-shrink-0 ${isPurple ? 'bg-purple-500/12 text-purple-400' : 'bg-cyan-500/12 text-cyan-400'}`}>
+                    <Icon size={13} className="md:hidden" />
+                    <Icon size={16} className="hidden md:block" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-white font-display">{p.title}</p>
-                    <p className="text-[11px] text-muted-foreground leading-relaxed mt-0.5">{p.desc}</p>
+                    <p className="text-xs md:text-sm font-semibold text-white font-display">{p.title}</p>
+                    <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed mt-0.5">{p.desc}</p>
                   </div>
                 </div>
               );

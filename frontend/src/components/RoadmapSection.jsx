@@ -122,14 +122,15 @@ const RoadmapSection = () => (
                       </span>
                       <div className="relative">
                         <div className="flex items-start gap-3 mb-2.5">
-                          <div className={`w-8 h-8 rounded-xl flex items-center justify-center border flex-shrink-0 ${
+                          <div className={`w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center border flex-shrink-0 ${
                             item.isVision
                               ? 'bg-gradient-purple text-white border-purple-500/30 shadow-lg shadow-purple-500/20'
                               : isPurple
                                 ? 'bg-purple-500/10 border-purple-500/20 text-purple-400'
                                 : 'bg-cyan-500/10 border-cyan-500/20 text-cyan-400'
                           }`}>
-                            <Icon size={14} />
+                            <Icon size={14} className="md:hidden" />
+                            <Icon size={18} className="hidden md:block" />
                           </div>
                           <div>
                             <h3 className="text-sm font-bold text-white font-display leading-snug">{item.title}</h3>

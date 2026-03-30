@@ -65,10 +65,11 @@ const ProblemSection = () => (
               className={`group bg-[#0f0f18]/80 backdrop-blur-sm border border-red-500/15 rounded-2xl p-3 md:p-5 hover:border-red-500/30 hover:bg-[#0f0f18] transition-all duration-300 ${isLast ? 'col-span-2 sm:col-span-1' : ''}`}
             >
               <div className="flex items-start justify-between mb-3">
-                <div className="w-8 h-8 rounded-xl bg-red-500/8 border border-red-500/15 flex items-center justify-center text-red-400/80 flex-shrink-0">
-                  <Icon size={14} />
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-red-500/8 border border-red-500/15 flex items-center justify-center text-red-400/80 flex-shrink-0">
+                  <Icon size={14} className="md:hidden" />
+                  <Icon size={18} className="hidden md:block" />
                 </div>
-                <span className="text-[9px] font-bold text-red-500/40 uppercase tracking-wider text-right leading-tight">{p.stat}</span>
+                <span className="text-[9px] md:text-[10px] font-bold text-red-500/40 uppercase tracking-wider text-right leading-tight">{p.stat}</span>
               </div>
               <h3 className="text-xs md:text-sm font-bold text-white mb-1.5 font-display">{p.title}</h3>
               <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed">{p.desc}</p>

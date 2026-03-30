@@ -148,14 +148,14 @@ const PricingSection = () => {
                   <p className="text-[10px] text-muted-foreground/50 mb-1">atau {formatRupiah(pkg.annual)}/tahun</p>
                 )}
 
-                <p className="text-[11px] text-muted-foreground leading-relaxed mb-4 mt-1">{pkg.desc}</p>
+                <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed mb-4 mt-1">{pkg.desc}</p>
 
                 {/* Benefits */}
                 <ul className="space-y-2 flex-1 mb-5">
                   {pkg.benefits.map((b, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <Check size={11} className={`flex-shrink-0 mt-0.5 ${pkg.highlight ? 'text-purple-400' : isCyan ? 'text-cyan-400' : 'text-purple-400'}`} />
-                      <span className="text-[11px] text-foreground/70 leading-snug">{b}</span>
+                      <span className="text-[11px] md:text-xs text-foreground/70 leading-snug">{b}</span>
                     </li>
                   ))}
                 </ul>
