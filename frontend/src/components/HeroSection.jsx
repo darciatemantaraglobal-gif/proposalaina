@@ -301,7 +301,7 @@ const HeroSection = () => {
             onClick={scrollToDashboard}
             className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-purple-500/25 hover:bg-white/10 text-white rounded-full font-semibold flex items-center justify-center gap-3 transition-all group backdrop-blur-sm"
           >
-            <div className="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-purple-500 group-hover:border-purple-500 transition-all">
+            <div className="w-6 h-6 rounded-full border border-purple-500/30 flex items-center justify-center group-hover:bg-purple-500 group-hover:border-purple-500 transition-all">
               <Play size={10} fill="currentColor" className="ml-0.5" />
             </div>
             <span>Coba Demo AINA</span>

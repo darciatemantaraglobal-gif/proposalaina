@@ -9,12 +9,12 @@ const points = [
   { icon: TrendingUp, title: 'Dibangun untuk berkembang', desc: 'Roadmap jelas menuju pusat ekosistem digital Masisir.' },
 ];
 
-const rows = [
+const comparisons = [
   { aspect: 'Target pengguna', aina: 'Masisir (konteks Mesir)', generic: 'Semua orang' },
-  { aspect: 'Basis jawaban', aina: 'Knowledge base terstruktur', generic: 'Generasi bebas (rawan salah)' },
-  { aspect: 'Transparansi sumber', aina: 'Ada — sumber + confidence', generic: 'Tidak ada' },
-  { aspect: 'Bahasa & konteks', aina: 'Masisir-aware', generic: 'General' },
+  { aspect: 'Basis jawaban', aina: 'Knowledge base terstruktur', generic: 'Generasi bebas AI' },
+  { aspect: 'Sumber & confidence', aina: 'Ada & transparan', generic: 'Tidak ada' },
   { aspect: 'Fitur tambahan', aina: 'Produktivitas, threads, berita', generic: 'Chat saja' },
+  { aspect: 'Bahasa & konteks', aina: 'Masisir-aware', generic: 'General' },
 ];
 
 const WhyAINASection = () => (
@@ -30,7 +30,7 @@ const WhyAINASection = () => (
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-12 items-start">
         {/* Left: Key differentiators */}
-        <div className="space-y-4">
+        <div className="space-y-3 md:space-y-4">
           {points.map((p, i) => {
             const Icon = p.icon;
             return (
@@ -47,30 +47,33 @@ const WhyAINASection = () => (
           })}
         </div>
 
-        {/* Right: Comparison table */}
-        <div className="bg-[#0c0c14] border border-purple-500/20 rounded-2xl overflow-hidden">
-          <div className="overflow-x-auto">
-            <div className="min-w-[380px]">
-              <div className="grid grid-cols-3 bg-[#111118] border-b border-purple-500/15 px-4 py-3">
-                <span className="text-[10px] text-slate-600 font-bold uppercase tracking-wider">Aspek</span>
-                <span className="text-[10px] text-purple-300 font-bold uppercase tracking-wider text-center">AINA</span>
-                <span className="text-[10px] text-slate-600 font-bold uppercase tracking-wider text-center">AI Umum</span>
-              </div>
-              {rows.map((row, i) => (
-                <div key={i} className={`grid grid-cols-3 px-4 py-3 border-b border-purple-500/12 last:border-0 ${i % 2 === 0 ? '' : 'bg-white/[0.01]'}`}>
-                  <span className="text-xs text-slate-500 font-medium flex items-center pr-2">{row.aspect}</span>
-                  <div className="flex items-center justify-center gap-1.5">
-                    <CheckCircle2 size={11} className="text-emerald-400 flex-shrink-0" />
-                    <span className="text-[11px] text-emerald-300 text-center">{row.aina}</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-1.5">
-                    <X size={11} className="text-slate-600 flex-shrink-0" />
-                    <span className="text-[11px] text-slate-500 text-center">{row.generic}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* Right: Comparison cards (bukan tabel) */}
+        <div className="space-y-2">
+          {/* Header labels */}
+          <div className="flex items-center gap-2 px-1 mb-3">
+            <div className="flex-1" />
+            <span className="text-[10px] font-bold text-purple-300 uppercase tracking-wider w-24 text-center">AINA</span>
+            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider w-24 text-center">AI Umum</span>
           </div>
+
+          {comparisons.map((row, i) => (
+            <div key={i} className="flex items-center gap-2 bg-[#0c0c14] border border-purple-500/20 rounded-xl px-3 py-2.5">
+              {/* Aspect label */}
+              <span className="text-[11px] text-slate-500 font-medium flex-1 min-w-0">{row.aspect}</span>
+
+              {/* AINA pill */}
+              <div className="flex items-center gap-1 w-24 justify-center bg-emerald-500/8 border border-emerald-500/20 rounded-lg px-2 py-1 flex-shrink-0">
+                <CheckCircle2 size={10} className="text-emerald-400 flex-shrink-0" />
+                <span className="text-[10px] text-emerald-300 font-medium leading-tight text-center">{row.aina}</span>
+              </div>
+
+              {/* Generic pill */}
+              <div className="flex items-center gap-1 w-24 justify-center bg-slate-800/50 border border-purple-500/12 rounded-lg px-2 py-1 flex-shrink-0">
+                <X size={10} className="text-slate-600 flex-shrink-0" />
+                <span className="text-[10px] text-slate-500 font-medium leading-tight text-center">{row.generic}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
