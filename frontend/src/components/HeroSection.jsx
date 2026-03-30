@@ -19,6 +19,7 @@ const Navbar = () => {
     { label: "Solusi", href: "#solusi" },
     { label: "Fitur", href: "#fitur" },
     { label: "Roadmap", href: "#roadmap" },
+    { label: "Partner", href: "#partnership" },
     { label: "Kolaborasi", href: "#kolaborasi" },
   ];
 
@@ -104,12 +105,12 @@ const Navbar = () => {
           ))}
           <div className="pt-2 mt-2 border-t border-purple-500/15 flex flex-col gap-3">
             <a
-              href={waLink}
+              href="https://wa.me/6281311506025?text=Halo%2C%20saya%20ingin%20menghubungi%20AINA."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full block text-center py-3 bg-purple-600 text-white font-bold rounded-xl shadow-lg shadow-purple-900/20"
+              className="w-full block text-center py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-xl shadow-lg shadow-purple-900/20 transition-colors"
             >
-              Kolaborasi
+              Hubungi AINA
             </a>
           </div>
         </div>
