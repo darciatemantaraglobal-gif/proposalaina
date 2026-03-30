@@ -1,12 +1,13 @@
 import React from 'react';
-import { Target, Brain, BookOpen, LifeBuoy, Globe2, CheckCircle2, X } from 'lucide-react';
+import { Target, Brain, BookOpen, LifeBuoy, Globe2, ShieldCheck, CheckCircle2, X } from 'lucide-react';
 
 const differentiators = [
-  { icon: Target, title: 'Dibuat khusus untuk Masisir', color: 'purple' },
-  { icon: Brain, title: 'Bukan AI generik', color: 'cyan' },
-  { icon: BookOpen, title: 'Knowledge lokal terverifikasi', color: 'purple' },
-  { icon: LifeBuoy, title: 'Mencakup semua kebutuhan', color: 'cyan' },
-  { icon: Globe2, title: 'Ekosistem yang terus berkembang', color: 'purple' },
+  { icon: Target, title: 'Dibuat khusus untuk Masisir', desc: 'Setiap fitur dari realita Masisir, bukan adaptasi produk umum.', color: 'purple' },
+  { icon: Brain, title: 'Bukan AI generik', desc: 'Jawaban dari knowledge base lokal, bukan generasi AI bebas.', color: 'cyan' },
+  { icon: BookOpen, title: 'Knowledge lokal terverifikasi', desc: 'Diisi dan diverifikasi oleh kontributor Masisir berpengalaman.', color: 'purple' },
+  { icon: LifeBuoy, title: 'Mencakup semua kebutuhan', desc: 'Birokrasi, akademik, kehidupan, produktivitas satu sistem.', color: 'cyan' },
+  { icon: Globe2, title: 'Ekosistem yang terus berkembang', desc: 'Tumbuh bersama komunitas Masisir, bukan aplikasi statis.', color: 'purple' },
+  { icon: ShieldCheck, title: 'Jawaban transparan & jujur', desc: 'Setiap jawaban ada sumber dan confidence level-nya.', color: 'cyan' },
 ];
 
 const comparisons = [
@@ -33,12 +34,12 @@ const WhyAINASection = () => (
           Bukan soal canggih.{' '}
           <span className="text-gradient-purple-cyan">Tapi yang paling paham Masisir.</span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-lg mx-auto">AI umum bisa banyak hal. AINA dibangun untuk satu konteks — dan itu bedanya.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-lg mx-auto">AI umum bisa banyak hal. AINA dibangun untuk satu konteks dan itu bedanya.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6 md:gap-8 items-start">
 
-        {/* Left: compact differentiator cards */}
+        {/* Left: 6 differentiator cards 3x2 grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
           {differentiators.map((d, i) => {
             const Icon = d.icon;
@@ -46,12 +47,15 @@ const WhyAINASection = () => (
             return (
               <div
                 key={i}
-                className={`flex items-center gap-2.5 p-3 rounded-xl border ${isPurple ? 'bg-purple-500/4 border-purple-500/15 hover:border-purple-500/30' : 'bg-cyan-500/4 border-cyan-500/12 hover:border-cyan-500/25'} transition-colors`}
+                className={`flex flex-col gap-2 p-3 rounded-xl border ${isPurple ? 'bg-purple-500/4 border-purple-500/15 hover:border-purple-500/30' : 'bg-cyan-500/4 border-cyan-500/12 hover:border-cyan-500/25'} transition-colors`}
               >
                 <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${isPurple ? 'bg-purple-500/12 text-purple-400' : 'bg-cyan-500/12 text-cyan-400'}`}>
                   <Icon size={14} />
                 </div>
-                <p className="text-xs font-semibold text-white font-display leading-tight">{d.title}</p>
+                <div>
+                  <p className="text-xs font-bold text-white font-display leading-tight mb-0.5">{d.title}</p>
+                  <p className="text-[10px] text-muted-foreground leading-relaxed">{d.desc}</p>
+                </div>
               </div>
             );
           })}

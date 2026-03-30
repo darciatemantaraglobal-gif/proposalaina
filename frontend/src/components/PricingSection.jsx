@@ -9,8 +9,8 @@ const tiers = [
     tier: 'UMKM Starter',
     icon: Handshake,
     color: 'cyan',
-    monthly: 350000,
-    annual: 2980000,
+    monthly: 150000,
+    annual: 1290000,
     desc: 'Untuk UMKM yang ingin menjangkau komunitas Masisir secara ringan.',
     benefits: [
       'Banner di halaman dashboard AINA',
@@ -27,8 +27,8 @@ const tiers = [
     tier: 'UMKM Standard',
     icon: Handshake,
     color: 'purple',
-    monthly: 800000,
-    annual: 6800000,
+    monthly: 400000,
+    annual: 3400000,
     desc: 'Untuk UMKM yang ingin eksposur lebih kuat dan terukur di ekosistem Masisir.',
     benefits: [
       'Banner placement prioritas',
