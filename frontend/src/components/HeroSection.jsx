@@ -291,10 +291,10 @@ const HeroSection = () => {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full px-6 md:px-0">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 w-full px-2 md:px-0">
           <button
             onClick={scrollToDashboard}
-            className="w-full sm:w-auto px-8 py-4 bg-white text-[#050509] rounded-full font-bold shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.4)] hover:scale-105 transition-all transform relative overflow-hidden group"
+            className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-white text-[#050509] rounded-full font-bold text-sm md:text-base shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.4)] hover:scale-105 transition-all transform relative overflow-hidden group"
           >
             <span className="relative z-10">Pelajari AINA</span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-100 to-cyan-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -302,10 +302,10 @@ const HeroSection = () => {
 
           <button
             onClick={scrollToDashboard}
-            className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-purple-500/25 hover:bg-white/10 text-white rounded-full font-semibold flex items-center justify-center gap-3 transition-all group backdrop-blur-sm"
+            className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-white/5 border border-purple-500/25 hover:bg-white/10 text-white rounded-full font-semibold text-sm md:text-base flex items-center justify-center gap-2.5 transition-all group backdrop-blur-sm"
           >
-            <div className="w-6 h-6 rounded-full border border-purple-500/30 flex items-center justify-center group-hover:bg-purple-500 group-hover:border-purple-500 transition-all">
-              <Play size={10} fill="currentColor" className="ml-0.5" />
+            <div className="w-5 h-5 md:w-6 md:h-6 rounded-full border border-purple-500/30 flex items-center justify-center group-hover:bg-purple-500 group-hover:border-purple-500 transition-all">
+              <Play size={9} fill="currentColor" className="ml-0.5" />
             </div>
             <span>Lihat Fitur</span>
           </button>
@@ -314,9 +314,9 @@ const HeroSection = () => {
             href="https://wa.me/6281311506025?text=Halo%2C%20saya%20ingin%20berkolaborasi%20dengan%20AINA."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-4 bg-purple-500/10 border border-purple-500/30 hover:bg-purple-500/20 text-white rounded-full font-semibold flex items-center justify-center gap-2 transition-all backdrop-blur-sm"
+            className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-purple-500/10 border border-purple-500/30 hover:bg-purple-500/20 text-white rounded-full font-semibold text-sm md:text-base flex items-center justify-center gap-2 transition-all backdrop-blur-sm"
           >
-            <GitMerge size={15} className="text-purple-400" />
+            <GitMerge size={13} className="text-purple-400" />
             <span>Kolaborasi Bersama AINA</span>
           </a>
         </div>
