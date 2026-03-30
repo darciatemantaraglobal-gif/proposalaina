@@ -1,96 +1,72 @@
 import React, { useState } from 'react';
-import { Check, Star, ArrowRight, Handshake, Building2, CalendarDays, MessageSquare, Zap } from 'lucide-react';
+import { Check, Star, MessageSquare, Handshake, Building2, ArrowRight, Zap } from 'lucide-react';
 
 const waBase = 'https://wa.me/6281311506025?text=';
 
-const packages = [
+const tiers = [
   {
-    id: 'umkm-basic',
-    category: 'UMKM',
-    tier: 'Starter',
-    price: 'Rp 300.000',
-    priceUnit: 's/d Rp 500.000 / bulan',
+    id: 'starter',
+    tier: 'UMKM Starter',
     icon: Handshake,
     color: 'cyan',
-    tagColor: 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300',
-    highlight: false,
+    monthly: 350000,
+    annual: 2980000,
     desc: 'Untuk UMKM yang ingin menjangkau komunitas Masisir secara ringan.',
     benefits: [
-      'Banner placement di halaman dashboard AINA',
-      'Exposure ke pengguna aktif Masisir',
-      'Mention singkat di announcement komunitas',
-      'Durasi 30 hari aktif',
+      'Banner di halaman dashboard AINA',
+      'Exposure ke pengguna aktif',
+      'Mention di announcement komunitas',
       'Laporan exposure dasar',
+      'Durasi 30 hari aktif',
     ],
     waText: 'Halo, saya tertarik dengan Paket UMKM Starter untuk partnership dengan AINA.',
+    highlight: false,
   },
   {
-    id: 'umkm-standard',
-    category: 'UMKM',
-    tier: 'Standard',
-    price: 'Rp 750.000',
-    priceUnit: 's/d Rp 1.500.000 / bulan',
+    id: 'standard',
+    tier: 'UMKM Standard',
     icon: Handshake,
     color: 'purple',
-    tagColor: 'bg-purple-500/10 border-purple-500/20 text-purple-300',
-    highlight: false,
+    monthly: 800000,
+    annual: 6800000,
     desc: 'Untuk UMKM yang ingin eksposur lebih kuat dan terukur di ekosistem Masisir.',
     benefits: [
-      'Banner placement prioritas (posisi lebih strategis)',
-      'Exposure lebih tinggi di beberapa halaman',
-      'Mention di announcement dengan konteks lebih kuat',
-      'Durasi 30 hari + analitik lengkap',
-      'Opsi perpanjangan dengan benefit kumulatif',
+      'Banner placement prioritas',
+      'Exposure di beberapa halaman utama',
+      'Mention announcement lebih kuat',
+      'Analitik lengkap bulanan',
+      'Opsi perpanjangan kumulatif',
     ],
     waText: 'Halo, saya tertarik dengan Paket UMKM Standard untuk partnership dengan AINA.',
+    highlight: false,
   },
   {
     id: 'corporate',
-    category: 'Corporate',
-    tier: 'Strategic Partner',
-    price: 'Rp 2.000.000',
-    priceUnit: 's/d Rp 5.000.000 / bulan',
+    tier: 'Corporate',
     icon: Building2,
     color: 'purple',
-    tagColor: 'bg-purple-500/10 border-purple-500/20 text-purple-300',
-    highlight: true,
+    monthly: 3000000,
+    annual: 25000000,
     desc: 'Untuk organisasi yang ingin hadir secara signifikan di ekosistem Masisir.',
     benefits: [
-      'Prioritas banner posisi utama di semua halaman kunci',
-      'Targeted popup announcement ke segmen pengguna',
+      'Banner prioritas di semua halaman kunci',
+      'Targeted announcement ke segmen pengguna',
       'Branding sebagai Partner Resmi AINA',
-      'Exposure tinggi di dashboard, berita, dan komunitas',
-      'Integrasi campaign dengan ekosistem AINA',
-      'Co-branded content & kolaborasi konten',
-      'Laporan performa bulanan terperinci',
+      'Integrasi campaign ekosistem AINA',
+      'Co-branded content & kolaborasi',
+      'Laporan performa bulanan lengkap',
     ],
     waText: 'Halo, saya tertarik dengan Paket Corporate Strategic Partner untuk partnership dengan AINA.',
-  },
-  {
-    id: 'annual',
-    category: 'Annual',
-    tier: 'Annual Premium',
-    price: 'Custom',
-    priceUnit: '/ tahun hemat s/d 25%',
-    icon: CalendarDays,
-    color: 'cyan',
-    tagColor: 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300',
-    highlight: false,
-    desc: 'Paket tahunan tersedia untuk semua tier dengan diskon dan benefit tambahan eksklusif.',
-    benefits: [
-      'Semua benefit dari tier yang dipilih',
-      'Diskon hingga 25% dibanding harga bulanan',
-      'Priority onboarding & dedicated contact',
-      'Slot partner resmi tahunan yang terbatas',
-      'Visibility sepanjang tahun tanpa jeda',
-      'Review strategy session di awal periode',
-    ],
-    waText: 'Halo, saya ingin mendiskusikan Annual Partnership Package dengan AINA.',
+    highlight: true,
   },
 ];
 
+const formatRupiah = (n) =>
+  'Rp ' + n.toLocaleString('id-ID').replace(/,/g, '.');
+
 const PricingSection = () => {
-  const [hovered, setHovered] = useState(null);
+  const [billing, setBilling] = useState('monthly');
+  const isAnnual = billing === 'annual';
 
   return (
     <section id="partnership" className="relative bg-[#050509] py-8 md:py-20 px-6 md:px-8 overflow-hidden">
@@ -100,64 +76,86 @@ const PricingSection = () => {
       <div className="relative z-10 max-w-5xl mx-auto">
 
         {/* Header */}
-        <div className="mb-6 md:mb-12 text-center">
+        <div className="mb-8 md:mb-12 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
             <Zap size={11} className="text-purple-400" />
             <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Partnership Packages</span>
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
+          <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-4 font-display">
             Hadir di ekosistem Masisir{' '}
             <span className="text-gradient-purple-cyan">dengan paket yang tepat.</span>
           </h2>
-          <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">
-            Dari UMKM hingga korporat. Semua bisa disesuaikan.
-          </p>
+
+          {/* Billing toggle */}
+          <div className="inline-flex items-center bg-[#0f0f18]/80 border border-purple-500/20 rounded-full p-1 gap-1">
+            <button
+              onClick={() => setBilling('monthly')}
+              className={`px-5 py-1.5 rounded-full text-xs font-bold transition-all ${!isAnnual ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/20' : 'text-muted-foreground hover:text-white'}`}
+            >
+              Bulanan
+            </button>
+            <button
+              onClick={() => setBilling('annual')}
+              className={`px-5 py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 ${isAnnual ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/20' : 'text-muted-foreground hover:text-white'}`}
+            >
+              Tahunan
+              <span className="bg-emerald-500/20 text-emerald-400 text-[9px] font-black px-1.5 py-0.5 rounded-full border border-emerald-500/25">Hemat ~29%</span>
+            </button>
+          </div>
         </div>
 
-        {/* Category label: UMKM */}
-        <div className="flex items-center gap-3 mb-3">
-          <div className="h-px flex-1 bg-gradient-to-r from-cyan-500/25 to-transparent" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-400/60 px-2">Paket UMKM</span>
-          <div className="h-px flex-1 bg-gradient-to-l from-purple-500/20 to-transparent" />
-        </div>
-
-        {/* UMKM Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
-          {packages.filter(p => p.category === 'UMKM').map((pkg) => {
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+          {tiers.map((pkg) => {
             const Icon = pkg.icon;
             const isCyan = pkg.color === 'cyan';
+            const price = isAnnual ? pkg.annual : pkg.monthly;
+            const savedAmount = pkg.monthly * 12 - pkg.annual;
+
             return (
               <div
                 key={pkg.id}
-                onMouseEnter={() => setHovered(pkg.id)}
-                onMouseLeave={() => setHovered(null)}
-                className={`group relative bg-[#0f0f18]/80 backdrop-blur-sm border rounded-2xl p-4 md:p-5 flex flex-col transition-all duration-300 ${
-                  hovered === pkg.id
-                    ? isCyan ? 'border-cyan-500/35 bg-[#0f0f18]' : 'border-purple-500/35 bg-[#0f0f18]'
-                    : 'border-purple-500/20 hover:border-purple-500/30'
+                className={`relative rounded-2xl p-5 flex flex-col transition-all duration-300 border ${
+                  pkg.highlight
+                    ? 'bg-gradient-to-br from-[#1a0e30]/90 to-[#0f0f18]/90 border-purple-500/40 glow-purple-sm'
+                    : 'bg-[#0f0f18]/80 backdrop-blur-sm border-purple-500/20 hover:border-purple-500/35'
                 }`}
               >
-                {/* Header */}
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <div className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border text-[9px] font-bold uppercase tracking-wider mb-2 ${pkg.tagColor}`}>
-                      <Icon size={9} />
-                      {pkg.tier}
-                    </div>
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-xl font-black text-white font-display">{pkg.price}</span>
-                    </div>
-                    <span className="text-[11px] text-muted-foreground">{pkg.priceUnit}</span>
+                {pkg.highlight && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="bg-gradient-purple text-white text-[9px] font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow-lg shadow-purple-500/30 flex items-center gap-1">
+                      <Star size={8} fill="white" />
+                      PALING POPULER
+                    </span>
                   </div>
+                )}
+
+                {/* Tier label */}
+                <div className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border text-[9px] font-bold uppercase tracking-wider mb-4 w-fit ${isCyan ? 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300' : 'bg-purple-500/10 border-purple-500/20 text-purple-300'}`}>
+                  <Icon size={9} />
+                  {pkg.tier}
                 </div>
 
-                <p className="text-xs text-muted-foreground leading-relaxed mb-4">{pkg.desc}</p>
+                {/* Price */}
+                <div className="mb-1">
+                  <span className="text-2xl font-black text-white font-display">{formatRupiah(price)}</span>
+                  <span className="text-xs text-muted-foreground ml-1">{isAnnual ? '/tahun' : '/bulan'}</span>
+                </div>
+                {isAnnual && (
+                  <p className="text-[10px] text-emerald-400 font-semibold mb-1">Hemat {formatRupiah(savedAmount)} vs bulanan</p>
+                )}
+                {!isAnnual && (
+                  <p className="text-[10px] text-muted-foreground/50 mb-1">atau {formatRupiah(pkg.annual)}/tahun</p>
+                )}
 
-                <ul className="space-y-2 flex-1 mb-4">
+                <p className="text-[11px] text-muted-foreground leading-relaxed mb-4 mt-1">{pkg.desc}</p>
+
+                {/* Benefits */}
+                <ul className="space-y-2 flex-1 mb-5">
                   {pkg.benefits.map((b, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <Check size={11} className={`flex-shrink-0 mt-0.5 ${isCyan ? 'text-cyan-400' : 'text-purple-400'}`} />
-                      <span className="text-xs text-foreground/70 leading-snug">{b}</span>
+                      <Check size={11} className={`flex-shrink-0 mt-0.5 ${pkg.highlight ? 'text-purple-400' : isCyan ? 'text-cyan-400' : 'text-purple-400'}`} />
+                      <span className="text-[11px] text-foreground/70 leading-snug">{b}</span>
                     </li>
                   ))}
                 </ul>
@@ -167,9 +165,11 @@ const PricingSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-2.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${
-                    isCyan
-                      ? 'bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 hover:bg-cyan-500/15 hover:border-cyan-500/35'
-                      : 'bg-purple-500/10 border border-purple-500/20 text-purple-300 hover:bg-purple-500/15 hover:border-purple-500/35'
+                    pkg.highlight
+                      ? 'bg-gradient-purple text-white hover:opacity-90 shadow-lg shadow-purple-500/25'
+                      : isCyan
+                      ? 'bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 hover:bg-cyan-500/15'
+                      : 'bg-purple-500/10 border border-purple-500/20 text-purple-300 hover:bg-purple-500/15'
                   }`}
                 >
                   <MessageSquare size={13} />
@@ -180,94 +180,11 @@ const PricingSection = () => {
           })}
         </div>
 
-        {/* Category label: Corporate */}
-        <div className="flex items-center gap-3 mb-3">
-          <div className="h-px flex-1 bg-gradient-to-r from-purple-500/30 to-transparent" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-purple-400/60 px-2">Paket Corporate & Strategic Partner</span>
-          <div className="h-px flex-1 bg-gradient-to-l from-purple-500/30 to-transparent" />
-        </div>
-
-        {/* Corporate + Annual */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
-          {packages.filter(p => p.category === 'Corporate' || p.category === 'Annual').map((pkg) => {
-            const Icon = pkg.icon;
-            const isCyan = pkg.color === 'cyan';
-            const isHighlight = pkg.highlight;
-            return (
-              <div
-                key={pkg.id}
-                onMouseEnter={() => setHovered(pkg.id)}
-                onMouseLeave={() => setHovered(null)}
-                className={`group relative backdrop-blur-sm border rounded-2xl p-4 md:p-5 flex flex-col transition-all duration-300 ${
-                  isHighlight
-                    ? 'bg-gradient-to-br from-[#1a0e30]/90 to-[#0f0f18]/90 border-purple-500/35 glow-purple-sm'
-                    : 'bg-[#0f0f18]/80 border-cyan-500/20 hover:border-cyan-500/30'
-                } ${hovered === pkg.id && !isHighlight ? 'bg-[#0f0f18]' : ''}`}
-              >
-                {isHighlight && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-gradient-purple text-white text-[9px] font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow-lg shadow-purple-500/30 flex items-center gap-1">
-                      <Star size={8} fill="white" />
-                      PALING POPULER
-                    </span>
-                  </div>
-                )}
-
-                {/* Header */}
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <div className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border text-[9px] font-bold uppercase tracking-wider mb-2 ${pkg.tagColor}`}>
-                      <Icon size={9} />
-                      {pkg.tier}
-                    </div>
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-xl font-black text-white font-display">{pkg.price}</span>
-                    </div>
-                    <span className="text-[11px] text-muted-foreground">{pkg.priceUnit}</span>
-                  </div>
-                </div>
-
-                <p className="text-xs text-muted-foreground leading-relaxed mb-4">{pkg.desc}</p>
-
-                <ul className="space-y-2 flex-1 mb-4">
-                  {pkg.benefits.map((b, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <Check size={11} className={`flex-shrink-0 mt-0.5 ${isHighlight ? 'text-purple-400' : isCyan ? 'text-cyan-400' : 'text-purple-400'}`} />
-                      <span className="text-xs text-foreground/70 leading-snug">{b}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href={`${waBase}${encodeURIComponent(pkg.waText)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-full py-2.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${
-                    isHighlight
-                      ? 'bg-gradient-purple text-white hover:opacity-90 shadow-lg shadow-purple-500/25'
-                      : 'bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 hover:bg-cyan-500/15 hover:border-cyan-500/35'
-                  }`}
-                >
-                  <MessageSquare size={13} />
-                  {isHighlight ? 'Mulai Diskusi Partnership' : 'Diskusikan Annual Package'}
-                </a>
-              </div>
-            );
-          })}
-        </div>
-
         {/* Custom note */}
-        <div className="bg-[#0f0f18]/80 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-3 md:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-          <div className="flex items-start gap-3">
-            <div className="w-8 h-8 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
-              <Star size={13} className="text-purple-400" />
-            </div>
-            <div>
-              <p className="text-sm font-bold text-white font-display">Semua paket bisa disesuaikan</p>
-              <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">
-                Skala exposure, durasi, format banner, dan integrasi campaign bisa dinegosiasikan sesuai kebutuhan bisnis kamu. Tim AINA siap mendiskusikan paket yang paling sesuai.
-              </p>
-            </div>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#0f0f18]/80 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-4">
+          <div>
+            <p className="text-sm font-bold text-white font-display">Butuh paket yang lebih fleksibel?</p>
+            <p className="text-xs text-muted-foreground mt-0.5">Skala, durasi, dan format semua bisa dinegosiasikan.</p>
           </div>
           <a
             href={`${waBase}${encodeURIComponent('Halo, saya ingin mendiskusikan custom partnership package dengan AINA.')}`}

@@ -2,18 +2,12 @@ import React from 'react';
 import { Bot, Sparkles, CheckCircle2, MessageSquare, BookOpen, Newspaper, LayoutDashboard, Users2, Bookmark, ShieldCheck } from 'lucide-react';
 
 const pillars = [
-  { icon: MessageSquare, title: 'AI Assistant', desc: 'Jawaban kontekstual berbasis knowledge Masisir bukan AI generik yang menebak-nebak.', color: 'purple' },
-  { icon: BookOpen, title: 'Knowledge Base', desc: 'Informasi dikurasi kontributor Masisir: prosedur, kampus, kehidupan, dan lebih banyak lagi.', color: 'cyan' },
-  { icon: Newspaper, title: 'Sistem Informasi', desc: 'Pengumuman kampus, berita organisasi, dan info komunitas dalam satu feed terpusat.', color: 'purple' },
-  { icon: Users2, title: 'Komunitas', desc: 'Threads diskusi termoderasi per topik peer-to-peer, upvote jawaban terbaik.', color: 'cyan' },
-  { icon: LayoutDashboard, title: 'Sistem Kehidupan Masisir', desc: 'Tasks, catatan, dan tracking target belajar terintegrasi dalam satu ruang produktif.', color: 'purple' },
-  { icon: Bookmark, title: 'Saved Answers', desc: 'Simpan jawaban penting dari AI atau komunitas, akses kembali kapan saja.', color: 'cyan' },
-];
-
-const differentiators = [
-  'Bukan chatbot biasa konteks jawaban terikat ke knowledge Masisir',
-  'Bukan platform media sosial bukan feed sembarangan, tapi informasi yang terkurasi',
-  'Bukan aplikasi produktivitas umum dirancang dari nol untuk kebutuhan Masisir di Mesir',
+  { icon: MessageSquare, title: 'AI Assistant', desc: 'Jawaban berbasis knowledge Masisir, bukan AI generik.', color: 'purple' },
+  { icon: BookOpen, title: 'Knowledge Base', desc: 'Dikurasi kontributor: prosedur, kampus, dan kehidupan.', color: 'cyan' },
+  { icon: Newspaper, title: 'Sistem Informasi', desc: 'Feed pengumuman dan berita komunitas terpusat.', color: 'purple' },
+  { icon: Users2, title: 'Komunitas', desc: 'Threads diskusi per topik, upvote jawaban terbaik.', color: 'cyan' },
+  { icon: LayoutDashboard, title: 'Ruang Produktif', desc: 'Tasks, catatan, dan target belajar dalam satu ruang.', color: 'purple' },
+  { icon: Bookmark, title: 'Saved Answers', desc: 'Simpan jawaban penting, akses kapan saja.', color: 'cyan' },
 ];
 
 const SolutionSection = () => (
@@ -22,13 +16,13 @@ const SolutionSection = () => (
     <div className="pointer-events-none absolute right-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full blur-[140px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
 
     <div className="relative z-10 max-w-5xl mx-auto">
-      <div className="flex flex-col lg:flex-row gap-5 md:gap-14 items-start">
+      <div className="flex flex-col lg:flex-row gap-8 md:gap-14 items-start">
 
         {/* LEFT: System status card */}
-        <div className="w-full lg:w-[340px] flex-shrink-0">
+        <div className="w-full lg:w-[280px] flex-shrink-0">
           <div className="bg-[#0f0f18]/80 backdrop-blur-xl border border-purple-500/25 rounded-2xl overflow-hidden glow-purple-sm">
             <div className="px-4 py-3 border-b border-purple-500/15 flex items-center justify-between bg-[#13121f]/60">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-full bg-gradient-purple flex items-center justify-center shadow-lg shadow-purple-500/30">
                   <Bot size={14} className="text-white" />
                 </div>
@@ -43,7 +37,7 @@ const SolutionSection = () => (
               <Sparkles size={13} className="text-purple-400 opacity-60" />
             </div>
 
-            <div className="p-3 md:p-4 space-y-2">
+            <div className="p-3 space-y-2">
               {pillars.map((p, i) => {
                 const Icon = p.icon;
                 return (
@@ -61,48 +55,35 @@ const SolutionSection = () => (
               })}
             </div>
 
-            {/* Bottom note */}
             <div className="px-4 py-3 border-t border-purple-500/15 bg-[#13121f]/40">
               <div className="flex items-start gap-2">
                 <ShieldCheck size={12} className="text-purple-400 flex-shrink-0 mt-0.5" />
-                <p className="text-[10px] text-muted-foreground leading-snug">Setiap jawaban AI disertai sumber dan tingkat keyakinan sistem. Bukan jawaban asal percaya diri.</p>
+                <p className="text-[10px] text-muted-foreground leading-snug">Setiap jawaban disertai sumber dan confidence level.</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* RIGHT: Text */}
+        {/* RIGHT: Heading + pillars grid */}
         <div className="flex-1">
           <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
             <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Solusi</span>
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-3 font-display">
-            AINA bukan chatbot.{' '}
-            <span className="text-gradient-purple-cyan">Ini ekosistem digital Masisir.</span>
+          <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-2 font-display">
+            Bukan chatbot biasa.{' '}
+            <span className="text-gradient-purple-cyan">Ekosistem digital Masisir.</span>
           </h2>
-          <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-4">
-            Lima lapisan dalam satu platform AI Assistant, Knowledge Base, Informasi, Diskusi, dan Tools Produktivitas. Dibangun dari nol untuk konteks Masisir.
+          <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-5">
+            AI Assistant, Knowledge Base, Informasi, Komunitas, dan Tools Produktivitas — dibangun satu ekosistem khusus Masisir.
           </p>
-
-          {/* Differentiators */}
-          <div className="mb-5 space-y-2">
-            {differentiators.map((d, i) => (
-              <div key={i} className="flex items-start gap-2.5">
-                <div className="w-4 h-4 rounded-full bg-purple-500/15 border border-purple-500/25 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-[8px] text-purple-400 font-bold">✕</span>
-                </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">{d}</p>
-              </div>
-            ))}
-          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {pillars.map((p, i) => {
               const Icon = p.icon;
               const isPurple = p.color === 'purple';
               return (
-                <div key={i} className="flex items-start gap-2.5">
-                  <div className={`mt-0.5 w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 ${isPurple ? 'bg-purple-500/10 text-purple-400' : 'bg-cyan-500/10 text-cyan-400'}`}>
+                <div key={i} className={`flex items-start gap-2.5 p-3 rounded-xl border ${isPurple ? 'bg-purple-500/4 border-purple-500/12' : 'bg-cyan-500/4 border-cyan-500/10'}`}>
+                  <div className={`mt-0.5 w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 ${isPurple ? 'bg-purple-500/12 text-purple-400' : 'bg-cyan-500/12 text-cyan-400'}`}>
                     <Icon size={13} />
                   </div>
                   <div>
