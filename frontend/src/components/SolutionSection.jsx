@@ -11,41 +11,44 @@ const pillars = [
 ];
 
 const SolutionSection = () => (
-  <section className="bg-[#050509] py-8 md:py-20 px-4 md:px-6">
-    <div className="max-w-5xl mx-auto">
+  <section className="relative bg-[#050509] py-8 md:py-20 px-4 md:px-6 overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
+    <div className="pointer-events-none absolute right-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full blur-[140px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
+
+    <div className="relative z-10 max-w-5xl mx-auto">
       <div className="flex flex-col lg:flex-row gap-5 md:gap-14 items-start">
 
         {/* LEFT: System status card */}
-        <div className="w-full lg:w-[360px] flex-shrink-0">
-          <div className="bg-[#0c0c14] border border-purple-500/20 rounded-2xl overflow-hidden">
-            <div className="px-5 py-4 border-b border-purple-500/15 flex items-center justify-between">
+        <div className="w-full lg:w-[340px] flex-shrink-0">
+          <div className="bg-[#0f0f18]/80 backdrop-blur-xl border border-purple-500/25 rounded-2xl overflow-hidden glow-purple-sm">
+            <div className="px-4 py-3 border-b border-purple-500/15 flex items-center justify-between bg-[#13121f]/60">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center">
-                  <Bot size={15} className="text-white" />
+                <div className="w-8 h-8 rounded-full bg-gradient-purple flex items-center justify-center shadow-lg shadow-purple-500/30">
+                  <Bot size={14} className="text-white" />
                 </div>
                 <div>
-                  <p className="text-white font-bold text-sm">AINA System</p>
+                  <p className="text-white font-bold text-xs font-display">AINA System</p>
                   <p className="text-emerald-400 text-[10px] flex items-center gap-1 font-medium">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse inline-block" />
                     Aktif & Berjalan
                   </p>
                 </div>
               </div>
-              <Sparkles size={14} className="text-purple-400 opacity-60" />
+              <Sparkles size={13} className="text-purple-400 opacity-60" />
             </div>
 
-            <div className="p-5 space-y-3">
+            <div className="p-3 md:p-4 space-y-2">
               {pillars.map((p, i) => {
                 const Icon = p.icon;
                 return (
-                  <div key={i} className="flex items-center justify-between bg-[#141420] rounded-xl px-3 py-2.5 border border-purple-500/12">
+                  <div key={i} className="flex items-center justify-between bg-[#13121f]/80 rounded-xl px-3 py-2 border border-purple-500/12 hover:border-purple-500/25 transition-colors">
                     <div className="flex items-center gap-2.5">
                       <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${i % 2 === 0 ? 'bg-purple-400' : 'bg-cyan-400'}`} />
-                      <span className="text-xs text-slate-300 font-medium">{p.title}</span>
+                      <span className="text-xs text-foreground/80 font-medium">{p.title}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <CheckCircle2 size={11} className="text-emerald-400" />
-                      <span className="text-[10px] text-emerald-400 font-mono font-bold">READY</span>
+                      <CheckCircle2 size={10} className="text-emerald-400" />
+                      <span className="text-[9px] text-emerald-400 font-bold">LIVE</span>
                     </div>
                   </div>
                 );
@@ -56,28 +59,28 @@ const SolutionSection = () => (
 
         {/* RIGHT: Text */}
         <div className="flex-1">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400">Solusi</span>
-          <h2 className="mt-2 text-2xl md:text-4xl font-bold text-white leading-tight mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
+            <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Solusi</span>
+          </div>
+          <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-3 font-display">
             AINA bukan sekadar chatbot.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-              Ini ekosistem digital Masisir.
-            </span>
+            <span className="text-gradient-purple-cyan">Ini ekosistem digital Masisir.</span>
           </h2>
-          <p className="text-sm text-slate-400 leading-relaxed mb-8">
-            Satu sistem yang menggabungkan AI assistant, knowledge base, informasi komunitas, dan tools produktivitas — semuanya dirancang dari nol untuk konteks Masisir di Mesir.
+          <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-6">
+            Satu sistem yang menggabungkan AI assistant, knowledge base, informasi komunitas, dan tools produktivitas — dirancang dari nol untuk konteks Masisir di Mesir.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {pillars.map((p, i) => {
               const Icon = p.icon;
               return (
-                <div key={i} className="flex items-start gap-3">
-                  <div className={`mt-0.5 w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${i % 2 === 0 ? 'bg-purple-500/10 text-purple-400' : 'bg-cyan-500/10 text-cyan-400'}`}>
-                    <Icon size={15} />
+                <div key={i} className="flex items-start gap-2.5">
+                  <div className={`mt-0.5 w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 ${i % 2 === 0 ? 'bg-purple-500/10 text-purple-400' : 'bg-cyan-500/10 text-cyan-400'}`}>
+                    <Icon size={13} />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-white">{p.title}</p>
-                    <p className="text-xs text-slate-500 leading-relaxed mt-0.5">{p.desc}</p>
+                    <p className="text-xs font-semibold text-white font-display">{p.title}</p>
+                    <p className="text-[11px] text-muted-foreground leading-relaxed mt-0.5">{p.desc}</p>
                   </div>
                 </div>
               );

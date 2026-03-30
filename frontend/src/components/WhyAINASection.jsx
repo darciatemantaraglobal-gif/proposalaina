@@ -18,59 +18,58 @@ const comparisons = [
 ];
 
 const WhyAINASection = () => (
-  <section className="bg-[#050509] py-8 md:py-20 px-4 md:px-6">
-    <div className="max-w-5xl mx-auto">
+  <section className="relative bg-[#050509] py-8 md:py-20 px-4 md:px-6 overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
+    <div className="pointer-events-none absolute left-0 bottom-0 h-[350px] w-[350px] rounded-full blur-[120px]" style={{ background: 'hsl(185 80% 55% / 0.06)' }} />
+
+    <div className="relative z-10 max-w-5xl mx-auto">
       <div className="mb-5 md:mb-14">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-cyan-400">Keunggulan</span>
-        <h2 className="mt-2 text-2xl md:text-4xl font-bold text-white leading-tight">
+        <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
+          <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-cyan-300">Keunggulan</span>
+        </div>
+        <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
           Kenapa AINA, bukan{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">AI biasa?</span>
+          <span className="text-gradient-purple-cyan">AI biasa?</span>
         </h2>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-12 items-start">
         {/* Left: Key differentiators */}
-        <div className="space-y-3 md:space-y-4">
+        <div className="space-y-3">
           {points.map((p, i) => {
             const Icon = p.icon;
             return (
               <div key={i} className="flex items-start gap-3 group">
-                <div className={`mt-0.5 w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 border transition-colors ${i % 2 === 0 ? 'bg-purple-500/8 border-purple-500/20 text-purple-400 group-hover:bg-purple-500/15' : 'bg-cyan-500/8 border-cyan-500/20 text-cyan-400 group-hover:bg-cyan-500/15'}`}>
-                  <Icon size={16} />
+                <div className={`mt-0.5 w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 border transition-all ${i % 2 === 0 ? 'bg-purple-500/8 border-purple-500/20 text-purple-400 group-hover:bg-purple-500/15 group-hover:border-purple-500/35' : 'bg-cyan-500/8 border-cyan-500/20 text-cyan-400 group-hover:bg-cyan-500/15 group-hover:border-cyan-500/35'}`}>
+                  <Icon size={14} />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">{p.title}</p>
-                  <p className="text-xs text-slate-500 leading-relaxed mt-0.5">{p.desc}</p>
+                  <p className="text-sm font-semibold text-white font-display">{p.title}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{p.desc}</p>
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Right: Comparison cards (bukan tabel) */}
+        {/* Right: Comparison cards */}
         <div className="space-y-2">
-          {/* Header labels */}
           <div className="flex items-center gap-2 px-1 mb-3">
             <div className="flex-1" />
             <span className="text-[10px] font-bold text-purple-300 uppercase tracking-wider w-24 text-center">AINA</span>
-            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider w-24 text-center">AI Umum</span>
+            <span className="text-[10px] font-bold text-muted-foreground/50 uppercase tracking-wider w-24 text-center">AI Umum</span>
           </div>
 
           {comparisons.map((row, i) => (
-            <div key={i} className="flex items-center gap-2 bg-[#0c0c14] border border-purple-500/20 rounded-xl px-3 py-2.5">
-              {/* Aspect label */}
-              <span className="text-[11px] text-slate-500 font-medium flex-1 min-w-0">{row.aspect}</span>
-
-              {/* AINA pill */}
+            <div key={i} className="flex items-center gap-2 bg-[#0f0f18]/80 backdrop-blur-sm border border-purple-500/20 rounded-xl px-3 py-2.5 hover:border-purple-500/35 transition-colors">
+              <span className="text-[11px] text-muted-foreground font-medium flex-1 min-w-0">{row.aspect}</span>
               <div className="flex items-center gap-1 w-24 justify-center bg-emerald-500/8 border border-emerald-500/20 rounded-lg px-2 py-1 flex-shrink-0">
                 <CheckCircle2 size={10} className="text-emerald-400 flex-shrink-0" />
                 <span className="text-[10px] text-emerald-300 font-medium leading-tight text-center">{row.aina}</span>
               </div>
-
-              {/* Generic pill */}
-              <div className="flex items-center gap-1 w-24 justify-center bg-slate-800/50 border border-purple-500/12 rounded-lg px-2 py-1 flex-shrink-0">
-                <X size={10} className="text-slate-600 flex-shrink-0" />
-                <span className="text-[10px] text-slate-500 font-medium leading-tight text-center">{row.generic}</span>
+              <div className="flex items-center gap-1 w-24 justify-center bg-[#13121f] border border-purple-500/12 rounded-lg px-2 py-1 flex-shrink-0">
+                <X size={10} className="text-muted-foreground/40 flex-shrink-0" />
+                <span className="text-[10px] text-muted-foreground/50 font-medium leading-tight text-center">{row.generic}</span>
               </div>
             </div>
           ))}
