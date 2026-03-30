@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Play, Sparkles, Menu, X, ArrowRight, GitMerge } from "lucide-react";
+import { Menu, X, ArrowRight, GitMerge } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -126,16 +126,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen bg-[#050509] overflow-hidden pt-20 pb-14 md:pt-28 md:pb-20 px-6 md:px-8 flex flex-col items-center justify-center">
-      <style>
-        {`
-          @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
-          .font-futuristic {
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.05em;
-          }
-        `}
-      </style>
-
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-purple-900/20 rounded-full blur-[120px] opacity-60" />
         <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-cyan-900/10 rounded-full blur-[100px] opacity-50" />
@@ -144,83 +134,25 @@ const HeroSection = () => {
 
       <Navbar />
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-purple-500/30 backdrop-blur-sm mb-6 md:mb-8 shadow-[0_0_15px_-5px_rgba(168,85,247,0.5)]">
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
-          </span>
-          <span className="text-[10px] md:text-xs font-bold text-purple-200 tracking-wide">
-            AI ASSISTANT & DIGITAL SYSTEM FOR MASISIR
-          </span>
-        </div>
+      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+        {/* Hero PNG */}
+        <img
+          src="/aina-hero.png"
+          alt="AINA — Asisten Pintar Khusus Mahasiswa Indonesia di Mesir"
+          className="w-full max-w-xs md:max-w-sm lg:max-w-md mx-auto mb-10 md:mb-12 select-none pointer-events-none"
+          draggable={false}
+        />
 
-        {/* Headline */}
-        <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.1] font-futuristic uppercase">
-          AINA{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-cyan-300">
-            AI ASSISTANT
-          </span>
-          <br />
-          <span
-            className="text-lg md:text-3xl lg:text-4xl text-slate-300 font-normal normal-case"
-            style={{ fontFamily: "sans-serif", letterSpacing: "0.01em" }}
-          >
-            Sistem digital yang paham konteks Masisir bukan AI generik.
-          </span>
-        </h1>
-
-        {/* Subtext */}
-        <p className="text-base md:text-xl text-slate-400 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-2">
-          AINA menggabungkan AI Assistant, Knowledge Base Masisir, informasi komunitas, dan tools produktivitas{" "}
-          <span className="text-slate-200 font-medium">
-            dalam satu ekosistem yang sudah berjalan dan terus berkembang.
-          </span>
-        </p>
-
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 w-full px-2 md:px-0 mb-10">
-          <button
-            onClick={() => scrollTo("#fitur")}
-            className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-white text-[#050509] rounded-full font-bold text-sm md:text-base shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.4)] hover:scale-105 transition-all transform relative overflow-hidden group"
-          >
-            <span className="relative z-10">Pelajari AINA</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-100 to-cyan-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </button>
-
-          <button
-            onClick={() => scrollTo("#fitur")}
-            className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-white/5 border border-purple-500/25 hover:bg-white/10 text-white rounded-full font-semibold text-sm md:text-base flex items-center justify-center gap-2.5 transition-all group backdrop-blur-sm"
-          >
-            <div className="w-5 h-5 md:w-6 md:h-6 rounded-full border border-purple-500/30 flex items-center justify-center group-hover:bg-purple-500 group-hover:border-purple-500 transition-all">
-              <Play size={9} fill="currentColor" className="ml-0.5" />
-            </div>
-            <span>Lihat Fitur</span>
-          </button>
-
-          <a
-            href="https://wa.me/6281311506025?text=Halo%2C%20saya%20ingin%20berkolaborasi%20dengan%20AINA."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-purple-500/10 border border-purple-500/30 hover:bg-purple-500/20 text-white rounded-full font-semibold text-sm md:text-base flex items-center justify-center gap-2 transition-all backdrop-blur-sm"
-          >
-            <GitMerge size={13} className="text-purple-400" />
-            <span>Kolaborasi Bersama AINA</span>
-          </a>
-        </div>
-
-        {/* Tags */}
-        <div className="flex flex-wrap justify-center gap-2 md:gap-3 opacity-80 px-2">
-          {["Administrasi", "Akademik", "Kesehatan", "Lokasi & Navigasi", "Produktivitas"].map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1.5 rounded-lg bg-[#1a1a24] border border-purple-500/15 text-[10px] md:text-xs font-medium text-slate-400 uppercase tracking-wider"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        {/* CTA */}
+        <a
+          href="https://wa.me/6281311506025?text=Halo%2C%20saya%20ingin%20berkolaborasi%20dengan%20AINA."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white rounded-full font-bold text-base flex items-center gap-2.5 transition-all shadow-[0_0_30px_-5px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] hover:scale-105 transform"
+        >
+          <GitMerge size={16} className="text-purple-200" />
+          Kolaborasi Bersama AINA
+        </a>
       </div>
     </section>
   );
