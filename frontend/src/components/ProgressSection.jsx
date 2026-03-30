@@ -92,7 +92,7 @@ const ProgressSection = () => (
     <div className="relative z-10 max-w-5xl mx-auto">
 
       {/* Header */}
-      <div className="mb-6 md:mb-12">
+      <div className="mb-6 md:mb-12 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
           <span className="relative flex h-1.5 w-1.5">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
@@ -101,10 +101,10 @@ const ProgressSection = () => (
           <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-300">Status Sistem — Live</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
-          AINA sudah dibangun, diuji, dan{' '}
-          <span className="text-gradient-purple-cyan">berjalan secara nyata.</span>
+          Dibangun. Diuji.{' '}
+          <span className="text-gradient-purple-cyan">Berjalan sekarang.</span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl">Bukan mockup, bukan prototipe. Sistem sudah beroperasi dan terus disempurnakan setiap harinya.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Bukan mockup atau prototipe. Sistem aktif beroperasi dan terus disempurnakan.</p>
       </div>
 
       {/* Stats */}

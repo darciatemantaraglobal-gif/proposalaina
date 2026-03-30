@@ -78,10 +78,10 @@ const SolutionSection = () => (
           </div>
           <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-3 font-display">
             AINA bukan chatbot.{' '}
-            <span className="text-gradient-purple-cyan">Ini ekosistem digital Masisir yang sudah hidup.</span>
+            <span className="text-gradient-purple-cyan">Ini ekosistem digital Masisir.</span>
           </h2>
           <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-4">
-            Lima lapisan sistem dalam satu platform — AI Assistant, Knowledge Base, Informasi Komunitas, Ruang Diskusi, dan Tools Produktivitas. Semuanya dirancang dari nol untuk konteks kehidupan Masisir di Mesir.
+            Lima lapisan dalam satu platform — AI Assistant, Knowledge Base, Informasi, Diskusi, dan Tools Produktivitas. Dibangun dari nol untuk konteks Masisir.
           </p>
 
           {/* Differentiators */}

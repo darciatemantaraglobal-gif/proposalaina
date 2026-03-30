@@ -51,7 +51,7 @@ const FeaturesSection = () => (
     <div className="relative z-10 max-w-5xl mx-auto">
 
       {/* Header */}
-      <div className="mb-6 md:mb-12">
+      <div className="mb-6 md:mb-12 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
           <span className="relative flex h-1.5 w-1.5">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
@@ -60,10 +60,10 @@ const FeaturesSection = () => (
           <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">12 Fitur — Semua Live</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
-          Fitur yang sudah berjalan,{' '}
-          <span className="text-gradient-purple-cyan">bukan yang masih direncanakan.</span>
+          Sudah berjalan.{' '}
+          <span className="text-gradient-purple-cyan">Bukan yang masih direncanakan.</span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl">Dibangun berlapis: core AI engine di fondasi, fitur ekosistem di atasnya.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Core AI engine di fondasi. Ekosistem fitur Masisir di atasnya.</p>
       </div>
 
       {/* Core Features */}

@@ -154,15 +154,15 @@ const SystemArchitectureSection = () => (
     <div className="relative z-10 max-w-5xl mx-auto">
 
       {/* Header */}
-      <div className="mb-6 md:mb-12">
+      <div className="mb-6 md:mb-12 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
           <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Arsitektur Sistem</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
-          Sistem yang dibangun berlapis —{' '}
-          <span className="text-gradient-purple-cyan">setiap layer punya peran spesifik.</span>
+          Dibangun berlapis.{' '}
+          <span className="text-gradient-purple-cyan">Setiap layer punya peran spesifik.</span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl">Di balik antarmuka yang sederhana, ada arsitektur yang dirancang serius. Buka tiap layer untuk melihat lebih dalam.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Di balik tampilan yang bersih, ada arsitektur yang serius. Buka tiap layer untuk lebih dalam.</p>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-5 md:gap-8 items-start">

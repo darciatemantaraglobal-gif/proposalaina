@@ -56,15 +56,15 @@ const HowItWorksSection = () => (
     <div className="pointer-events-none absolute left-0 bottom-0 h-[300px] w-[300px] rounded-full blur-[120px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
 
     <div className="relative z-10 max-w-5xl mx-auto">
-      <div className="mb-6 md:mb-12">
+      <div className="mb-6 md:mb-12 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
           <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Cara Kerja</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
           Dari pertanyaan ke jawaban —{' '}
-          <span className="text-gradient-purple-cyan">5 langkah yang terjadi di dalam AINA.</span>
+          <span className="text-gradient-purple-cyan">dalam 5 langkah.</span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl">Bukan jawaban asal generate. Ada proses pemahaman konteks, seleksi sumber, dan verifikasi di setiap jawaban.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Bukan asal generate. Ada pemahaman konteks, seleksi sumber, dan konfirmasi di setiap jawaban.</p>
       </div>
 
       {/* Main flow — desktop horizontal timeline */}

@@ -112,12 +112,12 @@ const ClosingSection = () => (
           <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
             <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Ambil Langkah Selanjutnya</span>
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-3 font-display">
+          <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-3 font-display text-center lg:text-left">
             AINA sudah berjalan.{' '}
-            <span className="text-gradient-purple-cyan">Sekarang giliran kamu ikut di dalamnya.</span>
+            <span className="text-gradient-purple-cyan">Giliran kamu ikut di dalamnya.</span>
           </h2>
-          <p className="text-xs md:text-sm text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
-            Ada banyak cara untuk menjadi bagian dari AINA — dari menggunakannya sehari-hari, berkontribusi ke knowledge base, hingga kolaborasi lebih dalam bersama tim.
+          <p className="text-xs md:text-sm text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0 text-center lg:text-left">
+            Pakai, kontribusi, atau kolaborasi — semua punya tempatnya di AINA.
           </p>
         </div>
 

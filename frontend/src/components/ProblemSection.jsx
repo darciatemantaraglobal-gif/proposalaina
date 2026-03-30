@@ -41,7 +41,7 @@ const ProblemSection = () => (
     <div className="pointer-events-none absolute bottom-0 right-0 h-[300px] w-[300px] rounded-full blur-[120px]" style={{ background: 'hsl(270 60% 55% / 0.06)' }} />
 
     <div className="relative z-10 max-w-5xl mx-auto">
-      <div className="mb-5 md:mb-14">
+      <div className="mb-5 md:mb-14 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-red-400/25 bg-red-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
           <span className="relative flex h-1.5 w-1.5">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
@@ -50,10 +50,10 @@ const ProblemSection = () => (
           <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-red-300">Masalah Nyata</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
-          Lima masalah yang dihadapi Masisir{' '}
-          <span className="text-gradient-purple-cyan">setiap hari — tanpa solusi terpusat.</span>
+          Lima masalah nyata.{' '}
+          <span className="text-gradient-purple-cyan">Setiap hari. Tanpa solusi terpusat.</span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl">Bukan asumsi. Ini realita yang dialami ribuan mahasiswa Indonesia di Mesir.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Bukan asumsi. Ini yang dihadapi ribuan Masisir setiap tahun.</p>
       </div>
 
       {/* 2-col grid for first 4, last one full-width */}

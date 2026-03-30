@@ -76,15 +76,15 @@ const RoadmapSection = () => (
     <div className="relative z-10 max-w-5xl mx-auto">
 
       {/* Header */}
-      <div className="mb-6 md:mb-12">
+      <div className="mb-6 md:mb-12 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
           <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-cyan-300">Roadmap</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
-          Apa yang sedang dibangun,{' '}
-          <span className="text-gradient-purple-cyan">apa yang akan datang.</span>
+          Sekarang, selanjutnya,{' '}
+          <span className="text-gradient-purple-cyan">dan ke mana AINA menuju.</span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl">Roadmap yang jelas — dibedakan antara yang sedang dikerjakan, arah dekat, dan visi jangka panjang.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Tiga fase yang jelas — bukan roadmap dekoratif.</p>
       </div>
 
       {/* Phase blocks */}

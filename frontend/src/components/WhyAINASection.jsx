@@ -50,15 +50,15 @@ const WhyAINASection = () => (
     <div className="pointer-events-none absolute right-0 top-0 h-[300px] w-[300px] rounded-full blur-[120px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
 
     <div className="relative z-10 max-w-5xl mx-auto">
-      <div className="mb-6 md:mb-12">
+      <div className="mb-6 md:mb-12 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
           <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-cyan-300">Mengapa AINA Berbeda</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
-          Bukan soal siapa yang lebih canggih —{' '}
-          <span className="text-gradient-purple-cyan">tapi siapa yang paling relevan untuk Masisir.</span>
+          Bukan soal canggih.{' '}
+          <span className="text-gradient-purple-cyan">Tapi siapa yang paling paham Masisir.</span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl">AI umum bisa menjawab banyak hal. Tapi tidak ada yang mengerti konteks Masisir di Mesir seperti sistem yang memang dibangun untuk itu.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">AI umum bisa banyak hal. AINA dibangun khusus untuk satu konteks — dan itu bedanya.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-5 md:gap-8 items-start">

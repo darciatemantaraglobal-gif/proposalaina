@@ -14,7 +14,7 @@ const AppreciationSection = () => (
     <div className="pointer-events-none absolute right-1/4 top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full blur-[140px]" style={{ background: 'hsl(330 60% 55% / 0.06)' }} />
 
     <div className="relative z-10 max-w-5xl mx-auto">
-      <div className="mb-5 md:mb-14">
+      <div className="mb-5 md:mb-14 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-pink-400/30 bg-pink-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
           <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-pink-300">Apresiasi</span>
         </div>
@@ -24,7 +24,7 @@ const AppreciationSection = () => (
             punya makna.
           </span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl">AINA tumbuh karena ada orang-orang yang mau meluangkan waktu dan ilmunya.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Tumbuh karena ada yang mau meluangkan waktu dan ilmunya.</p>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-3 items-stretch">

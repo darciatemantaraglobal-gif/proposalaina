@@ -100,17 +100,17 @@ const PricingSection = () => {
       <div className="relative z-10 max-w-5xl mx-auto">
 
         {/* Header */}
-        <div className="mb-6 md:mb-12">
+        <div className="mb-6 md:mb-12 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
             <Zap size={11} className="text-purple-400" />
             <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Partnership Packages</span>
           </div>
           <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
-            Hadir di ekosistem digital Masisir —{' '}
-            <span className="text-gradient-purple-cyan">dengan paket yang tepat untuk skala bisnis kamu.</span>
+            Hadir di ekosistem Masisir —{' '}
+            <span className="text-gradient-purple-cyan">dengan paket yang tepat.</span>
           </h2>
-          <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl">
-            Partnership packages AINA dirancang untuk UMKM hingga korporat yang ingin menjangkau komunitas Masisir secara terukur. Semua paket dapat disesuaikan dengan kebutuhan spesifik.
+          <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">
+            Dari UMKM hingga korporat. Semua bisa disesuaikan.
           </p>
         </div>
 
