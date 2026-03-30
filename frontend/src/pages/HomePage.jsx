@@ -5,6 +5,7 @@ import SolutionSection from '../components/SolutionSection';
 import WhyAINASection from '../components/WhyAINASection';
 import FeaturesSection from '../components/FeaturesSection';
 import HowItWorksSection from '../components/HowItWorksSection';
+import SystemArchitectureSection from '../components/SystemArchitectureSection';
 import ProgressSection from '../components/ProgressSection';
 import RoadmapSection from '../components/RoadmapSection';
 import FundingSection from '../components/FundingSection';
@@ -21,6 +22,7 @@ const HomePage = () => {
       <WhyAINASection />
       <FeaturesSection />
       <HowItWorksSection />
+      <SystemArchitectureSection />
       <ProgressSection />
       <RoadmapSection />
       <FundingSection />

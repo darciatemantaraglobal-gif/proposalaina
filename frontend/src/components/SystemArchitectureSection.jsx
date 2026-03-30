@@ -1,70 +1,70 @@
 import React, { useState } from 'react';
-import { Database, Cpu, Link2, LayoutGrid, TrendingUp, ChevronDown, ChevronUp } from 'lucide-react';
+import { Database, Cpu, ShieldCheck, LayoutGrid, TrendingUp, ChevronDown, ChevronUp, ArrowRight } from 'lucide-react';
 
 const layers = [
   {
-    number: '01',
+    num: '01',
     icon: Database,
     label: 'Knowledge Layer',
-    title: 'Basis Pengetahuan yang Dikurasi',
+    title: 'Basis pengetahuan yang dikurasi',
     color: 'purple',
-    summary: 'AINA tidak menjawab dari memori AI kosong. Di baliknya ada knowledge base terstruktur yang diisi, diverifikasi, dan diperbarui oleh kontributor yang memahami konteks Masisir.',
+    summary: 'AINA tidak menjawab dari memori AI kosong. Di baliknya ada knowledge base terstruktur yang diisi, diverifikasi, dan diperbarui oleh kontributor yang memahami konteks Masisir secara langsung.',
     points: [
-      'Konten dikurasi khusus — prosedur visa, regulasi Azhar, kehidupan di Kairo',
-      'Diperbarui secara berkala seiring perubahan kondisi dan regulasi',
-      'Kontributor bisa menambahkan, mengoreksi, dan memperkaya data',
+      'Konten dikurasi khusus — prosedur visa, regulasi Azhar, kehidupan di Kairo, dan lebih banyak lagi',
+      'Diperbarui secara berkala seiring perubahan kondisi dan regulasi di lapangan',
+      'Kontributor Masisir bisa menambahkan, mengoreksi, dan memperkaya data',
     ],
     accent: 'Fondasi utama yang membuat jawaban AINA lebih akurat dari AI umum.',
   },
   {
-    number: '02',
+    num: '02',
     icon: Cpu,
     label: 'AI Response Layer',
-    title: 'Pemrosesan & Penyesuaian Jawaban',
+    title: 'Pemrosesan & penyesuaian jawaban',
     color: 'cyan',
-    summary: 'Pertanyaan user tidak langsung diteruskan ke AI begitu saja. AINA memproses konteks pertanyaan, menentukan jenis kebutuhan, lalu menyusun jawaban dalam format yang paling sesuai.',
+    summary: 'Pertanyaan user tidak langsung diteruskan ke AI begitu saja. AINA memproses konteks pertanyaan, menentukan jenis kebutuhan, lalu menyusun jawaban dalam format yang paling tepat.',
     points: [
       'Pertanyaan dikenali berdasarkan kategori: birokrasi, akademik, kehidupan, atau umum',
       'Format jawaban disesuaikan — langkah demi langkah, ringkasan, atau penjelasan singkat',
       'Gaya bahasa disesuaikan dengan cara Masisir berkomunikasi sehari-hari',
     ],
-    accent: 'Bukan sekadar "tempel pertanyaan, terima jawaban" — ada proses cerdas di tengahnya.',
+    accent: 'Ada proses cerdas di tengahnya — bukan sekadar tempel pertanyaan, terima jawaban.',
   },
   {
-    number: '03',
-    icon: Link2,
+    num: '03',
+    icon: ShieldCheck,
     label: 'Source & Confidence Layer',
-    title: 'Transparansi yang Membangun Kepercayaan',
+    title: 'Transparansi yang membangun kepercayaan',
     color: 'purple',
-    summary: 'Setiap jawaban AINA bisa dilengkapi dengan informasi sumber dan tingkat keyakinan sistem. Ini bukan fitur dekorasi — ini komitmen bahwa AINA tidak asal bicara.',
+    summary: 'Setiap jawaban AINA dilengkapi informasi sumber dan tingkat keyakinan sistem. Ini bukan fitur dekorasi — ini komitmen bahwa AINA tidak asal bicara.',
     points: [
-      'Indikator sumber: pengguna tahu darimana informasi itu berasal',
+      'Source attribution: pengguna tahu dari mana informasi itu berasal',
       'Confidence level: sistem jujur tentang seberapa yakin jawabannya',
-      'Pengguna bisa memverifikasi dan mempertanyakan — bukan harus asal percaya',
+      'Pengguna bisa memverifikasi — bukan harus percaya buta pada AI',
     ],
-    accent: 'Transparansi ini yang membedakan AINA dari AI yang sering terlihat yakin padahal salah.',
+    accent: 'Transparansi ini yang membedakan AINA dari AI yang sering yakin padahal salah.',
   },
   {
-    number: '04',
+    num: '04',
     icon: LayoutGrid,
     label: 'Product System Layer',
-    title: 'Ekosistem Fitur yang Terintegrasi',
+    title: 'Ekosistem fitur yang terintegrasi',
     color: 'cyan',
     summary: 'AINA bukan chatbot tunggal yang berdiri sendiri. Semua fitur — chat, berita, diskusi, produktivitas, saved answers, contributor flow — bekerja dalam satu sistem yang saling terhubung.',
     points: [
-      'Dashboard terpadu: satu tempat untuk semua kebutuhan Masisir',
+      'Dashboard terpadu: satu tempat untuk semua kebutuhan digital Masisir',
       'Fitur-fitur saling melengkapi — jawaban bisa disimpan, sumber bisa didiskusikan',
       'Admin & contributor memiliki akses terpisah untuk menjaga kualitas konten',
     ],
     accent: 'Setiap fitur bukan add-on terpisah — semuanya bagian dari pengalaman yang utuh.',
   },
   {
-    number: '05',
+    num: '05',
     icon: TrendingUp,
-    label: 'Growth Layer',
-    title: 'Dirancang untuk Terus Berkembang',
+    label: 'Growth System Layer',
+    title: 'Dirancang untuk terus berkembang',
     color: 'purple',
-    summary: 'Fondasi teknis AINA dirancang agar bisa diperluas tanpa harus dibangun ulang dari nol. Setiap fitur baru bisa ditambahkan di atas sistem yang sudah ada.',
+    summary: 'Fondasi teknis AINA dirancang agar bisa diperluas tanpa harus dibangun ulang. Setiap fitur baru bisa ditambahkan di atas sistem yang sudah ada — dan setiap kontributor baru memperkuat keseluruhan sistem.',
     points: [
       'Arsitektur modular — fitur baru tidak mengganggu yang sudah berjalan',
       'Knowledge base bisa diperluas ke topik baru sesuai kebutuhan komunitas',
@@ -81,68 +81,61 @@ const LayerCard = ({ layer, isLast }) => {
 
   return (
     <div className="relative">
-      {/* Vertical connector line */}
       {!isLast && (
-        <div className="absolute left-[27px] top-[56px] bottom-0 w-px bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
+        <div className="absolute left-[19px] top-[52px] bottom-[-12px] w-px pointer-events-none" style={{ background: 'linear-gradient(to bottom, hsl(270 60% 55% / 0.2), transparent)' }} />
       )}
 
       <div
-        className={`relative bg-[#0e0e12] border rounded-2xl transition-all duration-300 hover:bg-[#13131a] cursor-pointer ${open ? 'shadow-xl' : ''}`}
-        style={{ borderColor: open ? (isPurple ? 'rgba(168,85,247,0.4)' : 'rgba(34,211,238,0.4)') : 'rgba(255,255,255,0.06)' }}
+        className={`relative backdrop-blur-sm border rounded-2xl transition-all duration-300 cursor-pointer ${
+          open
+            ? isPurple
+              ? 'bg-purple-500/6 border-purple-500/30'
+              : 'bg-cyan-500/5 border-cyan-500/25'
+            : 'bg-[#0f0f18]/80 border-purple-500/15 hover:border-purple-500/25 hover:bg-[#0f0f18]'
+        }`}
         onClick={() => setOpen(!open)}
       >
-        <div className="p-5 flex items-start gap-4">
-          {/* Icon node */}
-          <div className={`w-14 h-14 rounded-xl flex flex-col items-center justify-center flex-shrink-0 border transition-colors ${
+        <div className="p-3 md:p-4 flex items-start gap-3">
+          {/* Icon */}
+          <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 border transition-all ${
             open
-              ? isPurple ? 'bg-purple-500/20 border-purple-500/40 text-purple-300' : 'bg-cyan-500/20 border-cyan-500/40 text-cyan-300'
-              : 'bg-white/3 border-white/8 text-slate-500'
+              ? isPurple ? 'bg-purple-500/15 border-purple-500/30 text-purple-400' : 'bg-cyan-500/15 border-cyan-500/30 text-cyan-400'
+              : 'bg-[#13121f] border-purple-500/12 text-muted-foreground'
           }`}>
-            <Icon size={20} />
-            <span className={`text-[9px] font-bold mt-1 ${open ? (isPurple ? 'text-purple-400' : 'text-cyan-400') : 'text-slate-600'}`}>
-              {layer.number}
-            </span>
+            <Icon size={15} />
           </div>
 
           {/* Content */}
           <div className="flex-1 min-w-0">
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <span className={`text-[10px] font-bold tracking-widest uppercase ${isPurple ? 'text-purple-500' : 'text-cyan-500'}`}>
-                  {layer.label}
-                </span>
-                <h4 className="text-base font-bold text-white mt-0.5 leading-snug">
-                  {layer.title}
-                </h4>
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className={`text-[9px] font-black tracking-[0.2em] ${isPurple ? 'text-purple-500/70' : 'text-cyan-500/70'}`}>{layer.num}</span>
+                <span className={`text-[10px] font-bold uppercase tracking-wider ${isPurple ? 'text-purple-400' : 'text-cyan-400'}`}>{layer.label}</span>
               </div>
-              <div className={`flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center border transition-colors ${
-                open ? 'bg-white/8 border-white/15' : 'bg-transparent border-white/5'
-              }`}>
-                {open
-                  ? <ChevronUp size={14} className="text-slate-400" />
-                  : <ChevronDown size={14} className="text-slate-600" />
-                }
+              <div className={`flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center transition-colors ${open ? 'bg-white/8' : 'bg-transparent'}`}>
+                {open ? <ChevronUp size={12} className="text-slate-400" /> : <ChevronDown size={12} className="text-slate-600" />}
               </div>
             </div>
-            <p className="text-sm text-slate-400 mt-2 leading-relaxed">{layer.summary}</p>
+            <h4 className="text-sm font-bold text-white mt-0.5 font-display leading-snug">{layer.title}</h4>
+            <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{layer.summary}</p>
           </div>
         </div>
 
-        {/* Expanded content */}
+        {/* Expanded */}
         <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-[300px]' : 'max-h-0'}`}>
-          <div className="px-4 pb-4 pt-1 ml-[56px] md:ml-[72px]">
-            <ul className="space-y-2.5 mb-4">
+          <div className="px-3 md:px-4 pb-4 pt-0 ml-12">
+            <ul className="space-y-2 mb-3 border-l-2 border-purple-500/15 pl-3">
               {layer.points.map((point, i) => (
-                <li key={i} className="flex items-start gap-2.5">
-                  <div className={`mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 ${isPurple ? 'bg-purple-500' : 'bg-cyan-400'}`} />
-                  <span className="text-xs text-slate-300 leading-relaxed">{point}</span>
+                <li key={i} className="flex items-start gap-2">
+                  <div className={`mt-1.5 w-1 h-1 rounded-full flex-shrink-0 ${isPurple ? 'bg-purple-400' : 'bg-cyan-400'}`} />
+                  <span className="text-xs text-foreground/70 leading-relaxed">{point}</span>
                 </li>
               ))}
             </ul>
-            <div className={`inline-flex items-center gap-2 text-[11px] font-medium px-3 py-2 rounded-lg border ${
+            <div className={`inline-flex items-center gap-1.5 text-[11px] font-medium px-3 py-1.5 rounded-xl border ${
               isPurple ? 'bg-purple-500/8 border-purple-500/20 text-purple-300' : 'bg-cyan-500/8 border-cyan-500/20 text-cyan-300'
             }`}>
-              <span className="opacity-70">→</span>
+              <ArrowRight size={10} />
               <span>{layer.accent}</span>
             </div>
           </div>
@@ -152,86 +145,74 @@ const LayerCard = ({ layer, isLast }) => {
   );
 };
 
-const SystemArchitectureSection = () => {
-  return (
-    <section className="relative bg-[#050509] py-16 md:py-24 px-4 md:px-6 overflow-hidden font-sans text-slate-300">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-900/8 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-900/6 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTM5LCA5MiwgMjQ2LCAwLjA1KSIvPjwvc3ZnPg==')] opacity-40 pointer-events-none" />
+const SystemArchitectureSection = () => (
+  <section className="relative bg-[#050509] py-8 md:py-20 px-4 md:px-6 overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
+    <div className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full blur-[140px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
+    <div className="pointer-events-none absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full blur-[120px]" style={{ background: 'hsl(185 80% 55% / 0.05)' }} />
 
-      <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="mb-10 md:mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-          <div>
-            <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-purple-900/20 border border-purple-500/20 backdrop-blur-sm">
-              <Cpu size={12} className="text-purple-400" />
-              <span className="text-[10px] md:text-xs text-purple-200 font-bold uppercase tracking-widest">
-                Mesin di Balik AINA
-              </span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-              Sistem yang Dibangun{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-                dengan Serius.
-              </span>
-            </h2>
-          </div>
-          <p className="text-sm md:text-base text-slate-400 max-w-sm leading-relaxed lg:text-right border-l-2 lg:border-l-0 lg:border-r-2 border-purple-500/30 pl-4 lg:pl-0 lg:pr-4">
-            AINA dibangun berlapis — setiap lapisan punya peran spesifik yang saling menguatkan. Klik setiap layer untuk melihat lebih dalam.
-          </p>
+    <div className="relative z-10 max-w-5xl mx-auto">
+
+      {/* Header */}
+      <div className="mb-6 md:mb-12">
+        <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
+          <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Arsitektur Sistem</span>
+        </div>
+        <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
+          Sistem yang dibangun berlapis —{' '}
+          <span className="text-gradient-purple-cyan">setiap layer punya peran spesifik.</span>
+        </h2>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl">Di balik antarmuka yang sederhana, ada arsitektur yang dirancang serius. Buka tiap layer untuk melihat lebih dalam.</p>
+      </div>
+
+      <div className="flex flex-col lg:flex-row gap-5 md:gap-8 items-start">
+
+        {/* Left: Accordion */}
+        <div className="flex-1 space-y-3">
+          {layers.map((layer, i) => (
+            <LayerCard key={i} layer={layer} isLast={i === layers.length - 1} />
+          ))}
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-6 md:gap-10 items-start">
-          {/* Left: Layer accordion */}
-          <div className="flex-1 space-y-3">
-            {layers.map((layer, i) => (
-              <LayerCard key={i} layer={layer} isLast={i === layers.length - 1} />
-            ))}
-          </div>
-
-          {/* Right: Visual stack diagram */}
-          <div className="w-full lg:w-[280px] flex-shrink-0 sticky top-24">
-            <div className="bg-[#0a0a12] border border-white/8 rounded-2xl p-5 overflow-hidden">
-              <p className="text-[10px] text-slate-500 uppercase tracking-widest font-semibold mb-4">Struktur Sistem</p>
-              <div className="space-y-2">
-                {layers.map((layer, i) => {
-                  const Icon = layer.icon;
-                  const isPurple = layer.color === 'purple';
-                  return (
-                    <div
-                      key={i}
-                      className={`flex items-center gap-3 p-3 rounded-xl border transition-all ${
-                        isPurple
-                          ? 'bg-purple-500/5 border-purple-500/15'
-                          : 'bg-cyan-500/5 border-cyan-500/15'
-                      }`}
-                    >
-                      <div className={`w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 ${
+        {/* Right: Visual stack — sticky on desktop */}
+        <div className="w-full lg:w-[220px] flex-shrink-0 lg:sticky lg:top-24">
+          <div className="bg-[#0f0f18]/80 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-3 overflow-hidden">
+            <p className="text-[9px] text-muted-foreground/40 uppercase tracking-[0.2em] font-bold mb-3">Struktur Sistem</p>
+            <div className="space-y-0">
+              {layers.map((layer, i) => {
+                const Icon = layer.icon;
+                const isPurple = layer.color === 'purple';
+                const isLast = i === layers.length - 1;
+                return (
+                  <div key={i} className="relative">
+                    {!isLast && (
+                      <div className="absolute left-[17px] top-[34px] h-[10px] w-px bg-purple-500/15" />
+                    )}
+                    <div className={`flex items-center gap-2.5 p-2 rounded-xl border mb-1.5 last:mb-0 ${
+                      isPurple ? 'bg-purple-500/5 border-purple-500/15' : 'bg-cyan-500/5 border-cyan-500/12'
+                    }`}>
+                      <div className={`w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0 ${
                         isPurple ? 'bg-purple-500/15 text-purple-400' : 'bg-cyan-500/15 text-cyan-400'
                       }`}>
-                        <Icon size={13} />
+                        <Icon size={11} />
                       </div>
                       <div>
-                        <span className={`text-[9px] font-bold tracking-wider ${isPurple ? 'text-purple-500' : 'text-cyan-500'}`}>
-                          {layer.number}
-                        </span>
-                        <p className="text-xs font-semibold text-white leading-tight">{layer.label}</p>
+                        <span className={`text-[8px] font-black tracking-wider block ${isPurple ? 'text-purple-500/60' : 'text-cyan-500/60'}`}>{layer.num}</span>
+                        <p className="text-[10px] font-semibold text-white leading-none">{layer.label}</p>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
-              <div className="mt-4 pt-4 border-t border-white/5">
-                <p className="text-[10px] text-slate-600 leading-relaxed text-center">
-                  Setiap lapisan saling menopang lapisan di atasnya.
-                </p>
-              </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mt-3 pt-3 border-t border-purple-500/10">
+              <p className="text-[9px] text-muted-foreground/30 leading-relaxed text-center">Setiap layer menopang layer di atasnya</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default SystemArchitectureSection;
