@@ -1,5 +1,5 @@
 import React from 'react';
-import { GitMerge, Handshake, Heart, BookOpen, Bot, Send, User, ArrowRight } from 'lucide-react';
+import { GitMerge, Handshake, Heart, BookOpen, Bot, Send, User } from 'lucide-react';
 
 const waBase = 'https://wa.me/6281311506025?text=';
 
@@ -137,42 +137,26 @@ const ClosingSection = () => (
         </div>
       </div>
 
-      {/* CTA Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-12 md:mb-20">
+      {/* CTA Buttons */}
+      <div className="flex flex-wrap justify-center gap-3 mb-12 md:mb-20">
         {actions.map((action, i) => {
           const Icon = action.icon;
-          const isPurple = action.color === 'purple';
           return (
             <a
               key={i}
               href={action.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group flex flex-col rounded-2xl p-4 border transition-all duration-300 hover:-translate-y-0.5 ${
+              className={`group inline-flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm font-semibold transition-all duration-200 ${
                 action.featured
-                  ? 'bg-gradient-to-br from-[#1a0e30]/90 to-[#0f0f18]/90 border-purple-500/35 glow-purple-sm'
-                  : isPurple
-                    ? 'bg-[#0f0f18]/80 border-purple-500/20 hover:border-purple-500/35 backdrop-blur-sm'
-                    : 'bg-[#0f0f18]/80 border-cyan-500/15 hover:border-cyan-500/25 backdrop-blur-sm'
+                  ? 'bg-purple-600/20 border-purple-500/45 text-white hover:bg-purple-600/30 hover:border-purple-400/60'
+                  : action.color === 'cyan'
+                    ? 'bg-transparent border-cyan-500/25 text-cyan-300/80 hover:border-cyan-400/40 hover:text-cyan-200 hover:bg-cyan-500/5'
+                    : 'bg-transparent border-purple-500/20 text-purple-300/80 hover:border-purple-400/35 hover:text-purple-200 hover:bg-purple-500/5'
               }`}
             >
-              <div className={`w-8 h-8 rounded-xl flex items-center justify-center mb-3 border flex-shrink-0 ${
-                action.featured
-                  ? 'bg-gradient-purple text-white border-purple-500/30 shadow-lg shadow-purple-500/25'
-                  : isPurple
-                    ? 'bg-purple-500/10 border-purple-500/20 text-purple-400'
-                    : 'bg-cyan-500/10 border-cyan-500/20 text-cyan-400'
-              }`}>
-                <Icon size={14} />
-              </div>
-              <h3 className="text-sm font-bold text-white mb-1 font-display">{action.title}</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed flex-1 mb-3">{action.desc}</p>
-              <div className={`flex items-center gap-1.5 text-xs font-semibold ${
-                action.featured ? 'text-purple-300' : isPurple ? 'text-purple-400/70' : 'text-cyan-400/70'
-              }`}>
-                {action.cta}
-                <ArrowRight size={11} className="group-hover:translate-x-0.5 transition-transform" />
-              </div>
+              <Icon size={13} className="flex-shrink-0" />
+              {action.cta}
             </a>
           );
         })}
