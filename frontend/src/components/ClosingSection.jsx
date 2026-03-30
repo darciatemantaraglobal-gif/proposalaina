@@ -10,7 +10,7 @@ const actions = [
     desc: 'Lihat semua fitur, arsitektur sistem, dan cara AINA bekerja.',
     cta: 'Pelajari Sekarang',
     color: 'purple',
-    href: `${waBase}${encodeURIComponent('Halo, saya ingin mengetahui lebih dalam tentang AINA.')}`,
+    href: 'https://ainalabs.pro',
     style: 'ghost',
   },
   {
@@ -19,7 +19,7 @@ const actions = [
     desc: 'Isi knowledge base, moderasi diskusi, atau bantu memperkuat ekosistem AINA.',
     cta: 'Mulai Berkontribusi',
     color: 'purple',
-    href: `${waBase}${encodeURIComponent('Halo, saya ingin menjadi kontributor AINA.')}`,
+    href: 'https://ainalabs.pro',
     style: 'gradient',
     featured: true,
   },

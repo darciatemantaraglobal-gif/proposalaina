@@ -148,10 +148,20 @@ const HeroSection = () => {
           href="https://wa.me/6281311506025?text=Halo%2C%20saya%20ingin%20berkolaborasi%20dengan%20AINA."
           target="_blank"
           rel="noopener noreferrer"
-          className="px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white rounded-full font-bold text-base flex items-center gap-2.5 transition-all shadow-[0_0_30px_-5px_rgba(168,85,247,0.6)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.8)] hover:scale-105 transform"
+          className="group relative inline-flex items-center gap-2.5 px-5 py-2.5 font-bold text-white transition-all duration-300 overflow-hidden"
+          style={{ borderRadius: '4px' }}
         >
-          <GitMerge size={16} className="text-purple-200" />
-          Kolaborasi Bersama AINA
+          <span className="absolute inset-0 bg-[#0c0a1a] border border-purple-500/45 group-hover:border-purple-400/75 transition-all duration-300" style={{ borderRadius: '4px' }} />
+          <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: 'linear-gradient(135deg, hsl(270 60% 55% / 0.18), transparent)', borderRadius: '4px' }} />
+          <span className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-purple-400/70 to-transparent" />
+          <span className="absolute top-[3px] left-[3px] w-2.5 h-2.5 border-t border-l border-purple-400/50" />
+          <span className="absolute top-[3px] right-[3px] w-2.5 h-2.5 border-t border-r border-purple-400/50" />
+          <span className="absolute bottom-[3px] left-[3px] w-2.5 h-2.5 border-b border-l border-purple-400/50" />
+          <span className="absolute bottom-[3px] right-[3px] w-2.5 h-2.5 border-b border-r border-purple-400/50" />
+          <span className="relative flex items-center gap-2.5">
+            <GitMerge size={13} className="text-purple-300 group-hover:text-purple-200 transition-colors" />
+            <span className="text-xs tracking-[0.15em] uppercase">Kolaborasi Bersama AINA</span>
+          </span>
         </a>
       </div>
     </section>

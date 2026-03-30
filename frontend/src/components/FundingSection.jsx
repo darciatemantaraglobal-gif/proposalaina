@@ -11,7 +11,7 @@ const ways = [
     desc: 'Gunakan, beri feedback, ajak yang lain. Setiap user baru memperkuat ekosistem.',
     points: ['Gunakan fitur dan share pengalaman', 'Ajak teman Masisir bergabung', 'Berikan feedback langsung'],
     color: 'purple',
-    waText: 'Halo, saya ingin mulai menggunakan AINA!',
+    href: 'https://ainalabs.pro',
     cta: 'Mulai Pakai AINA',
   },
   {
@@ -22,7 +22,7 @@ const ways = [
     points: ['Isi knowledge base dengan info valid', 'Koreksi informasi yang sudah ada', 'Dapat pengakuan sebagai kontributor aktif'],
     color: 'cyan',
     highlight: true,
-    waText: 'Halo, saya ingin menjadi kontributor knowledge base AINA.',
+    href: 'https://ainalabs.pro',
     cta: 'Jadi Kontributor',
   },
   {
@@ -32,7 +32,7 @@ const ways = [
     desc: 'Untuk organisasi atau individu yang ingin berperan lebih dalam pengembangan AINA.',
     points: ['Kolaborasi organisasi Masisir', 'Dukungan pengembangan sistem', 'Partnership konten dan layanan'],
     color: 'purple',
-    waText: 'Halo, saya ingin mendiskusikan kolaborasi dengan AINA.',
+    href: `https://wa.me/${phoneNumber}?text=${encodeURIComponent('Halo, saya ingin mendiskusikan kolaborasi dengan AINA.')}`,
     cta: 'Diskusi Kolaborasi',
   },
 ];
@@ -86,7 +86,7 @@ const FundingSection = () => (
               </ul>
 
               <a
-                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(way.waText)}`}
+                href={way.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-full py-2.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${way.highlight ? 'bg-gradient-purple text-white hover:opacity-90 shadow-lg shadow-purple-500/25' : 'bg-purple-500/10 hover:bg-purple-500/15 text-purple-300 border border-purple-500/20'}`}
