@@ -109,7 +109,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="px-5 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-slate-200 transition-colors shadow-[0_0_20px_-5px_rgba(255,255,255,0.3)] flex items-center gap-2"
           >
-            Dukung AINA <ArrowRight size={14} />
+            Kolaborasi <ArrowRight size={14} />
           </a>
         </div>
 
@@ -144,7 +144,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="w-full block text-center py-3 bg-purple-600 text-white font-bold rounded-xl shadow-lg shadow-purple-900/20"
             >
-              Dukung AINA
+              Kolaborasi
             </a>
           </div>
         </div>
@@ -261,9 +261,12 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-5xl mx-auto text-center mb-12 md:mb-24">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-purple-500/30 backdrop-blur-sm mb-6 md:mb-8 animate-fade-in-up shadow-[0_0_15px_-5px_rgba(168,85,247,0.5)]">
-          <Sparkles size={12} className="text-cyan-400" />
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+          </span>
           <span className="text-[10px] md:text-xs font-bold text-purple-200 tracking-wide">
-            DIGITAL SYSTEM FOR MASISIR
+            AI ASSISTANT & DIGITAL SYSTEM FOR MASISIR
           </span>
         </div>
 
@@ -275,25 +278,25 @@ const HeroSection = () => {
           </span>
           <br />
           <span className="text-lg md:text-3xl lg:text-4xl text-slate-300 font-normal normal-case" style={{ fontFamily: "sans-serif", letterSpacing: "0.01em" }}>
-            Bukan AI biasa — sistem yang dirancang untuk Masisir.
+            Sistem digital yang paham konteks Masisir — bukan AI generik.
           </span>
         </h1>
 
         {/* Subtext */}
         <p className="text-base md:text-xl text-slate-400 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-4">
-          AINA membantu mahasiswa Indonesia di Mesir mengurus birokrasi, akademik, dan kehidupan sehari-hari —{" "}
+          AINA menggabungkan AI Assistant, Knowledge Base Masisir, informasi komunitas, dan tools produktivitas —{" "}
           <span className="text-slate-200 font-medium">
-            dalam satu sistem yang memahami konteks Masisir secara mendalam.
+            dalam satu ekosistem yang sudah berjalan dan terus berkembang.
           </span>
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-6 md:px-0">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full px-6 md:px-0">
           <button
             onClick={scrollToDashboard}
             className="w-full sm:w-auto px-8 py-4 bg-white text-[#050509] rounded-full font-bold shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.4)] hover:scale-105 transition-all transform relative overflow-hidden group"
           >
-            <span className="relative z-10">Lihat Fitur AINA</span>
+            <span className="relative z-10">Pelajari AINA</span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-100 to-cyan-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
 
@@ -304,8 +307,18 @@ const HeroSection = () => {
             <div className="w-6 h-6 rounded-full border border-purple-500/30 flex items-center justify-center group-hover:bg-purple-500 group-hover:border-purple-500 transition-all">
               <Play size={10} fill="currentColor" className="ml-0.5" />
             </div>
-            <span>Coba Demo AINA</span>
+            <span>Lihat Fitur</span>
           </button>
+
+          <a
+            href="https://wa.me/6281311506025?text=Halo%2C%20saya%20ingin%20berkolaborasi%20dengan%20AINA."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-8 py-4 bg-purple-500/10 border border-purple-500/30 hover:bg-purple-500/20 text-white rounded-full font-semibold flex items-center justify-center gap-2 transition-all backdrop-blur-sm"
+          >
+            <GitMerge size={15} className="text-purple-400" />
+            <span>Kolaborasi Bersama AINA</span>
+          </a>
         </div>
 
         {/* Tags */}
