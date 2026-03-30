@@ -9,7 +9,7 @@ const packages = [
     category: 'UMKM',
     tier: 'Starter',
     price: 'Rp 300.000',
-    priceUnit: '— Rp 500.000 / bulan',
+    priceUnit: 's/d Rp 500.000 / bulan',
     icon: Handshake,
     color: 'cyan',
     tagColor: 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300',
@@ -29,7 +29,7 @@ const packages = [
     category: 'UMKM',
     tier: 'Standard',
     price: 'Rp 750.000',
-    priceUnit: '— Rp 1.500.000 / bulan',
+    priceUnit: 's/d Rp 1.500.000 / bulan',
     icon: Handshake,
     color: 'purple',
     tagColor: 'bg-purple-500/10 border-purple-500/20 text-purple-300',
@@ -49,14 +49,14 @@ const packages = [
     category: 'Corporate',
     tier: 'Strategic Partner',
     price: 'Rp 2.000.000',
-    priceUnit: '— Rp 5.000.000 / bulan',
+    priceUnit: 's/d Rp 5.000.000 / bulan',
     icon: Building2,
     color: 'purple',
     tagColor: 'bg-purple-500/10 border-purple-500/20 text-purple-300',
     highlight: true,
     desc: 'Untuk organisasi yang ingin hadir secara signifikan di ekosistem Masisir.',
     benefits: [
-      'Prioritas banner — posisi utama di semua halaman kunci',
+      'Prioritas banner posisi utama di semua halaman kunci',
       'Targeted popup announcement ke segmen pengguna',
       'Branding sebagai Partner Resmi AINA',
       'Exposure tinggi di dashboard, berita, dan komunitas',
@@ -71,18 +71,18 @@ const packages = [
     category: 'Annual',
     tier: 'Annual Premium',
     price: 'Custom',
-    priceUnit: '/ tahun — hemat s/d 25%',
+    priceUnit: '/ tahun hemat s/d 25%',
     icon: CalendarDays,
     color: 'cyan',
     tagColor: 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300',
     highlight: false,
-    desc: 'Paket tahunan tersedia untuk semua tier — dengan diskon dan benefit tambahan eksklusif.',
+    desc: 'Paket tahunan tersedia untuk semua tier dengan diskon dan benefit tambahan eksklusif.',
     benefits: [
       'Semua benefit dari tier yang dipilih',
       'Diskon hingga 25% dibanding harga bulanan',
       'Priority onboarding & dedicated contact',
       'Slot partner resmi tahunan yang terbatas',
-      'Visibility sepanjang tahun — tanpa jeda',
+      'Visibility sepanjang tahun tanpa jeda',
       'Review strategy session di awal periode',
     ],
     waText: 'Halo, saya ingin mendiskusikan Annual Partnership Package dengan AINA.',
@@ -106,7 +106,7 @@ const PricingSection = () => {
             <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Partnership Packages</span>
           </div>
           <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
-            Hadir di ekosistem Masisir —{' '}
+            Hadir di ekosistem Masisir{' '}
             <span className="text-gradient-purple-cyan">dengan paket yang tepat.</span>
           </h2>
           <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">

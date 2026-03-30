@@ -35,7 +35,7 @@ const actions = [
   {
     icon: Heart,
     title: 'Dukung AINA',
-    desc: 'Bantu AINA tumbuh — dengan menggunakannya, menyebarkannya, atau berkontribusi.',
+    desc: 'Bantu AINA tumbuh dengan menggunakannya, menyebarkannya, atau berkontribusi.',
     cta: 'Dukung AINA',
     color: 'purple',
     href: `${waBase}${encodeURIComponent('Halo, saya ingin tahu cara mendukung pertumbuhan AINA.')}`,
@@ -61,7 +61,7 @@ const ChatDemo = () => (
           <Bot size={9} className="text-white" />
         </div>
         <div className="bg-[#0f0f18] border border-purple-500/15 p-2 rounded-xl rounded-tl-none max-w-[85%]">
-          <p className="text-[10px] text-foreground/80 leading-relaxed">Ahlan! AINA siap membantu — seputar kehidupan Masisir di Mesir.</p>
+          <p className="text-[10px] text-foreground/80 leading-relaxed">Ahlan! AINA siap membantu seputar kehidupan Masisir di Mesir.</p>
         </div>
       </div>
 
@@ -117,7 +117,7 @@ const ClosingSection = () => (
             <span className="text-gradient-purple-cyan">Giliran kamu ikut di dalamnya.</span>
           </h2>
           <p className="text-xs md:text-sm text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0 text-center lg:text-left">
-            Pakai, kontribusi, atau kolaborasi — semua punya tempatnya di AINA.
+            Pakai, kontribusi, atau kolaborasi semua punya tempatnya di AINA.
           </p>
         </div>
 

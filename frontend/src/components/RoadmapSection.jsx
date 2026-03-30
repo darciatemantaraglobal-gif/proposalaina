@@ -58,7 +58,7 @@ const phases = [
       {
         icon: Globe2,
         title: 'AINA sebagai Pusat Ekosistem Digital Masisir',
-        desc: 'Satu ekosistem untuk semua kebutuhan digital Masisir — informasi, AI, komunitas, dan layanan.',
+        desc: 'Satu ekosistem untuk semua kebutuhan digital Masisir informasi, AI, komunitas, dan layanan.',
         tags: ['Full Ecosystem', 'All-in-One Platform', 'Community Hub'],
         color: 'purple',
         isVision: true,
@@ -84,7 +84,7 @@ const RoadmapSection = () => (
           Sekarang, selanjutnya,{' '}
           <span className="text-gradient-purple-cyan">dan ke mana AINA menuju.</span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Tiga fase yang jelas — bukan roadmap dekoratif.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Tiga fase yang jelas bukan roadmap dekoratif.</p>
       </div>
 
       {/* Phase blocks */}
@@ -161,7 +161,7 @@ const RoadmapSection = () => (
       <div className="mt-5 flex items-start gap-3 bg-[#0f0f18]/80 backdrop-blur-sm border border-purple-500/15 rounded-2xl p-3 md:p-4">
         <CheckCircle2 size={14} className="text-purple-400/60 flex-shrink-0 mt-0.5" />
         <p className="text-xs text-muted-foreground leading-relaxed">
-          Roadmap ini bukan janji publik — ini arah internal yang terus disesuaikan dengan kebutuhan komunitas Masisir. Yang sudah disebutkan di bagian atas adalah yang <span className="text-white font-medium">sudah live dan bisa dicoba sekarang</span>.
+          Roadmap ini bukan janji publik ini arah internal yang terus disesuaikan dengan kebutuhan komunitas Masisir. Yang sudah disebutkan di bagian atas adalah yang <span className="text-white font-medium">sudah live dan bisa dicoba sekarang</span>.
         </p>
       </div>
     </div>

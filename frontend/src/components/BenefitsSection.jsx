@@ -9,7 +9,7 @@ const BenefitsSection = () => {
       category: 'Administrasi',
       // Mengubah judul dan deskripsi fokus ke "Anti Bingung"
       title: 'Kemudahan Informasi',
-      description: 'Tak perlu tanya sana-sini. Tanya AINA langsung — dari prosedur visa sampai berkas kuliah, semua dijawab berbasis pengetahuan komunitas Masisir.',
+      description: 'Tak perlu tanya sana-sini. Tanya AINA langsung dari prosedur visa sampai berkas kuliah, semua dijawab berbasis pengetahuan komunitas Masisir.',
       visual: (
         <div className="relative flex flex-col gap-3 w-full max-w-[240px] mx-auto pt-2">
           {/* Card 1: Syarat */}
@@ -51,7 +51,7 @@ const BenefitsSection = () => {
       id: 'academic',
       category: 'Akademik',
       title: 'Paham Lebih Cepat',
-      description: 'Tanya AINA soal materi kuliah, simpan jawaban penting, dan diskusi di Threads komunitas — semua dalam satu tempat.',
+      description: 'Tanya AINA soal materi kuliah, simpan jawaban penting, dan diskusi di Threads komunitas semua dalam satu tempat.',
       visual: (
         <div className="flex flex-col items-center justify-center h-full mb-6">
           <h3 className="text-center font-bold leading-tight">
@@ -70,7 +70,7 @@ const BenefitsSection = () => {
       id: 'productivity',
       category: 'Produktivitas',
       title: 'Hidup Level Up',
-      description: 'Ruang Produktif AINA membantu kamu atur target, lacak progres, dan bangun kebiasaan positif — dengan sentuhan gamifikasi yang memotivasi.',
+      description: 'Ruang Produktif AINA membantu kamu atur target, lacak progres, dan bangun kebiasaan positif dengan sentuhan gamifikasi yang memotivasi.',
       visual: (
         <div className="mb-6 w-full max-w-[280px] mx-auto">
           <div className="bg-[#1a1a24] p-4 rounded-2xl border border-white/5 relative overflow-hidden shadow-2xl">

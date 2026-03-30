@@ -7,7 +7,7 @@ const steps = [
     num: '01',
     title: 'User bertanya',
     short: 'Input pertanyaan',
-    desc: 'Tulis pertanyaan dalam bahasa natural — topik apa pun seputar Masisir.',
+    desc: 'Tulis pertanyaan dalam bahasa natural topik apa pun seputar Masisir.',
     detail: 'Tidak perlu format khusus. Cukup tulis seperti bertanya ke teman yang tahu segalanya.',
     color: 'purple',
   },
@@ -16,7 +16,7 @@ const steps = [
     num: '02',
     title: 'Sistem membaca konteks',
     short: 'Analisis konteks',
-    desc: 'AINA baca konteks — topik, intent, kategori. Bukan sekadar keyword match.',
+    desc: 'AINA baca konteks topik, intent, kategori. Bukan sekadar keyword match.',
     detail: 'Langkah ini memastikan sistem mengerti apa yang sebenarnya ditanyakan, bukan hanya kata-katanya.',
     color: 'cyan',
   },
@@ -26,7 +26,7 @@ const steps = [
     title: 'Sumber terbaik dipilih',
     short: 'Pemilihan sumber',
     desc: 'Sistem pilih entri paling relevan dari knowledge base Masisir.',
-    detail: 'Knowledge base dikurasi kontributor — informasi valid, bukan scraping sembarangan.',
+    detail: 'Knowledge base dikurasi kontributor informasi valid, bukan scraping sembarangan.',
     color: 'purple',
   },
   {
@@ -43,8 +43,8 @@ const steps = [
     num: '05',
     title: 'Sumber & confidence ditampilkan',
     short: 'Transparansi',
-    desc: 'Sumber dan confidence level ditampilkan — bisa diverifikasi langsung.',
-    detail: 'Jika confidence rendah, AINA akan menyebutkannya — bukan pura-pura yakin.',
+    desc: 'Sumber dan confidence level ditampilkan bisa diverifikasi langsung.',
+    detail: 'Jika confidence rendah, AINA akan menyebutkannya bukan pura-pura yakin.',
     color: 'purple',
   },
 ];
@@ -61,13 +61,13 @@ const HowItWorksSection = () => (
           <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Cara Kerja</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
-          Dari pertanyaan ke jawaban —{' '}
+          Dari pertanyaan ke jawaban,{' '}
           <span className="text-gradient-purple-cyan">dalam 5 langkah.</span>
         </h2>
         <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Bukan asal generate. Ada pemahaman konteks, seleksi sumber, dan konfirmasi di setiap jawaban.</p>
       </div>
 
-      {/* Main flow — desktop horizontal timeline */}
+      {/* Main flow desktop horizontal timeline */}
       <div className="hidden md:block mb-6">
         <div className="flex items-stretch gap-0">
           {steps.map((step, i) => {
@@ -122,7 +122,7 @@ const HowItWorksSection = () => (
         })}
       </div>
 
-      {/* Detail cards — desktop */}
+      {/* Detail cards desktop */}
       <div className="hidden md:grid grid-cols-5 gap-2 mb-5">
         {steps.map((step, i) => {
           const isPurple = step.color === 'purple';
@@ -139,7 +139,7 @@ const HowItWorksSection = () => (
         <ShieldCheck size={15} className="text-purple-400 flex-shrink-0 mt-0.5" />
         <div>
           <p className="text-xs font-semibold text-white mb-1 font-display">Kenapa source & confidence level penting?</p>
-          <p className="text-xs text-muted-foreground leading-relaxed">AI umum sering tampak yakin padahal informasinya salah — ini disebut hallucination. AINA mencegah ini dengan mengikat setiap jawaban ke sumber terverifikasi, dan jujur menampilkan tingkat keyakinan sistem. Kalau informasinya tidak cukup kuat, AINA akan bilang — bukan mengarang jawaban.</p>
+          <p className="text-xs text-muted-foreground leading-relaxed">AI umum sering tampak yakin padahal informasinya salah ini disebut hallucination. AINA mencegah ini dengan mengikat setiap jawaban ke sumber terverifikasi, dan jujur menampilkan tingkat keyakinan sistem. Kalau informasinya tidak cukup kuat, AINA akan bilang bukan mengarang jawaban.</p>
         </div>
       </div>
     </div>

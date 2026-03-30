@@ -16,7 +16,7 @@ const FutureFeaturesSection = () => {
         {
           icon: SlidersHorizontal,
           title: 'Personalisasi & Response Style',
-          desc: 'Pengguna bisa mengatur gaya respons AINA — singkat, detail, formal, atau santai — sesuai preferensi belajar masing-masing.',
+          desc: 'Pengguna bisa mengatur gaya respons AINA singkat, detail, formal, atau santai sesuai preferensi belajar masing-masing.',
           items: ['Pilihan tone dan panjang jawaban', 'Preferensi topik yang diprioritaskan', 'Profil pengguna yang lebih kaya'],
         },
         {
@@ -28,7 +28,7 @@ const FutureFeaturesSection = () => {
         {
           icon: Layers,
           title: 'Filter & Kategorisasi Berita',
-          desc: 'Pengguna bisa memilih kategori berita yang ingin diikuti — akademik, visa, kegiatan komunitas, atau topik tertentu.',
+          desc: 'Pengguna bisa memilih kategori berita yang ingin diikuti akademik, visa, kegiatan komunitas, atau topik tertentu.',
           items: ['Preferensi kategori berita', 'Notifikasi topik spesifik', 'Arsip berita yang bisa dicari'],
         },
       ],
@@ -46,7 +46,7 @@ const FutureFeaturesSection = () => {
         {
           icon: Map,
           title: 'Direktori Layanan Kairo',
-          desc: 'Database lengkap lokasi strategis untuk Masisir — rumah sakit, klinik, toko Indonesia, tempat makan halal, dan titik penting lainnya.',
+          desc: 'Database lengkap lokasi strategis untuk Masisir rumah sakit, klinik, toko Indonesia, tempat makan halal, dan titik penting lainnya.',
           items: ['Peta interaktif lokasi penting', 'Ulasan dan tips dari komunitas', 'Update real-time dari kontributor'],
         },
         {
@@ -70,7 +70,7 @@ const FutureFeaturesSection = () => {
         {
           icon: MessageCircle,
           title: 'Direct Messaging',
-          desc: 'Komunikasi peer-to-peer antar sesama Masisir dalam ekosistem AINA — untuk kolaborasi, mentoring, dan dukungan komunitas yang lebih erat.',
+          desc: 'Komunikasi peer-to-peer antar sesama Masisir dalam ekosistem AINA untuk kolaborasi, mentoring, dan dukungan komunitas yang lebih erat.',
           items: ['Direct & group messaging', 'Notifikasi real-time', 'Kontrol privasi pengguna'],
         },
         {
@@ -105,7 +105,7 @@ const FutureFeaturesSection = () => {
             ?
           </h2>
           <p className="mx-auto max-w-2xl text-sm md:text-base text-slate-400 leading-relaxed">
-            AINA dibangun secara bertahap dan jujur. Berikut tiga lapisan pengembangan yang jelas — dengan pembeda antara yang sudah ada, yang sedang dikuatkan, dan yang direncanakan.
+            AINA dibangun secara bertahap dan jujur. Berikut tiga lapisan pengembangan yang jelas dengan pembeda antara yang sudah ada, yang sedang dikuatkan, dan yang direncanakan.
           </p>
         </div>
 
@@ -193,7 +193,7 @@ const FutureFeaturesSection = () => {
             <p className="text-xs md:text-sm text-slate-300">
               Prioritas pengembangan ditentukan berdasarkan{' '}
               <span className="text-white font-bold">kebutuhan nyata komunitas Masisir</span>{' '}
-              — bukan sekadar roadmap di atas kertas.
+              bukan sekadar roadmap di atas kertas.
             </p>
           </div>
         </div>

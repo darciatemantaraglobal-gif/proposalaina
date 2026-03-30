@@ -18,7 +18,7 @@ const ways = [
     icon: Code2,
     title: 'Berkontribusi Konten',
     subtitle: 'Kontributor Knowledge',
-    desc: 'Tambahkan info yang kamu tahu ke knowledge base — birokrasi, akademik, kehidupan.',
+    desc: 'Tambahkan info yang kamu tahu ke knowledge base birokrasi, akademik, kehidupan.',
     points: ['Isi knowledge base dengan info valid', 'Koreksi informasi yang sudah ada', 'Dapat pengakuan sebagai kontributor aktif'],
     color: 'cyan',
     highlight: true,
@@ -51,7 +51,7 @@ const FundingSection = () => (
           AINA tumbuh{' '}
           <span className="text-gradient-purple-cyan">bersama komunitasnya.</span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Pakai sehari-hari, isi knowledge base, atau kolaborasi lebih dalam — semua punya tempatnya.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">Pakai sehari-hari, isi knowledge base, atau kolaborasi lebih dalam semua punya tempatnya.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-5">

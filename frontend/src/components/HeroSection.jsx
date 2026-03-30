@@ -167,13 +167,13 @@ const HeroSection = () => {
             className="text-lg md:text-3xl lg:text-4xl text-slate-300 font-normal normal-case"
             style={{ fontFamily: "sans-serif", letterSpacing: "0.01em" }}
           >
-            Sistem digital yang paham konteks Masisir — bukan AI generik.
+            Sistem digital yang paham konteks Masisir bukan AI generik.
           </span>
         </h1>
 
         {/* Subtext */}
         <p className="text-base md:text-xl text-slate-400 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-2">
-          AINA menggabungkan AI Assistant, Knowledge Base Masisir, informasi komunitas, dan tools produktivitas —{" "}
+          AINA menggabungkan AI Assistant, Knowledge Base Masisir, informasi komunitas, dan tools produktivitas{" "}
           <span className="text-slate-200 font-medium">
             dalam satu ekosistem yang sudah berjalan dan terus berkembang.
           </span>

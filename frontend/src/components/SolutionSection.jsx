@@ -2,18 +2,18 @@ import React from 'react';
 import { Bot, Sparkles, CheckCircle2, MessageSquare, BookOpen, Newspaper, LayoutDashboard, Users2, Bookmark, ShieldCheck } from 'lucide-react';
 
 const pillars = [
-  { icon: MessageSquare, title: 'AI Assistant', desc: 'Jawaban kontekstual berbasis knowledge Masisir — bukan AI generik yang menebak-nebak.', color: 'purple' },
+  { icon: MessageSquare, title: 'AI Assistant', desc: 'Jawaban kontekstual berbasis knowledge Masisir bukan AI generik yang menebak-nebak.', color: 'purple' },
   { icon: BookOpen, title: 'Knowledge Base', desc: 'Informasi dikurasi kontributor Masisir: prosedur, kampus, kehidupan, dan lebih banyak lagi.', color: 'cyan' },
   { icon: Newspaper, title: 'Sistem Informasi', desc: 'Pengumuman kampus, berita organisasi, dan info komunitas dalam satu feed terpusat.', color: 'purple' },
-  { icon: Users2, title: 'Komunitas', desc: 'Threads diskusi termoderasi per topik — peer-to-peer, upvote jawaban terbaik.', color: 'cyan' },
+  { icon: Users2, title: 'Komunitas', desc: 'Threads diskusi termoderasi per topik peer-to-peer, upvote jawaban terbaik.', color: 'cyan' },
   { icon: LayoutDashboard, title: 'Sistem Kehidupan Masisir', desc: 'Tasks, catatan, dan tracking target belajar terintegrasi dalam satu ruang produktif.', color: 'purple' },
   { icon: Bookmark, title: 'Saved Answers', desc: 'Simpan jawaban penting dari AI atau komunitas, akses kembali kapan saja.', color: 'cyan' },
 ];
 
 const differentiators = [
-  'Bukan chatbot biasa — konteks jawaban terikat ke knowledge Masisir',
-  'Bukan platform media sosial — bukan feed sembarangan, tapi informasi yang terkurasi',
-  'Bukan aplikasi produktivitas umum — dirancang dari nol untuk kebutuhan Masisir di Mesir',
+  'Bukan chatbot biasa konteks jawaban terikat ke knowledge Masisir',
+  'Bukan platform media sosial bukan feed sembarangan, tapi informasi yang terkurasi',
+  'Bukan aplikasi produktivitas umum dirancang dari nol untuk kebutuhan Masisir di Mesir',
 ];
 
 const SolutionSection = () => (
@@ -81,7 +81,7 @@ const SolutionSection = () => (
             <span className="text-gradient-purple-cyan">Ini ekosistem digital Masisir.</span>
           </h2>
           <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-4">
-            Lima lapisan dalam satu platform — AI Assistant, Knowledge Base, Informasi, Diskusi, dan Tools Produktivitas. Dibangun dari nol untuk konteks Masisir.
+            Lima lapisan dalam satu platform AI Assistant, Knowledge Base, Informasi, Diskusi, dan Tools Produktivitas. Dibangun dari nol untuk konteks Masisir.
           </p>
 
           {/* Differentiators */}

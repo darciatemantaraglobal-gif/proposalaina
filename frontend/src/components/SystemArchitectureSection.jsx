@@ -10,7 +10,7 @@ const layers = [
     color: 'purple',
     summary: 'AINA tidak menjawab dari memori AI kosong. Di baliknya ada knowledge base terstruktur yang diisi, diverifikasi, dan diperbarui oleh kontributor yang memahami konteks Masisir secara langsung.',
     points: [
-      'Konten dikurasi khusus — prosedur visa, regulasi Azhar, kehidupan di Kairo, dan lebih banyak lagi',
+      'Konten dikurasi khusus prosedur visa, regulasi Azhar, kehidupan di Kairo, dan lebih banyak lagi',
       'Diperbarui secara berkala seiring perubahan kondisi dan regulasi di lapangan',
       'Kontributor Masisir bisa menambahkan, mengoreksi, dan memperkaya data',
     ],
@@ -25,10 +25,10 @@ const layers = [
     summary: 'Pertanyaan user tidak langsung diteruskan ke AI begitu saja. AINA memproses konteks pertanyaan, menentukan jenis kebutuhan, lalu menyusun jawaban dalam format yang paling tepat.',
     points: [
       'Pertanyaan dikenali berdasarkan kategori: birokrasi, akademik, kehidupan, atau umum',
-      'Format jawaban disesuaikan — langkah demi langkah, ringkasan, atau penjelasan singkat',
+      'Format jawaban disesuaikan langkah demi langkah, ringkasan, atau penjelasan singkat',
       'Gaya bahasa disesuaikan dengan cara Masisir berkomunikasi sehari-hari',
     ],
-    accent: 'Ada proses cerdas di tengahnya — bukan sekadar tempel pertanyaan, terima jawaban.',
+    accent: 'Ada proses cerdas di tengahnya bukan sekadar tempel pertanyaan, terima jawaban.',
   },
   {
     num: '03',
@@ -36,11 +36,11 @@ const layers = [
     label: 'Source & Confidence Layer',
     title: 'Transparansi yang membangun kepercayaan',
     color: 'purple',
-    summary: 'Setiap jawaban AINA dilengkapi informasi sumber dan tingkat keyakinan sistem. Ini bukan fitur dekorasi — ini komitmen bahwa AINA tidak asal bicara.',
+    summary: 'Setiap jawaban AINA dilengkapi informasi sumber dan tingkat keyakinan sistem. Ini bukan fitur dekorasi ini komitmen bahwa AINA tidak asal bicara.',
     points: [
       'Source attribution: pengguna tahu dari mana informasi itu berasal',
       'Confidence level: sistem jujur tentang seberapa yakin jawabannya',
-      'Pengguna bisa memverifikasi — bukan harus percaya buta pada AI',
+      'Pengguna bisa memverifikasi bukan harus percaya buta pada AI',
     ],
     accent: 'Transparansi ini yang membedakan AINA dari AI yang sering yakin padahal salah.',
   },
@@ -50,13 +50,13 @@ const layers = [
     label: 'Product System Layer',
     title: 'Ekosistem fitur yang terintegrasi',
     color: 'cyan',
-    summary: 'AINA bukan chatbot tunggal yang berdiri sendiri. Semua fitur — chat, berita, diskusi, produktivitas, saved answers, contributor flow — bekerja dalam satu sistem yang saling terhubung.',
+    summary: 'AINA bukan chatbot tunggal yang berdiri sendiri. Semua fitur chat, berita, diskusi, produktivitas, saved answers, contributor flow bekerja dalam satu sistem yang saling terhubung.',
     points: [
       'Dashboard terpadu: satu tempat untuk semua kebutuhan digital Masisir',
-      'Fitur-fitur saling melengkapi — jawaban bisa disimpan, sumber bisa didiskusikan',
+      'Fitur-fitur saling melengkapi jawaban bisa disimpan, sumber bisa didiskusikan',
       'Admin & contributor memiliki akses terpisah untuk menjaga kualitas konten',
     ],
-    accent: 'Setiap fitur bukan add-on terpisah — semuanya bagian dari pengalaman yang utuh.',
+    accent: 'Setiap fitur bukan add-on terpisah semuanya bagian dari pengalaman yang utuh.',
   },
   {
     num: '05',
@@ -64,13 +64,13 @@ const layers = [
     label: 'Growth System Layer',
     title: 'Dirancang untuk terus berkembang',
     color: 'purple',
-    summary: 'Fondasi teknis AINA dirancang agar bisa diperluas tanpa harus dibangun ulang. Setiap fitur baru bisa ditambahkan di atas sistem yang sudah ada — dan setiap kontributor baru memperkuat keseluruhan sistem.',
+    summary: 'Fondasi teknis AINA dirancang agar bisa diperluas tanpa harus dibangun ulang. Setiap fitur baru bisa ditambahkan di atas sistem yang sudah ada dan setiap kontributor baru memperkuat keseluruhan sistem.',
     points: [
-      'Arsitektur modular — fitur baru tidak mengganggu yang sudah berjalan',
+      'Arsitektur modular fitur baru tidak mengganggu yang sudah berjalan',
       'Knowledge base bisa diperluas ke topik baru sesuai kebutuhan komunitas',
       'Skalabel untuk mendukung lebih banyak pengguna seiring pertumbuhan AINA',
     ],
-    accent: 'AINA hari ini adalah pondasi — bukan produk akhir.',
+    accent: 'AINA hari ini adalah pondasi bukan produk akhir.',
   },
 ];
 
@@ -174,7 +174,7 @@ const SystemArchitectureSection = () => (
           ))}
         </div>
 
-        {/* Right: Visual stack — sticky on desktop */}
+        {/* Right: Visual stack sticky on desktop */}
         <div className="w-full lg:w-[220px] flex-shrink-0 lg:sticky lg:top-24">
           <div className="bg-[#0f0f18]/80 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-3 overflow-hidden">
             <p className="text-[9px] text-muted-foreground/40 uppercase tracking-[0.2em] font-bold mb-3">Struktur Sistem</p>

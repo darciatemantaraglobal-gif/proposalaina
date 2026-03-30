@@ -34,7 +34,7 @@ const AppreciationSection = () => (
             <Heart size={16} className="text-pink-400" />
           </div>
           <h3 className="text-sm font-bold text-white mb-1.5 font-display">Membangun AINA adalah kontribusi untuk Masisir</h3>
-          <p className="text-xs text-muted-foreground leading-relaxed mb-4">Setiap informasi yang ditambahkan, setiap pertanyaan yang dijawab, setiap diskusi yang dimoderasi — semua itu nyata dampaknya.</p>
+          <p className="text-xs text-muted-foreground leading-relaxed mb-4">Setiap informasi yang ditambahkan, setiap pertanyaan yang dijawab, setiap diskusi yang dimoderasi semua itu nyata dampaknya.</p>
 
           <ul className="space-y-2 flex-1">
             {['Namamu tercatat sebagai bagian dari fondasi AINA', 'Kontribusi awal punya nilai khusus yang tidak hilang', 'Ekosistem yang kamu bangun akan bertahan lama'].map((v, i) => (
@@ -47,7 +47,7 @@ const AppreciationSection = () => (
 
           <div className="mt-4 flex items-start gap-2 bg-pink-900/10 border border-pink-500/15 rounded-xl p-3">
             <Heart size={12} className="text-pink-400 flex-shrink-0 mt-0.5" />
-            <p className="text-[11px] text-pink-200/50 leading-relaxed">Dan bagi yang percaya — setiap ilmu yang bermanfaat adalah amal yang terus mengalir, insyaAllah.</p>
+            <p className="text-[11px] text-pink-200/50 leading-relaxed">Dan bagi yang percaya setiap ilmu yang bermanfaat adalah amal yang terus mengalir, insyaAllah.</p>
           </div>
         </div>
 
@@ -74,7 +74,7 @@ const AppreciationSection = () => (
             </div>
             <div>
               <h5 className="text-xs font-bold text-white mb-1 font-display">Kontribusi awal punya nilai khusus</h5>
-              <p className="text-[11px] text-muted-foreground leading-relaxed">Mereka yang bergabung di fase awal diakui secara khusus. Semakin besar AINA, semakin banyak yang ingin terlibat — tapi yang pertama selalu diingat.</p>
+              <p className="text-[11px] text-muted-foreground leading-relaxed">Mereka yang bergabung di fase awal diakui secara khusus. Semakin besar AINA, semakin banyak yang ingin terlibat tapi yang pertama selalu diingat.</p>
             </div>
           </div>
         </div>

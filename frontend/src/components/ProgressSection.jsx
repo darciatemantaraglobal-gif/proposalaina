@@ -17,7 +17,7 @@ const milestones = [
   },
   {
     icon: Layers,
-    phase: 'Fitur Inti — Semua Live',
+    phase: 'Fitur Inti Semua Live',
     status: 'live',
     badge: 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300',
     dot: 'bg-cyan-400',
@@ -98,7 +98,7 @@ const ProgressSection = () => (
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
           </span>
-          <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-300">Status Sistem — Live</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-300">Status Sistem Live</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
           Dibangun. Diuji.{' '}

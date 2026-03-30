@@ -5,7 +5,7 @@ const pillars = [
   {
     icon: KeyRound,
     title: 'Autentikasi Pengguna',
-    desc: 'Setiap pengguna AINA memiliki akun yang dilindungi sistem autentikasi berbasis token. Akses ke fitur dan data dikontrol berdasarkan peran — pengguna biasa, kontributor, dan admin memiliki hak akses yang berbeda.',
+    desc: 'Setiap pengguna AINA memiliki akun yang dilindungi sistem autentikasi berbasis token. Akses ke fitur dan data dikontrol berdasarkan peran pengguna biasa, kontributor, dan admin memiliki hak akses yang berbeda.',
     tag: 'Identity & Access',
     color: 'purple',
   },
@@ -19,7 +19,7 @@ const pillars = [
   {
     icon: Server,
     title: 'Fondasi Backend yang Matang',
-    desc: 'Backend AINA dibangun dengan struktur yang bersih dan terencana — bukan tumpukan kode cepat. Arsitektur ini memudahkan penambahan fitur baru, pemeliharaan sistem, dan pertumbuhan kapasitas pengguna.',
+    desc: 'Backend AINA dibangun dengan struktur yang bersih dan terencana bukan tumpukan kode cepat. Arsitektur ini memudahkan penambahan fitur baru, pemeliharaan sistem, dan pertumbuhan kapasitas pengguna.',
     tag: 'System Foundation',
     color: 'purple',
   },
@@ -94,7 +94,7 @@ const SecurityReadinessSection = () => {
             <div className="flex-1">
               <h5 className="text-white font-bold text-sm mb-1">Siap untuk Digunakan, Siap untuk Berkembang</h5>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Sistem AINA sudah melewati tahap pengembangan awal dan aktif berjalan. Fondasi yang ada sekarang dirancang agar mudah diperluas — lebih banyak pengguna, lebih banyak fitur, lebih banyak konten — tanpa harus membangun ulang dari awal.
+                Sistem AINA sudah melewati tahap pengembangan awal dan aktif berjalan. Fondasi yang ada sekarang dirancang agar mudah diperluas lebih banyak pengguna, lebih banyak fitur, lebih banyak konten tanpa harus membangun ulang dari awal.
               </p>
             </div>
           </div>

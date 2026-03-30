@@ -5,7 +5,7 @@ const coreFeatures = [
   {
     icon: MessageSquare,
     title: 'AI Chat untuk Masisir',
-    desc: 'Jawaban dari knowledge base Masisir — bukan generasi bebas yang rawan salah.',
+    desc: 'Jawaban dari knowledge base Masisir bukan generasi bebas yang rawan salah.',
     tag: 'Core',
     color: 'purple',
   },
@@ -26,19 +26,19 @@ const coreFeatures = [
   {
     icon: BarChart2,
     title: 'Confidence Level',
-    desc: 'Kalau informasinya terbatas, AINA jujur — bukan pura-pura yakin.',
+    desc: 'Kalau informasinya terbatas, AINA jujur bukan pura-pura yakin.',
     tag: 'Core',
     color: 'cyan',
   },
 ];
 
 const supportingFeatures = [
-  { icon: Newspaper, title: 'Berita & Pengumuman', desc: 'Informasi kampus dan komunitas terpusat — tidak tenggelam di grup WA.', color: 'purple' },
+  { icon: Newspaper, title: 'Berita & Pengumuman', desc: 'Informasi kampus dan komunitas terpusat tidak tenggelam di grup WA.', color: 'purple' },
   { icon: MessageCircle, title: 'Threads Komunitas', desc: 'Diskusi per topik, termoderasi. Jawaban terbaik naik ke atas.', color: 'cyan' },
   { icon: CheckSquare, title: 'Ruang Produktif', desc: 'Tasks, catatan, dan target belajar dalam satu ruang.', color: 'purple' },
   { icon: Bookmark, title: 'Saved Answers', desc: 'Simpan jawaban penting, akses kapan saja.', color: 'cyan' },
   { icon: Users2, title: 'Contributor System', desc: 'Kontribusi Masisir diverifikasi sebelum masuk ke sistem.', color: 'purple' },
-  { icon: User, title: 'Personalization', desc: 'Relevansi disesuaikan dengan profil — kampus, tahun, minat.', color: 'cyan' },
+  { icon: User, title: 'Personalization', desc: 'Relevansi disesuaikan dengan profil kampus, tahun, minat.', color: 'cyan' },
   { icon: Bell, title: 'Announcement System', desc: 'Pengumuman penting tidak terlewat.', color: 'purple' },
   { icon: LayoutDashboard, title: 'Dashboard Terpusat', desc: 'Semua fitur dalam satu dashboard.', color: 'cyan' },
 ];
@@ -57,7 +57,7 @@ const FeaturesSection = () => (
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
           </span>
-          <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">12 Fitur — Semua Live</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">12 Fitur Semua Live</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight font-display">
           Sudah berjalan.{' '}
@@ -70,7 +70,7 @@ const FeaturesSection = () => (
       <div className="mb-4">
         <div className="flex items-center gap-3 mb-3">
           <div className="h-px flex-1 bg-gradient-to-r from-purple-500/30 to-transparent" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-purple-400/60 px-2">Core — Mesin AI AINA</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-purple-400/60 px-2">Core Mesin AI AINA</span>
           <div className="h-px flex-1 bg-gradient-to-l from-cyan-500/30 to-transparent" />
         </div>
 
@@ -103,7 +103,7 @@ const FeaturesSection = () => (
       <div>
         <div className="flex items-center gap-3 mb-3">
           <div className="h-px flex-1 bg-gradient-to-r from-purple-500/20 to-transparent" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/40 px-2">Supporting — Ekosistem Masisir</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/40 px-2">Supporting Ekosistem Masisir</span>
           <div className="h-px flex-1 bg-gradient-to-l from-cyan-500/20 to-transparent" />
         </div>
 

@@ -5,13 +5,13 @@ const differentiators = [
   {
     icon: Target,
     title: 'Dibuat khusus untuk Masisir',
-    desc: 'Setiap fitur dan respons dirancang dari realita Masisir — bukan produk umum yang dipaksakan.',
+    desc: 'Setiap fitur dan respons dirancang dari realita Masisir bukan produk umum yang dipaksakan.',
     color: 'purple',
   },
   {
     icon: Brain,
     title: 'Bukan AI generik',
-    desc: 'Bukan dari AI general — dari knowledge base lokal yang dikurasi Masisir.',
+    desc: 'Bukan dari AI general dari knowledge base lokal yang dikurasi Masisir.',
     color: 'cyan',
   },
   {
@@ -23,13 +23,13 @@ const differentiators = [
   {
     icon: LifeBuoy,
     title: 'Mencakup seluruh kebutuhan Masisir',
-    desc: 'Birokrasi, akademik, kehidupan, produktivitas — satu sistem, bukan satu aspek.',
+    desc: 'Birokrasi, akademik, kehidupan, produktivitas satu sistem, bukan satu aspek.',
     color: 'cyan',
   },
   {
     icon: Globe2,
     title: 'Menuju pusat ekosistem digital Masisir',
-    desc: 'Sistem yang tumbuh bersama komunitasnya — bukan aplikasi statis.',
+    desc: 'Sistem yang tumbuh bersama komunitasnya bukan aplikasi statis.',
     color: 'purple',
   },
 ];
@@ -37,7 +37,7 @@ const differentiators = [
 const comparisons = [
   { aspect: 'Target pengguna', aina: 'Khusus Masisir di Mesir', generic: 'Semua orang' },
   { aspect: 'Basis jawaban', aina: 'Knowledge base lokal terverifikasi', generic: 'Generasi bebas AI' },
-  { aspect: 'Source transparency', aina: 'Ada — setiap jawaban', generic: 'Tidak ada' },
+  { aspect: 'Source transparency', aina: 'Ada setiap jawaban', generic: 'Tidak ada' },
   { aspect: 'Confidence level', aina: 'Ditampilkan eksplisit', generic: 'Tidak ada' },
   { aspect: 'Konteks budaya & bahasa', aina: 'Masisir-aware', generic: 'Generic / global' },
   { aspect: 'Ekosistem fitur', aina: 'Produktivitas, threads, berita, dashboard', generic: 'Chat saja' },
@@ -58,7 +58,7 @@ const WhyAINASection = () => (
           Bukan soal canggih.{' '}
           <span className="text-gradient-purple-cyan">Tapi siapa yang paling paham Masisir.</span>
         </h2>
-        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">AI umum bisa banyak hal. AINA dibangun khusus untuk satu konteks — dan itu bedanya.</p>
+        <p className="mt-2 text-xs md:text-sm text-muted-foreground max-w-xl mx-auto">AI umum bisa banyak hal. AINA dibangun khusus untuk satu konteks dan itu bedanya.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-5 md:gap-8 items-start">

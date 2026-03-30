@@ -11,7 +11,7 @@ const problems = [
   {
     icon: Globe,
     title: 'Informasi tersebar, tidak terpusat',
-    desc: 'Info penting tenggelam di grup WA — tidak tersaring, tidak bisa dicari ulang.',
+    desc: 'Info penting tenggelam di grup WA tidak tersaring, tidak bisa dicari ulang.',
     stat: 'Tiap hari',
   },
   {
@@ -23,13 +23,13 @@ const problems = [
   {
     icon: MapPin,
     title: 'Adaptasi hidup di negeri orang',
-    desc: 'Semua dicari sendiri — tanpa panduan yang paham kondisi di lapangan.',
+    desc: 'Semua dicari sendiri tanpa panduan yang paham kondisi di lapangan.',
     stat: 'Terutama tahun pertama',
   },
   {
     icon: Clock,
     title: 'Tidak ada sistem terpusat untuk Masisir',
-    desc: 'Pertanyaan sama berulang tiap tahun — pengetahuan komunitas hilang begitu saja.',
+    desc: 'Pertanyaan sama berulang tiap tahun pengetahuan komunitas hilang begitu saja.',
     stat: 'Ribuan jam terbuang',
   },
 ];
@@ -75,7 +75,7 @@ const ProblemSection = () => (
         })}
       </div>
 
-      {/* Last problem — wide */}
+      {/* Last problem wide */}
       <div className="bg-[#0f0f18]/80 backdrop-blur-sm border border-red-500/15 rounded-2xl p-3 md:p-5 hover:border-red-500/30 hover:bg-[#0f0f18] transition-all duration-300 mb-4 group">
         {(() => {
           const p = problems[4];
@@ -103,7 +103,7 @@ const ProblemSection = () => (
       <div className="flex items-center gap-3 bg-[#0f0f18]/80 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-3 md:p-4">
         <div className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse flex-shrink-0" />
         <p className="text-xs text-muted-foreground">
-          Masalah ini dialami <span className="text-white font-semibold">ribuan Masisir setiap tahun</span> — dan AINA dibangun khusus untuk mengatasinya, bukan sebagai solusi generik.
+          Masalah ini dialami <span className="text-white font-semibold">ribuan Masisir setiap tahun</span> dan AINA dibangun khusus untuk mengatasinya, bukan sebagai solusi generik.
         </p>
       </div>
     </div>
