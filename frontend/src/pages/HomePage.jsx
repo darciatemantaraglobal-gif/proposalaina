@@ -2,7 +2,9 @@ import React from 'react';
 import HeroSection from '../components/HeroSection';
 import ProblemSection from '../components/ProblemSection';
 import SolutionSection from '../components/SolutionSection';
+import WhyAINASection from '../components/WhyAINASection';
 import FeaturesSection from '../components/FeaturesSection';
+import HowItWorksSection from '../components/HowItWorksSection';
 import MarketSection from '../components/MarketSection';
 import ProgressSection from '../components/ProgressSection';
 import FutureFeaturesSection from '../components/FutureFeaturesSection';
@@ -19,7 +21,9 @@ const HomePage = () => {
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
+      <WhyAINASection />
       <FeaturesSection />
+      <HowItWorksSection />
       <MarketSection />
       <ProgressSection />
       <FutureFeaturesSection />
