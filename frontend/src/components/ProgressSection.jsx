@@ -48,15 +48,15 @@ const stats = [
 ];
 
 const ProgressSection = () => (
-  <section className="bg-[#050509] py-14 md:py-20 px-4 md:px-6">
+  <section className="bg-[#050509] py-8 md:py-20 px-4 md:px-6">
     <div className="max-w-5xl mx-auto">
-      <div className="mb-10 md:mb-14">
+      <div className="mb-5 md:mb-14">
         <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400">Progress</span>
-        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white leading-tight">
+        <h2 className="mt-2 text-2xl md:text-4xl font-bold text-white leading-tight">
           AINA bukan konsep.{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Ini produk yang sedang tumbuh.</span>
         </h2>
-        <p className="mt-3 text-sm text-slate-400 max-w-xl">Fondasi sudah dibangun, fitur inti sudah live, dan sistem terus disempurnakan setiap harinya.</p>
+        <p className="mt-2 text-xs md:text-sm text-slate-400 max-w-xl">Fondasi sudah dibangun, fitur inti sudah live, dan sistem terus disempurnakan setiap harinya.</p>
       </div>
 
       {/* Stats */}

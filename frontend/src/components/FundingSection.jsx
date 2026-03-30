@@ -38,23 +38,23 @@ const ways = [
 ];
 
 const FundingSection = () => (
-  <section className="bg-[#050509] py-14 md:py-20 px-4 md:px-8" id="kolaborasi">
+  <section className="bg-[#050509] py-8 md:py-20 px-4 md:px-8" id="kolaborasi">
     <div className="max-w-5xl mx-auto">
-      <div className="mb-10 md:mb-14">
+      <div className="mb-5 md:mb-14">
         <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400">Kolaborasi</span>
-        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white leading-tight">
+        <h2 className="mt-2 text-2xl md:text-4xl font-bold text-white leading-tight">
           AINA tumbuh{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">bersama komunitasnya.</span>
         </h2>
-        <p className="mt-3 text-sm text-slate-400 max-w-xl">Ada banyak cara untuk jadi bagian dari AINA — dari menggunakannya sehari-hari hingga kolaborasi lebih dalam.</p>
+        <p className="mt-2 text-xs md:text-sm text-slate-400 max-w-xl">Ada banyak cara untuk jadi bagian dari AINA — dari menggunakannya sehari-hari hingga kolaborasi lebih dalam.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
         {ways.map((way, i) => {
           const Icon = way.icon;
           const isCyan = way.color === 'cyan';
           return (
-            <div key={i} className={`relative flex flex-col rounded-2xl p-5 border transition-all duration-300 ${way.highlight ? 'bg-[#0c0c14] border-cyan-500/30 shadow-[0_0_30px_-10px_rgba(34,211,238,0.2)]' : 'bg-[#0c0c14] border-purple-500/20 hover:border-purple-500/20'}`}>
+            <div key={i} className={`relative flex flex-col rounded-2xl p-3 md:p-5 border transition-all duration-300 ${way.highlight ? 'bg-[#0c0c14] border-cyan-500/30 shadow-[0_0_30px_-10px_rgba(34,211,238,0.2)]' : 'bg-[#0c0c14] border-purple-500/20 hover:border-purple-500/20'}`}>
               {way.highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 text-black text-[10px] font-bold px-3 py-1 rounded-full whitespace-nowrap">
@@ -94,7 +94,7 @@ const FundingSection = () => (
         })}
       </div>
 
-      <div className="bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-3 md:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
             <MessageSquare size={14} className="text-purple-400" />

@@ -11,9 +11,9 @@ const pillars = [
 ];
 
 const SolutionSection = () => (
-  <section className="bg-[#050509] py-14 md:py-20 px-4 md:px-6">
+  <section className="bg-[#050509] py-8 md:py-20 px-4 md:px-6">
     <div className="max-w-5xl mx-auto">
-      <div className="flex flex-col lg:flex-row gap-10 md:gap-14 items-start">
+      <div className="flex flex-col lg:flex-row gap-5 md:gap-14 items-start">
 
         {/* LEFT: System status card */}
         <div className="w-full lg:w-[360px] flex-shrink-0">
@@ -57,7 +57,7 @@ const SolutionSection = () => (
         {/* RIGHT: Text */}
         <div className="flex-1">
           <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400">Solusi</span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+          <h2 className="mt-2 text-2xl md:text-4xl font-bold text-white leading-tight mb-4">
             AINA bukan sekadar chatbot.{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
               Ini ekosistem digital Masisir.

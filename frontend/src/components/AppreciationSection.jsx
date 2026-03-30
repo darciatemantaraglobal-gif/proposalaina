@@ -9,20 +9,20 @@ const recognitions = [
 ];
 
 const AppreciationSection = () => (
-  <section className="bg-[#050509] py-14 md:py-20 px-4 md:px-6">
+  <section className="bg-[#050509] py-8 md:py-20 px-4 md:px-6">
     <div className="max-w-5xl mx-auto">
-      <div className="mb-10 md:mb-14">
+      <div className="mb-5 md:mb-14">
         <span className="text-[10px] font-bold uppercase tracking-widest text-pink-400">Apresiasi</span>
-        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white leading-tight">
+        <h2 className="mt-2 text-2xl md:text-4xl font-bold text-white leading-tight">
           Setiap kontribusi{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">punya makna.</span>
         </h2>
-        <p className="mt-3 text-sm text-slate-400 max-w-xl">AINA tumbuh karena ada orang-orang yang mau meluangkan waktu dan ilmunya. Kontribusi mereka tidak kami anggap kecil.</p>
+        <p className="mt-2 text-xs md:text-sm text-slate-400 max-w-xl">AINA tumbuh karena ada orang-orang yang mau meluangkan waktu dan ilmunya. Kontribusi mereka tidak kami anggap kecil.</p>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6 items-stretch">
         {/* Left: Main message */}
-        <div className="w-full lg:w-[40%] bg-gradient-to-b from-[#1a0e30] to-[#0c0c14] border border-purple-500/20 rounded-2xl p-5 flex flex-col">
+        <div className="w-full lg:w-[40%] bg-gradient-to-b from-[#1a0e30] to-[#0c0c14] border border-purple-500/20 rounded-2xl p-3 md:p-5 flex flex-col">
           <div className="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center mb-4">
             <Heart size={18} className="text-pink-400" />
           </div>
@@ -54,7 +54,7 @@ const AppreciationSection = () => (
             const Icon = r.icon;
             const isPurple = i % 2 === 0;
             return (
-              <div key={i} className={`rounded-2xl p-4 border transition-all hover:-translate-y-0.5 ${isPurple ? 'bg-[#110e24] border-purple-500/15' : 'bg-[#081618] border-cyan-500/12'}`}>
+              <div key={i} className={`rounded-2xl p-3 md:p-4 border transition-all hover:-translate-y-0.5 ${isPurple ? 'bg-[#110e24] border-purple-500/15' : 'bg-[#081618] border-cyan-500/12'}`}>
                 <div className={`w-9 h-9 rounded-xl flex items-center justify-center mb-3 border ${isPurple ? 'bg-purple-500/10 border-purple-500/20 text-purple-300' : 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300'}`}>
                   <Icon size={16} />
                 </div>
@@ -65,7 +65,7 @@ const AppreciationSection = () => (
           })}
 
           {/* Wide card */}
-          <div className="col-span-2 bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-4 flex items-start gap-3">
+          <div className="col-span-2 bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-3 md:p-4 flex items-start gap-3">
             <div className="w-9 h-9 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
               <Star size={15} className="text-purple-400" />
             </div>

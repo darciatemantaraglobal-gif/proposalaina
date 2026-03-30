@@ -33,23 +33,23 @@ const directions = [
 ];
 
 const RoadmapSection = () => (
-  <section className="bg-[#050509] py-14 md:py-20 px-4 md:px-6">
+  <section className="bg-[#050509] py-8 md:py-20 px-4 md:px-6">
     <div className="max-w-5xl mx-auto">
-      <div className="mb-10 md:mb-14">
+      <div className="mb-5 md:mb-14">
         <span className="text-[10px] font-bold uppercase tracking-widest text-cyan-400">Roadmap</span>
-        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white leading-tight">
+        <h2 className="mt-2 text-2xl md:text-4xl font-bold text-white leading-tight">
           Ke mana{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">AINA akan tumbuh.</span>
         </h2>
-        <p className="mt-3 text-sm text-slate-400 max-w-xl">Arah nyata yang digerakkan oleh kebutuhan komunitas — bukan roadmap di atas kertas.</p>
+        <p className="mt-2 text-xs md:text-sm text-slate-400 max-w-xl">Arah nyata yang digerakkan oleh kebutuhan komunitas — bukan roadmap di atas kertas.</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
         {directions.map((d, i) => {
           const Icon = d.icon;
           const isPurple = d.color === 'purple';
           return (
-            <div key={i} className="group bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-5 hover:border-purple-500/20 transition-all duration-300">
+            <div key={i} className="group bg-[#0c0c14] border border-purple-500/20 rounded-2xl p-3 md:p-5 hover:border-purple-500/20 transition-all duration-300">
               <div className="flex items-start gap-3 mb-3">
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center border flex-shrink-0 ${isPurple ? 'bg-purple-500/10 border-purple-500/20 text-purple-400' : 'bg-cyan-500/10 border-cyan-500/20 text-cyan-400'}`}>
                   <Icon size={18} />
@@ -66,7 +66,7 @@ const RoadmapSection = () => (
       </div>
 
       {/* Vision */}
-      <div className="bg-gradient-to-br from-[#140a28] to-[#0c0c14] border border-purple-500/20 rounded-2xl p-5 flex items-start gap-4">
+      <div className="bg-gradient-to-br from-[#140a28] to-[#0c0c14] border border-purple-500/20 rounded-2xl p-3 md:p-5 flex items-start gap-4">
         <div className="w-10 h-10 rounded-xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center flex-shrink-0">
           <Globe2 size={18} className="text-purple-400" />
         </div>

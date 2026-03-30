@@ -18,17 +18,17 @@ const rows = [
 ];
 
 const WhyAINASection = () => (
-  <section className="bg-[#050509] py-14 md:py-20 px-4 md:px-6">
+  <section className="bg-[#050509] py-8 md:py-20 px-4 md:px-6">
     <div className="max-w-5xl mx-auto">
-      <div className="mb-10 md:mb-14">
+      <div className="mb-5 md:mb-14">
         <span className="text-[10px] font-bold uppercase tracking-widest text-cyan-400">Keunggulan</span>
-        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white leading-tight">
+        <h2 className="mt-2 text-2xl md:text-4xl font-bold text-white leading-tight">
           Kenapa AINA, bukan{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">AI biasa?</span>
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-12 items-start">
         {/* Left: Key differentiators */}
         <div className="space-y-4">
           {points.map((p, i) => {

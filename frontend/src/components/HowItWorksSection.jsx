@@ -10,11 +10,11 @@ const steps = [
 ];
 
 const HowItWorksSection = () => (
-  <section className="bg-[#050509] py-14 md:py-20 px-4 md:px-6">
+  <section className="bg-[#050509] py-8 md:py-20 px-4 md:px-6">
     <div className="max-w-5xl mx-auto">
-      <div className="mb-10 md:mb-14">
+      <div className="mb-5 md:mb-14">
         <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400">Cara Kerja</span>
-        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white leading-tight">
+        <h2 className="mt-2 text-2xl md:text-4xl font-bold text-white leading-tight">
           Bagaimana AINA{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">menjawab pertanyaanmu.</span>
         </h2>
@@ -66,7 +66,7 @@ const HowItWorksSection = () => (
         })}
       </div>
 
-      <div className="bg-[#0c0c14] border border-purple-500/15 rounded-2xl p-4 flex items-start gap-3">
+      <div className="bg-[#0c0c14] border border-purple-500/15 rounded-2xl p-3 md:p-4 flex items-start gap-3">
         <ShieldCheck size={18} className="text-purple-400 flex-shrink-0 mt-0.5" />
         <div>
           <p className="text-sm font-semibold text-white mb-1">Kenapa transparansi sumber penting?</p>

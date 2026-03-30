@@ -59,11 +59,11 @@ const ChatDemo = () => (
 const ClosingSection = () => (
   <section className="bg-[#050509] pt-14 md:pt-20 pb-0 overflow-hidden">
     <div className="max-w-5xl mx-auto px-4 md:px-6">
-      <div className="flex flex-col lg:flex-row gap-10 md:gap-14 items-center mb-16 md:mb-20">
+      <div className="flex flex-col lg:flex-row gap-5 md:gap-14 items-center mb-16 md:mb-20">
         {/* Text */}
         <div className="flex-1 text-center lg:text-left">
           <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400">Bergabung</span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+          <h2 className="mt-2 text-2xl md:text-4xl font-bold text-white leading-tight mb-4">
             AINA dibangun serius —{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-white to-cyan-400">
               dan butuh kamu di dalamnya.
