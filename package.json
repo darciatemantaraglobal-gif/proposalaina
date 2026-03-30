@@ -1,0 +1,11 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/darciatemantaraglobal-gif/proposalaina",
+  "author": "HAGAH <56807785-desainppidunia@users.noreply.replit.com>",
+  "license": "MIT",
+  "dependencies": {
+    "yarn": "^1.22.22"
+  }
+}

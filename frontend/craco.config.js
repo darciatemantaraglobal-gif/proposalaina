@@ -81,32 +81,33 @@ if (config.enableVisualEdits) {
 }
 
 // Setup dev server with visual edits and/or health check
-if (config.enableVisualEdits || config.enableHealthCheck) {
-  webpackConfig.devServer = (devServerConfig) => {
-    // Apply visual edits dev server setup if enabled
-    if (config.enableVisualEdits && setupDevServer) {
-      devServerConfig = setupDevServer(devServerConfig);
-    }
+webpackConfig.devServer = (devServerConfig) => {
+  // Allow all hosts for Replit proxy
+  devServerConfig.allowedHosts = "all";
 
-    // Add health check endpoints if enabled
-    if (config.enableHealthCheck && setupHealthEndpoints && healthPluginInstance) {
-      const originalSetupMiddlewares = devServerConfig.setupMiddlewares;
+  // Apply visual edits dev server setup if enabled
+  if (config.enableVisualEdits && setupDevServer) {
+    devServerConfig = setupDevServer(devServerConfig);
+  }
 
-      devServerConfig.setupMiddlewares = (middlewares, devServer) => {
-        // Call original setup if exists
-        if (originalSetupMiddlewares) {
-          middlewares = originalSetupMiddlewares(middlewares, devServer);
-        }
+  // Add health check endpoints if enabled
+  if (config.enableHealthCheck && setupHealthEndpoints && healthPluginInstance) {
+    const originalSetupMiddlewares = devServerConfig.setupMiddlewares;
 
-        // Setup health endpoints
-        setupHealthEndpoints(devServer, healthPluginInstance);
+    devServerConfig.setupMiddlewares = (middlewares, devServer) => {
+      // Call original setup if exists
+      if (originalSetupMiddlewares) {
+        middlewares = originalSetupMiddlewares(middlewares, devServer);
+      }
 
-        return middlewares;
-      };
-    }
+      // Setup health endpoints
+      setupHealthEndpoints(devServer, healthPluginInstance);
 
-    return devServerConfig;
-  };
-}
+      return middlewares;
+    };
+  }
+
+  return devServerConfig;
+};
 
 module.exports = webpackConfig;
