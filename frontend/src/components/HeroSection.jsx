@@ -238,7 +238,7 @@ const HeroSection = () => {
     "https://wa.me/6281311506025?text=Halo%20Daru,%20saya%20ingin%20bergabung%20komunitas%20AINA.";
 
   return (
-    <section className="relative min-h-screen bg-[#050509] overflow-hidden pt-28 pb-20 px-4 md:px-6 flex flex-col items-center">
+    <section className="relative min-h-screen bg-[#050509] overflow-hidden pt-20 pb-14 md:pt-28 md:pb-20 px-4 md:px-6 flex flex-col items-center">
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
@@ -268,13 +268,13 @@ const HeroSection = () => {
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.1] font-futuristic uppercase">
+        <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.1] font-futuristic uppercase">
           AINA{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-cyan-300">
             AI ASSISTANT
           </span>
           <br />
-          <span className="text-2xl md:text-3xl lg:text-4xl text-slate-300 font-normal normal-case" style={{ fontFamily: "sans-serif", letterSpacing: "0.01em" }}>
+          <span className="text-lg md:text-3xl lg:text-4xl text-slate-300 font-normal normal-case" style={{ fontFamily: "sans-serif", letterSpacing: "0.01em" }}>
             Bukan AI biasa — sistem yang dirancang untuk Masisir.
           </span>
         </h1>

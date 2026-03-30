@@ -154,14 +154,14 @@ const LayerCard = ({ layer, isLast }) => {
 
 const SystemArchitectureSection = () => {
   return (
-    <section className="relative bg-[#050509] py-24 px-6 overflow-hidden font-sans text-slate-300">
+    <section className="relative bg-[#050509] py-16 md:py-24 px-4 md:px-6 overflow-hidden font-sans text-slate-300">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-900/8 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-900/6 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTM5LCA5MiwgMjQ2LCAwLjA1KSIvPjwvc3ZnPg==')] opacity-40 pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header */}
-        <div className="mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+        <div className="mb-10 md:mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
           <div>
             <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-purple-900/20 border border-purple-500/20 backdrop-blur-sm">
               <Cpu size={12} className="text-purple-400" />

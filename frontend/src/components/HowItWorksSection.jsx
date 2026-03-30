@@ -41,13 +41,13 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="relative bg-[#050509] py-24 px-6 overflow-hidden font-sans text-slate-300">
+    <section className="relative bg-[#050509] py-16 md:py-24 px-4 md:px-6 overflow-hidden font-sans text-slate-300">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTM5LCA5MiwgMjQ2LCAwLjA1KSIvPjwvc3ZnPg==')] opacity-40 pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-purple-900/20 border border-purple-500/20 backdrop-blur-sm">
             <Search size={12} className="text-cyan-400" />
             <span className="text-[10px] md:text-xs text-purple-200 font-bold uppercase tracking-widest">
@@ -67,7 +67,7 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Steps — Desktop: horizontal, Mobile: vertical */}
-        <div className="hidden md:flex items-start justify-between gap-2 mb-16">
+        <div className="hidden md:flex items-start justify-between gap-2 mb-10 md:mb-16">
           {steps.map((step, i) => {
             const Icon = step.icon;
             const isPurple = step.color === 'purple';

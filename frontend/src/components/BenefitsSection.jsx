@@ -101,14 +101,14 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="relative py-24 px-6 overflow-hidden bg-[#050509]">
+    <section className="relative py-16 md:py-24 px-4 md:px-6 overflow-hidden bg-[#050509]">
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0f0a1e] to-black"></div>
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-3xl h-[500px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <div className="inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full bg-purple-900/20 border border-purple-500/20 backdrop-blur-sm">
             <Sparkles className="w-3.5 h-3.5 text-purple-400" />
             <span className="text-xs text-purple-300 font-medium uppercase tracking-widest">

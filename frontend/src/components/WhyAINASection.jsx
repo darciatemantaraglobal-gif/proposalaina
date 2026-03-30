@@ -44,14 +44,14 @@ const comparisonRows = [
 
 const WhyAINASection = () => {
   return (
-    <section className="relative bg-[#050509] py-24 px-6 overflow-hidden font-sans text-slate-300">
+    <section className="relative bg-[#050509] py-16 md:py-24 px-4 md:px-6 overflow-hidden font-sans text-slate-300">
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-cyan-900/8 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-900/8 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTM5LCA5MiwgMjQ2LCAwLjA1KSIvPjwvc3ZnPg==')] opacity-40 pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-purple-900/20 border border-purple-500/20 backdrop-blur-sm">
             <Target size={12} className="text-purple-400" />
             <span className="text-[10px] md:text-xs text-purple-200 font-bold uppercase tracking-widest">
@@ -70,7 +70,7 @@ const WhyAINASection = () => {
         </div>
 
         {/* 5 Differentiators */}
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 mb-16">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 mb-10 md:mb-16">
           {differentiators.map((item, i) => {
             const Icon = item.icon;
             const isPurple = item.color === 'purple';
@@ -104,29 +104,33 @@ const WhyAINASection = () => {
         <div className="relative group">
           <div className="absolute -inset-px bg-gradient-to-r from-purple-900/40 to-cyan-900/20 rounded-2xl blur opacity-60" />
           <div className="relative bg-[#0a0a12] border border-white/8 rounded-2xl overflow-hidden">
-            {/* Table Header */}
-            <div className="grid grid-cols-3 bg-[#13131a] border-b border-white/5 px-5 py-4">
-              <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Aspek</div>
-              <div className="text-xs text-purple-300 font-bold uppercase tracking-wider text-center">AINA</div>
-              <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider text-center">AI Umum</div>
-            </div>
-            {/* Rows */}
-            {comparisonRows.map((row, i) => (
-              <div
-                key={i}
-                className={`grid grid-cols-3 px-5 py-4 border-b border-white/5 last:border-0 hover:bg-white/[0.02] transition-colors ${i % 2 === 0 ? 'bg-transparent' : 'bg-white/[0.01]'}`}
-              >
-                <div className="text-xs text-slate-400 font-medium pr-4 flex items-center">{row.aspect}</div>
-                <div className="flex items-center justify-center gap-1.5">
-                  <CheckCircle2 size={12} className="text-emerald-400 flex-shrink-0" />
-                  <span className="text-xs text-emerald-300 font-medium text-center">{row.aina}</span>
+            <div className="overflow-x-auto">
+              <div className="min-w-[480px]">
+                {/* Table Header */}
+                <div className="grid grid-cols-3 bg-[#13131a] border-b border-white/5 px-5 py-4">
+                  <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Aspek</div>
+                  <div className="text-xs text-purple-300 font-bold uppercase tracking-wider text-center">AINA</div>
+                  <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider text-center">AI Umum</div>
                 </div>
-                <div className="flex items-center justify-center gap-1.5">
-                  <X size={12} className="text-slate-600 flex-shrink-0" />
-                  <span className="text-xs text-slate-500 text-center">{row.generic}</span>
-                </div>
+                {/* Rows */}
+                {comparisonRows.map((row, i) => (
+                  <div
+                    key={i}
+                    className={`grid grid-cols-3 px-5 py-4 border-b border-white/5 last:border-0 hover:bg-white/[0.02] transition-colors ${i % 2 === 0 ? 'bg-transparent' : 'bg-white/[0.01]'}`}
+                  >
+                    <div className="text-xs text-slate-400 font-medium pr-4 flex items-center">{row.aspect}</div>
+                    <div className="flex items-center justify-center gap-1.5">
+                      <CheckCircle2 size={12} className="text-emerald-400 flex-shrink-0" />
+                      <span className="text-xs text-emerald-300 font-medium text-center">{row.aina}</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-1.5">
+                      <X size={12} className="text-slate-600 flex-shrink-0" />
+                      <span className="text-xs text-slate-500 text-center">{row.generic}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

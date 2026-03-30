@@ -111,7 +111,7 @@ const FeaturesSection = () => {
   const rightFeatures = features.slice(4);
 
   return (
-    <section className="relative py-24 px-6 overflow-hidden bg-[#050712]">
+    <section className="relative py-16 md:py-24 px-4 md:px-6 overflow-hidden bg-[#050712]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,#1c1235_0,#050712_55%)]" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,#7c3aed_0,#050712_70%)] opacity-60 blur-3xl" />
 

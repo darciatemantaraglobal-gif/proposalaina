@@ -61,14 +61,14 @@ const ClosingSection = () => {
     "https://wa.me/6281311506025?text=Halo%20Daru,%20saya%20ingin%20berkontribusi%20untuk%20AINA.";
 
   return (
-    <section className="relative bg-[#050509] pt-24 pb-0 overflow-hidden font-sans text-slate-300">
+    <section className="relative bg-[#050509] pt-16 md:pt-24 pb-0 overflow-hidden font-sans text-slate-300">
       
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[radial-gradient(ellipse_at_center,rgba(88,28,135,0.15),transparent_70%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
 
-      <div className="max-w-7xl mx-auto relative z-10 px-6">
+      <div className="max-w-7xl mx-auto relative z-10 px-4 md:px-6">
         
-        <div className="text-center max-w-3xl mx-auto mb-16 relative z-20">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 relative z-20">
           <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-purple-900/20 border border-purple-500/30 backdrop-blur-md shadow-[0_0_20px_-5px_rgba(168,85,247,0.5)]">
             <Sparkles size={14} className="text-cyan-400 animate-pulse" />
             <span className="text-xs font-bold text-purple-200 uppercase tracking-widest">

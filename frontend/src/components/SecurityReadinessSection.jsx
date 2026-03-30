@@ -27,7 +27,7 @@ const pillars = [
 
 const SecurityReadinessSection = () => {
   return (
-    <section className="relative bg-[#050509] py-20 px-6 overflow-hidden font-sans text-slate-300">
+    <section className="relative bg-[#050509] py-14 md:py-20 px-4 md:px-6 overflow-hidden font-sans text-slate-300">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTM5LCA5MiwgMjQ2LCAwLjA1KSIvPjwvc3ZnPg==')] opacity-40 pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-purple-900/8 rounded-full blur-[100px] pointer-events-none" />
 

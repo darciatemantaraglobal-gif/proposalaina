@@ -60,13 +60,13 @@ const ProgressSection = () => {
   const readyCount = 8;
 
   return (
-    <section className="relative overflow-hidden bg-black py-24 px-6 md:py-32">
+    <section className="relative overflow-hidden bg-black py-16 px-4 md:py-24 md:px-6">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#130f2b] via-[#050509] to-black" />
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTIwLCAxMDAsIDI1NSwgMC4wNykiLz48L3N2Zz4=')] opacity-40" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-10 md:mb-16 text-center">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-950/30 px-4 py-1.5 backdrop-blur-md">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
@@ -91,7 +91,7 @@ const ProgressSection = () => {
         </div>
 
         {/* Stats row */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-wrap justify-center gap-4 mb-10 md:mb-16">
           {[
             { value: readyCount, label: 'Fitur Core Live', color: 'text-emerald-400' },
             { value: '5', label: 'Layer Sistem', color: 'text-cyan-400' },

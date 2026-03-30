@@ -44,7 +44,7 @@ const SolutionSection = () => {
   const modules = ['AI Assistant', 'Knowledge Base', 'Info Lokasi'];
 
   return (
-    <section className="relative bg-[#050509] py-24 px-6 font-sans text-slate-300 overflow-hidden">
+    <section className="relative bg-[#050509] py-16 md:py-24 px-4 md:px-6 font-sans text-slate-300 overflow-hidden">
       
       <div className="absolute top-1/4 -left-40 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 -right-40 w-[600px] h-[600px] bg-cyan-900/10 rounded-full blur-[120px] pointer-events-none" />
