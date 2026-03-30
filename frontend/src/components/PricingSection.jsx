@@ -13,11 +13,11 @@ const tiers = [
     annual: 1290000,
     desc: 'Untuk UMKM yang ingin menjangkau komunitas Masisir secara ringan.',
     benefits: [
-      'Banner di halaman dashboard AINA',
-      'Exposure ke pengguna aktif',
-      'Mention di announcement komunitas',
-      'Laporan exposure dasar',
-      'Durasi 30 hari aktif',
+      'Banner di beranda AINA (tampil ke semua pengguna aktif)',
+      'Profil bisnis di direktori mitra AINA',
+      '1 announcement per bulan ke seluruh pengguna',
+      'Badge "Mitra AINA" di profil bisnis',
+      'Laporan impresi bulanan (tampil & klik)',
     ],
     waText: 'Halo, saya tertarik dengan Paket UMKM Starter untuk partnership dengan AINA.',
     highlight: false,
@@ -31,11 +31,11 @@ const tiers = [
     annual: 3400000,
     desc: 'Untuk UMKM yang ingin eksposur lebih kuat dan terukur di ekosistem Masisir.',
     benefits: [
-      'Banner placement prioritas',
-      'Exposure di beberapa halaman utama',
-      'Mention announcement lebih kuat',
-      'Analitik lengkap bulanan',
-      'Opsi perpanjangan kumulatif',
+      'Banner prioritas di beranda + halaman AI Chat',
+      '3 announcement per bulan ke semua pengguna',
+      '1 pinned post di forum komunitas per bulan',
+      'AINA rekomendasikan bisnis kamu saat pertanyaan relevan',
+      'Laporan performa lengkap (impresi, klik, reach)',
     ],
     waText: 'Halo, saya tertarik dengan Paket UMKM Standard untuk partnership dengan AINA.',
     highlight: false,
@@ -49,12 +49,13 @@ const tiers = [
     annual: 25000000,
     desc: 'Untuk organisasi yang ingin hadir secara signifikan di ekosistem Masisir.',
     benefits: [
-      'Banner prioritas di semua halaman kunci',
-      'Targeted announcement ke segmen pengguna',
-      'Branding sebagai Partner Resmi AINA',
-      'Integrasi campaign ekosistem AINA',
-      'Co-branded content & kolaborasi',
-      'Laporan performa bulanan lengkap',
+      'Banner di semua halaman kunci (Beranda, AI Chat, Knowledge, Komunitas)',
+      'Status "Partner Resmi AINA" di seluruh ekosistem',
+      'Unlimited announcements + featured placement',
+      'Rekomendasi AI terintegrasi penuh (AINA aktif menyebut bisnis kamu)',
+      'Artikel knowledge base dengan branding partner',
+      'Co-marketing & kolaborasi konten bersama AINA',
+      'Analytics real-time + priority WhatsApp support',
     ],
     waText: 'Halo, saya tertarik dengan Paket Corporate Strategic Partner untuk partnership dengan AINA.',
     highlight: true,
@@ -73,7 +74,7 @@ const PricingSection = () => {
       <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
       <div className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[700px] -translate-x-1/2 rounded-full blur-[150px]" style={{ background: 'hsl(270 60% 55% / 0.08)' }} />
 
-      <div className="relative z-10 max-w-5xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
 
         {/* Header */}
         <div className="mb-8 md:mb-12 text-center">

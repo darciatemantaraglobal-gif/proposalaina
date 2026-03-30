@@ -104,7 +104,7 @@ const ClosingSection = () => (
     <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
     <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[150px]" style={{ background: 'hsl(270 60% 55% / 0.09)' }} />
 
-    <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8">
+    <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8">
 
       {/* Top: headline + chat demo */}
       <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center mb-8 md:mb-14">

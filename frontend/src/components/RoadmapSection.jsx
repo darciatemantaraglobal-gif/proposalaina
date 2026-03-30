@@ -73,7 +73,7 @@ const RoadmapSection = () => (
     <div className="pointer-events-none absolute right-0 top-0 h-[400px] w-[400px] rounded-full blur-[140px]" style={{ background: 'hsl(185 80% 55% / 0.05)' }} />
     <div className="pointer-events-none absolute left-0 bottom-0 h-[300px] w-[300px] rounded-full blur-[120px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
 
-    <div className="relative z-10 max-w-5xl mx-auto">
+    <div className="relative z-10 max-w-6xl mx-auto">
 
       {/* Header */}
       <div className="mb-6 md:mb-12 text-center">

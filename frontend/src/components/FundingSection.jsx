@@ -42,7 +42,7 @@ const FundingSection = () => (
     <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
     <div className="pointer-events-none absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full blur-[140px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
 
-    <div className="relative z-10 max-w-5xl mx-auto">
+    <div className="relative z-10 max-w-6xl mx-auto">
       <div className="mb-5 md:mb-14 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
           <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Kolaborasi</span>

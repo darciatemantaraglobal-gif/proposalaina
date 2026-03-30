@@ -48,7 +48,7 @@ const FeaturesSection = () => (
     <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
     <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[160px]" style={{ background: 'hsl(270 60% 55% / 0.06)' }} />
 
-    <div className="relative z-10 max-w-5xl mx-auto">
+    <div className="relative z-10 max-w-6xl mx-auto">
 
       {/* Header */}
       <div className="mb-6 md:mb-12 text-center">

@@ -15,7 +15,7 @@ const SolutionSection = () => (
     <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
     <div className="pointer-events-none absolute right-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full blur-[140px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
 
-    <div className="relative z-10 max-w-5xl mx-auto">
+    <div className="relative z-10 max-w-6xl mx-auto">
       <div className="flex flex-col lg:flex-row gap-8 md:gap-14 items-start">
 
         {/* LEFT: System status card */}

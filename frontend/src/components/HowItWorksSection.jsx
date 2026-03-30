@@ -45,7 +45,7 @@ const HowItWorksSection = () => (
     <div className="pointer-events-none absolute right-0 top-0 h-[400px] w-[400px] rounded-full blur-[140px]" style={{ background: 'hsl(185 80% 55% / 0.05)' }} />
     <div className="pointer-events-none absolute left-0 bottom-0 h-[300px] w-[300px] rounded-full blur-[120px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
 
-    <div className="relative z-10 max-w-4xl mx-auto">
+    <div className="relative z-10 max-w-5xl mx-auto">
       <div className="mb-8 md:mb-12 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
           <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Cara Kerja</span>

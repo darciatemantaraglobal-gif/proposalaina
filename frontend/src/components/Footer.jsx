@@ -5,7 +5,7 @@ const AinaHeroSection = () => (
   <footer className="relative bg-[#050509] border-t border-purple-500/15 py-8 px-6 md:px-8 overflow-hidden">
     <div className="pointer-events-none absolute inset-0 dot-grid opacity-20" />
 
-    <div className="relative z-10 max-w-5xl mx-auto">
+    <div className="relative z-10 max-w-6xl mx-auto">
       <div className="flex flex-col md:flex-row items-start justify-between gap-6">
         {/* Brand */}
         <div className="flex-1">

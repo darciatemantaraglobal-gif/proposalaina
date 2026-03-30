@@ -39,7 +39,7 @@ const ProblemSection = () => (
     <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
     <div className="pointer-events-none absolute left-1/3 top-0 h-[400px] w-[400px] -translate-x-1/2 rounded-full blur-[140px]" style={{ background: 'hsl(270 60% 55% / 0.08)' }} />
 
-    <div className="relative z-10 max-w-5xl mx-auto">
+    <div className="relative z-10 max-w-6xl mx-auto">
       <div className="mb-8 md:mb-12 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-red-400/25 bg-red-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
           <span className="relative flex h-1.5 w-1.5">
