@@ -5,31 +5,31 @@ const problems = [
   {
     icon: FileX,
     title: 'Birokrasi yang membingungkan',
-    desc: 'Visa, iqamah, tasjil, dan prosedur kampus — aturannya berubah, prosesnya panjang, dan tidak ada satu panduan yang bisa diandalkan.',
+    desc: 'Prosedur berubah terus, aturan tidak jelas, dan tidak ada panduan terpercaya.',
     stat: 'Keluhan #1',
   },
   {
     icon: Globe,
     title: 'Informasi tersebar, tidak terpusat',
-    desc: 'Pengumuman penting terkubur di grup WA yang ramai. Tidak ada sistem yang menyimpan, menyaring, dan menyajikan informasi untuk Masisir.',
+    desc: 'Info penting tenggelam di grup WA — tidak tersaring, tidak bisa dicari ulang.',
     stat: 'Tiap hari',
   },
   {
     icon: BookOpen,
     title: 'Kesulitan akademik tanpa pendampingan',
-    desc: 'Sistem kuliah di Mesir berbeda jauh dari Indonesia. Tidak ada tempat yang memahami konteks akademik Masisir secara spesifik.',
+    desc: 'Sistem akademik Mesir beda jauh dari Indonesia. Tidak ada yang memahami konteksnya.',
     stat: 'Tiap mahasiswa baru',
   },
   {
     icon: MapPin,
     title: 'Adaptasi hidup di negeri orang',
-    desc: 'Cari kos, transportasi, kuliner halal, layanan kesehatan — semua dilakukan sendiri tanpa panduan yang paham kondisi Masisir di lapangan.',
+    desc: 'Semua dicari sendiri — tanpa panduan yang paham kondisi di lapangan.',
     stat: 'Terutama tahun pertama',
   },
   {
     icon: Clock,
     title: 'Tidak ada sistem terpusat untuk Masisir',
-    desc: 'Ribuan pertanyaan yang sama ditanyakan berulang setiap tahun ajaran baru. Pengetahuan komunitas tidak tersimpan, tidak bisa diakses ulang.',
+    desc: 'Pertanyaan sama berulang tiap tahun — pengetahuan komunitas hilang begitu saja.',
     stat: 'Ribuan jam terbuang',
   },
 ];

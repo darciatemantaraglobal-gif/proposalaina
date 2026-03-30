@@ -5,31 +5,31 @@ const differentiators = [
   {
     icon: Target,
     title: 'Dibuat khusus untuk Masisir',
-    desc: 'Setiap fitur, setiap konten, dan setiap respons dirancang dari realita kehidupan mahasiswa Indonesia di Mesir. Bukan produk umum yang dipaksakan masuk.',
+    desc: 'Setiap fitur dan respons dirancang dari realita Masisir — bukan produk umum yang dipaksakan.',
     color: 'purple',
   },
   {
     icon: Brain,
     title: 'Bukan AI generik',
-    desc: 'AINA tidak menjawab dari pengetahuan umum AI. Jawabannya berasal dari knowledge base lokal yang dikurasi kontributor Masisir — lebih akurat, lebih relevan.',
+    desc: 'Bukan dari AI general — dari knowledge base lokal yang dikurasi Masisir.',
     color: 'cyan',
   },
   {
     icon: BookOpen,
     title: 'Berbasis knowledge lokal',
-    desc: 'Knowledge base AINA diisi dan diverifikasi oleh Masisir yang punya pengalaman langsung. Informasi tentang prosedur, kampus, dan kehidupan di Mesir tidak datang dari internet sembarangan.',
+    desc: 'Diisi dan diverifikasi oleh Masisir yang punya pengalaman langsung.',
     color: 'purple',
   },
   {
     icon: LifeBuoy,
     title: 'Mencakup seluruh kebutuhan Masisir',
-    desc: 'Dari birokrasi dan administrasi kampus, hingga kehidupan sehari-hari dan produktivitas — AINA hadir untuk semua dimensi kehidupan Masisir, bukan hanya satu aspek.',
+    desc: 'Birokrasi, akademik, kehidupan, produktivitas — satu sistem, bukan satu aspek.',
     color: 'cyan',
   },
   {
     icon: Globe2,
     title: 'Menuju pusat ekosistem digital Masisir',
-    desc: 'AINA bukan aplikasi statis. Sistem dibangun untuk berkembang — menghubungkan semua kebutuhan digital Masisir dalam satu ekosistem yang tumbuh bersama komunitasnya.',
+    desc: 'Sistem yang tumbuh bersama komunitasnya — bukan aplikasi statis.',
     color: 'purple',
   },
 ];

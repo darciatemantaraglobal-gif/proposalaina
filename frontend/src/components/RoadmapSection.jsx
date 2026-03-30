@@ -12,14 +12,14 @@ const phases = [
       {
         icon: Brain,
         title: 'Penguatan AI & Knowledge Base',
-        desc: 'Knowledge base diisi lebih dalam untuk birokrasi, akademik, dan kehidupan Masisir. Kualitas jawaban AI terus ditingkatkan — lebih akurat, lebih kontekstual.',
+        desc: 'Knowledge base lebih dalam, jawaban AI makin akurat dan kontekstual.',
         tags: ['Knowledge Expansion', 'AI Quality', 'Accuracy'],
         color: 'purple',
       },
       {
         icon: Users2,
         title: 'Penguatan Ekosistem Komunitas',
-        desc: 'Contributor dashboard dimatangkan. Sistem verifikasi diperkuat. Threads komunitas diaktifkan secara penuh dengan moderasi dan reward sistem.',
+        desc: 'Dashboard kontributor, verifikasi, dan threads komunitas dimatangkan penuh.',
         tags: ['Contributor System', 'Community Threads', 'Moderation'],
         color: 'cyan',
       },
@@ -35,14 +35,14 @@ const phases = [
       {
         icon: Newspaper,
         title: 'Penguatan Sistem Informasi Masisir',
-        desc: 'Feed berita dan pengumuman lebih terpusat dan terstruktur. Notifikasi topik personal. Jaringan kontributor konten dari berbagai universitas di Mesir.',
+        desc: 'Feed lebih terpusat, notifikasi personal, kontributor dari berbagai kampus.',
         tags: ['News Feed', 'Personalized Notif', 'Multi-campus'],
         color: 'purple',
       },
       {
         icon: LayoutDashboard,
         title: 'Penguatan Tools Kehidupan',
-        desc: 'Ruang produktif lebih adaptif — integrasi task, notes, dan reminder. Fitur pendamping kehidupan kampus yang lebih lengkap dan terintegrasi.',
+        desc: 'Task, notes, dan reminder lebih terintegrasi dalam satu ruang produktif.',
         tags: ['Productive Tools', 'Task Integration', 'Life System'],
         color: 'cyan',
       },
@@ -58,7 +58,7 @@ const phases = [
       {
         icon: Globe2,
         title: 'AINA sebagai Pusat Ekosistem Digital Masisir',
-        desc: 'Satu platform yang menghubungkan semua kebutuhan digital Masisir — informasi, AI assistant, layanan, komunitas, dan pengembangan diri — dalam satu ekosistem yang matang.',
+        desc: 'Satu ekosistem untuk semua kebutuhan digital Masisir — informasi, AI, komunitas, dan layanan.',
         tags: ['Full Ecosystem', 'All-in-One Platform', 'Community Hub'],
         color: 'purple',
         isVision: true,

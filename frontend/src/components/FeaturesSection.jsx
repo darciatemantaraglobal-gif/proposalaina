@@ -5,42 +5,42 @@ const coreFeatures = [
   {
     icon: MessageSquare,
     title: 'AI Chat untuk Masisir',
-    desc: 'Bukan AI generik. Setiap jawaban dihasilkan dari konteks dan knowledge base Masisir — bukan dari generasi bebas yang rawan salah.',
+    desc: 'Jawaban dari knowledge base Masisir — bukan generasi bebas yang rawan salah.',
     tag: 'Core',
     color: 'purple',
   },
   {
     icon: Database,
     title: 'Knowledge-Based Answering',
-    desc: 'Jawaban terikat ke knowledge base yang dikurasi kontributor. Sistem tidak menebak — ia mencari, mencocokkan, lalu menjawab.',
+    desc: 'Sistem mencari, mencocokkan, lalu menjawab. Tidak menebak.',
     tag: 'Core',
     color: 'cyan',
   },
   {
     icon: Link2,
     title: 'Source Transparency',
-    desc: 'Setiap jawaban AI disertai sumber dari mana informasi diambil. Pengguna bisa verifikasi sendiri tanpa harus percaya buta.',
+    desc: 'Setiap jawaban ada sumbernya. Bisa diverifikasi langsung.',
     tag: 'Core',
     color: 'purple',
   },
   {
     icon: BarChart2,
     title: 'Confidence Level',
-    desc: 'Indikator tingkat keyakinan sistem pada setiap jawaban. Kalau informasinya terbatas, AINA jujur — bukan pura-pura yakin.',
+    desc: 'Kalau informasinya terbatas, AINA jujur — bukan pura-pura yakin.',
     tag: 'Core',
     color: 'cyan',
   },
 ];
 
 const supportingFeatures = [
-  { icon: Newspaper, title: 'Berita & Pengumuman', desc: 'Feed informasi kampus, organisasi, dan komunitas Masisir — real-time, terpusat, tidak tenggelam di grup WA.', color: 'purple' },
-  { icon: MessageCircle, title: 'Threads Komunitas', desc: 'Ruang diskusi peer-to-peer termoderasi per topik. Upvote jawaban terbaik, jawaban berkualitas naik ke atas.', color: 'cyan' },
-  { icon: CheckSquare, title: 'Ruang Produktif', desc: 'Tasks, catatan, dan tracking target belajar dalam satu dashboard. Dirancang untuk ritme hidup Masisir.', color: 'purple' },
-  { icon: Bookmark, title: 'Saved Answers', desc: 'Simpan jawaban AI atau postingan komunitas yang penting dan akses kembali kapan saja tanpa harus cari ulang.', color: 'cyan' },
-  { icon: Users2, title: 'Contributor System', desc: 'Masisir bisa berkontribusi memperkaya knowledge base. Kontribusi diverifikasi sebelum masuk ke sistem.', color: 'purple' },
-  { icon: User, title: 'Personalization', desc: 'AINA menyesuaikan relevansi informasi berdasarkan profil dan kebutuhan pengguna — kampus, tahun, minat.', color: 'cyan' },
-  { icon: Bell, title: 'Announcement System', desc: 'Notifikasi pengumuman penting dari kampus atau organisasi — tersampaikan tepat waktu, tidak terlewat.', color: 'purple' },
-  { icon: LayoutDashboard, title: 'Dashboard Terpusat', desc: 'Semua fitur diakses dari satu dashboard. Tidak perlu lompat-lompat antar aplikasi untuk kebutuhan yang berbeda.', color: 'cyan' },
+  { icon: Newspaper, title: 'Berita & Pengumuman', desc: 'Informasi kampus dan komunitas terpusat — tidak tenggelam di grup WA.', color: 'purple' },
+  { icon: MessageCircle, title: 'Threads Komunitas', desc: 'Diskusi per topik, termoderasi. Jawaban terbaik naik ke atas.', color: 'cyan' },
+  { icon: CheckSquare, title: 'Ruang Produktif', desc: 'Tasks, catatan, dan target belajar dalam satu ruang.', color: 'purple' },
+  { icon: Bookmark, title: 'Saved Answers', desc: 'Simpan jawaban penting, akses kapan saja.', color: 'cyan' },
+  { icon: Users2, title: 'Contributor System', desc: 'Kontribusi Masisir diverifikasi sebelum masuk ke sistem.', color: 'purple' },
+  { icon: User, title: 'Personalization', desc: 'Relevansi disesuaikan dengan profil — kampus, tahun, minat.', color: 'cyan' },
+  { icon: Bell, title: 'Announcement System', desc: 'Pengumuman penting tidak terlewat.', color: 'purple' },
+  { icon: LayoutDashboard, title: 'Dashboard Terpusat', desc: 'Semua fitur dalam satu dashboard.', color: 'cyan' },
 ];
 
 const FeaturesSection = () => (

@@ -14,7 +14,7 @@ const packages = [
     color: 'cyan',
     tagColor: 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300',
     highlight: false,
-    desc: 'Untuk UMKM atau bisnis skala kecil yang ingin menjangkau komunitas Masisir secara ringan.',
+    desc: 'Untuk UMKM yang ingin menjangkau komunitas Masisir secara ringan.',
     benefits: [
       'Banner placement di halaman dashboard AINA',
       'Exposure ke pengguna aktif Masisir',
@@ -54,7 +54,7 @@ const packages = [
     color: 'purple',
     tagColor: 'bg-purple-500/10 border-purple-500/20 text-purple-300',
     highlight: true,
-    desc: 'Untuk organisasi atau perusahaan yang ingin hadir secara signifikan di ekosistem digital Masisir.',
+    desc: 'Untuk organisasi yang ingin hadir secara signifikan di ekosistem Masisir.',
     benefits: [
       'Prioritas banner — posisi utama di semua halaman kunci',
       'Targeted popup announcement ke segmen pengguna',
