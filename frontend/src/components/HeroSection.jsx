@@ -465,15 +465,13 @@ const HeroSection = () => {
                         AINA AI
                       </span>
                       <span className="text-[10px] text-green-400 flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>{" "}
-                        Online • Demo Mode
+                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>{" "}
+                        Online
                       </span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] text-slate-400 bg-white/5 px-2 py-1 rounded-full border border-purple-500/15">
-                      {MAX_CHATS - chatCount} chat left
-                    </span>
+                    <span className="text-[10px] text-purple-400/60">Gemini AI</span>
                   </div>
                 </div>
 
@@ -524,7 +522,7 @@ const HeroSection = () => {
                   {chatCount >= MAX_CHATS && (
                     <div className="p-4 rounded-2xl bg-purple-900/20 border border-purple-500/30 text-center">
                       <p className="text-xs text-purple-300 mb-2 font-medium">
-                        Demo selesai! Tertarik bergabung komunitas AINA?
+                        Tertarik dengan AINA? Hubungi tim kami langsung.
                       </p>
                       <a
                         href={waLinkChat}
@@ -532,7 +530,7 @@ const HeroSection = () => {
                         rel="noopener noreferrer"
                         className="inline-block text-[10px] px-4 py-2 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-500 transition-colors"
                       >
-                        Gabung Komunitas →
+                        Hubungi Tim AINA →
                       </a>
                     </div>
                   )}
@@ -562,7 +560,7 @@ const HeroSection = () => {
                   ) : (
                     <div className="flex items-center justify-center gap-2 text-slate-500 text-[10px]">
                       <CheckCircle size={12} className="text-emerald-500" />
-                      Demo selesai
+                      Chat terbatas — hubungi tim untuk akses penuh
                     </div>
                   )}
                 </div>
