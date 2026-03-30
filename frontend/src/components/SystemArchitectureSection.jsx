@@ -146,7 +146,7 @@ const LayerCard = ({ layer, isLast }) => {
 };
 
 const SystemArchitectureSection = () => (
-  <section className="relative bg-[#050509] py-8 md:py-20 px-4 md:px-6 overflow-hidden">
+  <section className="relative bg-[#050509] py-8 md:py-20 px-6 md:px-8 overflow-hidden">
     <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
     <div className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full blur-[140px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
     <div className="pointer-events-none absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full blur-[120px]" style={{ background: 'hsl(185 80% 55% / 0.05)' }} />

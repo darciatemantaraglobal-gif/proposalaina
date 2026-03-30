@@ -17,7 +17,7 @@ const differentiators = [
 ];
 
 const SolutionSection = () => (
-  <section id="solusi" className="relative bg-[#050509] py-8 md:py-20 px-4 md:px-6 overflow-hidden">
+  <section id="solusi" className="relative bg-[#050509] py-8 md:py-20 px-6 md:px-8 overflow-hidden">
     <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
     <div className="pointer-events-none absolute right-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full blur-[140px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
 

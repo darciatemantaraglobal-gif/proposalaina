@@ -35,7 +35,7 @@ const problems = [
 ];
 
 const ProblemSection = () => (
-  <section id="masalah" className="relative bg-[#050509] py-8 md:py-20 px-4 md:px-6 overflow-hidden">
+  <section id="masalah" className="relative bg-[#050509] py-8 md:py-20 px-6 md:px-8 overflow-hidden">
     <div className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
     <div className="pointer-events-none absolute left-1/3 top-0 h-[400px] w-[400px] -translate-x-1/2 rounded-full blur-[140px]" style={{ background: 'hsl(270 60% 55% / 0.08)' }} />
     <div className="pointer-events-none absolute bottom-0 right-0 h-[300px] w-[300px] rounded-full blur-[120px]" style={{ background: 'hsl(270 60% 55% / 0.06)' }} />

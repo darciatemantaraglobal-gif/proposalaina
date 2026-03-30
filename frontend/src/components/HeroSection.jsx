@@ -238,7 +238,7 @@ const HeroSection = () => {
     "https://wa.me/6281311506025?text=Halo%20Daru,%20saya%20ingin%20bergabung%20komunitas%20AINA.";
 
   return (
-    <section className="relative min-h-screen bg-[#050509] overflow-hidden pt-20 pb-14 md:pt-28 md:pb-20 px-4 md:px-6 flex flex-col items-center">
+    <section className="relative min-h-screen bg-[#050509] overflow-hidden pt-20 pb-14 md:pt-28 md:pb-20 px-6 md:px-8 flex flex-col items-center">
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
@@ -349,7 +349,7 @@ const HeroSection = () => {
 
         <div className="bg-[#0a0a0f] rounded-2xl md:rounded-3xl border border-purple-500/25 shadow-2xl shadow-black/50 overflow-hidden transform md:rotate-x-12 transition-transform duration-700 ease-out md:hover:rotate-x-0 md:hover:translate-y-[-10px]">
           {/* Window Controls */}
-          <div className="h-10 md:h-12 bg-[#13131a] border-b border-purple-500/15 flex items-center justify-between px-4 md:px-6">
+          <div className="h-10 md:h-12 bg-[#13131a] border-b border-purple-500/15 flex items-center justify-between px-6 md:px-8">
             <div className="flex gap-1.5 md:gap-2">
               <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
               <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
