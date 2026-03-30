@@ -115,16 +115,16 @@ const BenefitsSection = () => {
               Impact & Benefit
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 tracking-tight">
             Solusi Nyata, <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-emerald-400">Bukan Teori.</span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+          <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-lg">
             AINA menjadikan tantangan terbesar Masisir menjadi kemudahan dalam satu genggaman.
           </p>
         </div>
 
         {/* Benefits Grid (3 Columns) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {benefits.map((benefit) => (
             <Card
               key={benefit.id}
@@ -133,17 +133,17 @@ const BenefitsSection = () => {
               <CardContent className="p-0 flex flex-col h-full">
                 
                 {/* Visual Content Area - Expands to fill top space */}
-                <div className="relative flex-grow min-h-[220px] flex items-center justify-center bg-gradient-to-b from-white/[0.02] to-transparent p-6 group-hover:from-purple-500/[0.05] transition-colors duration-500">
+                <div className="relative flex-grow min-h-[160px] md:min-h-[220px] flex items-center justify-center bg-gradient-to-b from-white/[0.02] to-transparent p-4 md:p-6 group-hover:from-purple-500/[0.05] transition-colors duration-500">
                     {benefit.visual}
                 </div>
 
                 {/* Text Content - Anchored at bottom */}
-                <div className="relative z-10 p-8 pt-2 text-center bg-[#0e0e14] group-hover:bg-[#12121a] transition-colors">
+                <div className="relative z-10 p-5 pt-2 md:p-8 md:pt-2 text-center bg-[#0e0e14] group-hover:bg-[#12121a] transition-colors">
                   <div className="mb-2">
                     <span className="inline-block text-xs font-bold text-purple-500 uppercase tracking-wider mb-2">
                       {benefit.category}
                     </span>
-                    <h3 className="text-2xl font-bold text-white mb-3 leading-snug">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2 leading-snug">
                       {benefit.title}
                     </h3>
                   </div>

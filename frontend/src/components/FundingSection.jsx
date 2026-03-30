@@ -53,13 +53,13 @@ const ways = [
 
 const FundingSection = () => {
   return (
-    <section className="relative min-h-[auto] bg-[#050509] py-20 px-4 md:px-8 overflow-hidden font-sans">
+    <section className="relative min-h-[auto] bg-[#050509] py-14 md:py-20 px-4 md:px-8 overflow-hidden font-sans">
       <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-purple-900/12 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-cyan-900/8 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-8 md:mb-14">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-purple-900/20 border border-purple-500/20 backdrop-blur-md">
             <Handshake className="w-4 h-4 text-purple-400" />
             <span className="text-xs font-bold text-purple-200 uppercase tracking-widest">Cara Terlibat dengan AINA</span>
@@ -78,7 +78,7 @@ const FundingSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-14 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-14 items-start">
           {ways.map((way, i) => {
             const Icon = way.icon;
             const isCyan = way.color === 'cyan';
@@ -86,7 +86,7 @@ const FundingSection = () => {
             return (
               <div
                 key={i}
-                className={`relative flex flex-col h-full rounded-[28px] p-6 lg:p-7 transition-all duration-300 group ${
+                className={`relative flex flex-col h-full rounded-[28px] p-5 md:p-6 lg:p-7 transition-all duration-300 group ${
                   way.highlight
                     ? 'bg-[#0e0e12] border border-cyan-500/40 shadow-[0_0_50px_-15px_rgba(34,211,238,0.2)] md:-translate-y-5 z-10'
                     : 'bg-[#0e0e12] border border-white/6 hover:border-purple-500/25 hover:-translate-y-2'
@@ -104,8 +104,8 @@ const FundingSection = () => {
 
                 <div className="relative z-10 flex flex-col h-full">
                   {/* Header */}
-                  <div className="mb-5 pb-5 border-b border-white/5">
-                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 border ${
+                  <div className="mb-4 pb-4 border-b border-white/5">
+                    <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl flex items-center justify-center mb-3 border ${
                       isCyan ? 'bg-cyan-500/10 border-cyan-500/20 text-cyan-400' : 'bg-purple-500/10 border-purple-500/20 text-purple-400'
                     }`}>
                       <Icon size={22} />

@@ -98,7 +98,7 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Steps — Mobile: vertical */}
-        <div className="md:hidden space-y-0 mb-16">
+        <div className="md:hidden space-y-0 mb-8">
           {steps.map((step, i) => {
             const Icon = step.icon;
             const isPurple = step.color === 'purple';
@@ -115,7 +115,7 @@ const HowItWorksSection = () => {
                 }`}>
                   <Icon size={18} />
                 </div>
-                <div className="pb-8">
+                <div className="pb-5">
                   <span className={`text-[10px] font-bold tracking-widest ${isPurple ? 'text-purple-400' : 'text-cyan-400'}`}>
                     {step.number}
                   </span>

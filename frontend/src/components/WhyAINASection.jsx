@@ -70,7 +70,7 @@ const WhyAINASection = () => {
         </div>
 
         {/* 5 Differentiators */}
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 mb-10 md:mb-16">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-8 md:mb-16">
           {differentiators.map((item, i) => {
             const Icon = item.icon;
             const isPurple = item.color === 'purple';
@@ -78,7 +78,7 @@ const WhyAINASection = () => {
             return (
               <div
                 key={i}
-                className={`group relative bg-[#0e0e12] border rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-[#13131a] ${
+                className={`group relative bg-[#0e0e12] border rounded-2xl p-4 md:p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-[#13131a] ${
                   isLast ? 'md:col-span-2 lg:col-span-1' : ''
                 }`}
                 style={{ borderColor: isPurple ? 'rgba(168,85,247,0.2)' : 'rgba(34,211,238,0.15)' }}

@@ -110,7 +110,7 @@ const FutureFeaturesSection = () => {
         </div>
 
         {/* Legend */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-8 md:mb-12">
           {[
             { dot: 'bg-cyan-400', label: 'Sedang Dikuatkan' },
             { dot: 'bg-purple-400', label: 'Fase Berikutnya' },
@@ -124,7 +124,7 @@ const FutureFeaturesSection = () => {
         </div>
 
         {/* Tiers */}
-        <div className="space-y-10">
+        <div className="space-y-7 md:space-y-10">
           {tiers.map((tier, ti) => (
             <div key={ti}>
               {/* Tier label */}
@@ -137,19 +137,19 @@ const FutureFeaturesSection = () => {
               </div>
 
               {/* Feature cards */}
-              <div className={`grid gap-5 ${tier.features.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
+              <div className={`grid gap-4 ${tier.features.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
                 {tier.features.map((feature, fi) => {
                   const Icon = feature.icon;
                   return (
                     <div
                       key={fi}
-                      className="group relative bg-[#0e0e12] border rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#13131a]"
+                      className="group relative bg-[#0e0e12] border rounded-2xl p-4 md:p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#13131a]"
                       style={{ borderColor: tier.borderColor }}
                     >
                       <div className={`absolute inset-0 opacity-0 group-hover:opacity-[0.06] rounded-2xl transition-opacity duration-500 bg-gradient-to-br ${tier.glowColor} to-transparent`} />
 
                       <div className="relative z-10 flex flex-col h-full">
-                        <div className="flex justify-between items-start mb-5">
+                        <div className="flex justify-between items-start mb-4">
                           <div className={`p-2.5 rounded-xl border ${tier.badgeColor}`}>
                             <Icon size={18} />
                           </div>
@@ -185,7 +185,7 @@ const FutureFeaturesSection = () => {
         </div>
 
         {/* Bottom note */}
-        <div className="mt-14 flex justify-center">
+        <div className="mt-8 md:mt-14 flex justify-center">
           <div className="inline-flex items-center gap-4 bg-[#0e0e12] border border-white/10 rounded-full px-6 py-3 md:px-8 md:py-4 shadow-xl">
             <div className="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
               <Clock size={18} className="text-purple-400" />

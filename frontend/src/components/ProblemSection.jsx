@@ -54,7 +54,7 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section className="relative bg-[#050509] py-20 px-6 font-sans text-slate-300 overflow-hidden">
+    <section className="relative bg-[#050509] py-14 md:py-20 px-4 md:px-6 font-sans text-slate-300 overflow-hidden">
       
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-900/10 rounded-full blur-[120px] pointer-events-none" />
@@ -62,7 +62,7 @@ const ProblemSection = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         
-        <div className="mb-16 md:mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="mb-8 md:mb-20 flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-purple-900/20 border border-purple-500/20 backdrop-blur-sm">
               <Info size={12} className="text-purple-400" />
@@ -85,7 +85,7 @@ const ProblemSection = () => {
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {problems.map((item, index) => {
             const Icon = item.icon;
             const isPurple = item.color === 'purple';
@@ -93,13 +93,13 @@ const ProblemSection = () => {
             return (
               <div 
                 key={index}
-                className="group relative bg-[#0e0e12] border border-white/5 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-[#13131a]"
+                className="group relative bg-[#0e0e12] border border-white/5 rounded-2xl p-4 md:p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-[#13131a]"
                 style={{ borderColor: isPurple ? 'rgba(168,85,247,0.2)' : 'rgba(34,211,238,0.2)' }}
               >
                 <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500 bg-gradient-to-br ${isPurple ? 'from-purple-500 to-transparent' : 'from-cyan-500 to-transparent'}`} />
 
                 <div className="relative z-10 flex flex-col h-full">
-                  <div className="flex justify-between items-start mb-6">
+                  <div className="flex justify-between items-start mb-4">
                     <div className={`p-3 rounded-xl ${isPurple ? 'bg-purple-500/10 text-purple-400' : 'bg-cyan-500/10 text-cyan-400'}`}>
                       <Icon size={24} />
                     </div>
@@ -131,7 +131,7 @@ const ProblemSection = () => {
           })}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-8 md:mt-16 text-center">
           <div className="inline-block relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full blur opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
             <div className="relative bg-[#0e0e12] border border-white/10 rounded-full px-8 py-4 flex items-center gap-3">

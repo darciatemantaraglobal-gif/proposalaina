@@ -50,7 +50,7 @@ const SolutionSection = () => {
       <div className="absolute bottom-0 -right-40 w-[600px] h-[600px] bg-cyan-900/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTM5LCA5MiwgMjQ2LCAwLjA1KSIvPjwvc3ZnPg==')] opacity-40 pointer-events-none" />
 
-      <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-16 lg:flex-row lg:items-center">
+      <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 md:gap-16 lg:flex-row lg:items-center">
         
         {/* LEFT: System Card */}
         <div className="w-full max-w-md mx-auto lg:mx-0 relative group">
@@ -73,7 +73,7 @@ const SolutionSection = () => {
               <Sparkles size={16} className="text-purple-400 opacity-50" />
             </div>
 
-            <div className="p-6 md:p-8 space-y-6">
+            <div className="p-4 md:p-8 space-y-4 md:space-y-6">
               <div>
                 <p className="text-xs text-slate-500 uppercase tracking-widest mb-2 font-semibold">Modul Aktif</p>
                 <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight">
@@ -127,7 +127,7 @@ const SolutionSection = () => {
             </span>
           </h2>
 
-          <p className="mb-10 text-sm md:text-base text-slate-400 max-w-xl leading-relaxed">
+          <p className="mb-6 md:mb-10 text-sm md:text-base text-slate-400 max-w-xl leading-relaxed">
             AINA menggabungkan AI assistant, knowledge base terstruktur, sistem informasi lokal, komunitas, dan tools produktivitas — dirancang dari nol untuk memahami realita mahasiswa Indonesia di Mesir.
           </p>
 

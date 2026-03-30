@@ -130,7 +130,7 @@ const LayerCard = ({ layer, isLast }) => {
 
         {/* Expanded content */}
         <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-[300px]' : 'max-h-0'}`}>
-          <div className="px-5 pb-5 pt-1 ml-[72px]">
+          <div className="px-4 pb-4 pt-1 ml-[56px] md:ml-[72px]">
             <ul className="space-y-2.5 mb-4">
               {layer.points.map((point, i) => (
                 <li key={i} className="flex items-start gap-2.5">
@@ -181,7 +181,7 @@ const SystemArchitectureSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-10 items-start">
+        <div className="flex flex-col lg:flex-row gap-6 md:gap-10 items-start">
           {/* Left: Layer accordion */}
           <div className="flex-1 space-y-3">
             {layers.map((layer, i) => (

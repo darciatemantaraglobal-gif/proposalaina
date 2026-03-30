@@ -33,7 +33,7 @@ const SecurityReadinessSection = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-purple-900/20 border border-purple-500/20 backdrop-blur-sm">
             <ShieldCheck size={12} className="text-purple-400" />
             <span className="text-[10px] md:text-xs text-purple-200 font-bold uppercase tracking-widest">
@@ -52,14 +52,14 @@ const SecurityReadinessSection = () => {
         </div>
 
         {/* 3 pillars */}
-        <div className="grid gap-5 md:grid-cols-3 mb-10">
+        <div className="grid gap-4 md:grid-cols-3 mb-8 md:mb-10">
           {pillars.map((pillar, i) => {
             const Icon = pillar.icon;
             const isPurple = pillar.color === 'purple';
             return (
               <div
                 key={i}
-                className="group relative bg-[#0e0e12] rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1 hover:bg-[#13131a]"
+                className="group relative bg-[#0e0e12] rounded-2xl p-4 md:p-6 border transition-all duration-300 hover:-translate-y-1 hover:bg-[#13131a]"
                 style={{ borderColor: isPurple ? 'rgba(168,85,247,0.18)' : 'rgba(34,211,238,0.15)' }}
               >
                 <div className={`absolute inset-0 opacity-0 group-hover:opacity-[0.05] rounded-2xl transition-opacity bg-gradient-to-br ${isPurple ? 'from-purple-500' : 'from-cyan-500'} to-transparent`} />

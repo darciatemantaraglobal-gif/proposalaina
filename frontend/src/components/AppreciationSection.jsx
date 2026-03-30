@@ -36,13 +36,13 @@ const values = [
 
 const AppreciationSection = () => {
   return (
-    <section className="relative bg-[#050509] py-20 px-6 font-sans text-slate-300 overflow-hidden">
+    <section className="relative bg-[#050509] py-14 md:py-20 px-4 md:px-6 font-sans text-slate-300 overflow-hidden">
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-900/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-8 md:mb-14">
           <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-purple-900/20 border border-purple-500/20 backdrop-blur-sm">
             <Heart size={12} className="text-pink-400" />
             <span className="text-[10px] md:text-xs text-purple-200 font-bold uppercase tracking-widest">
@@ -66,11 +66,11 @@ const AppreciationSection = () => {
 
           {/* LEFT: Main value card */}
           <div className="w-full lg:w-[42%]">
-            <div className="relative h-full bg-gradient-to-b from-[#1e1040] to-[#0f0716] border border-purple-500/25 rounded-[2rem] p-8 flex flex-col overflow-hidden group hover:border-purple-500/40 transition-all duration-500 shadow-[0_0_40px_-15px_rgba(168,85,247,0.25)]">
+            <div className="relative h-full bg-gradient-to-b from-[#1e1040] to-[#0f0716] border border-purple-500/25 rounded-[2rem] p-5 md:p-8 flex flex-col overflow-hidden group hover:border-purple-500/40 transition-all duration-500 shadow-[0_0_40px_-15px_rgba(168,85,247,0.25)]">
               <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:24px_24px] opacity-30" />
 
               <div className="relative z-10">
-                <div className="w-14 h-14 rounded-2xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center mb-6">
+                <div className="w-11 h-11 md:w-14 md:h-14 rounded-2xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center mb-4 md:mb-6">
                   <Heart size={26} className="text-pink-300" />
                 </div>
 
@@ -78,7 +78,7 @@ const AppreciationSection = () => {
                   Membangun AINA adalah Kontribusi untuk Masisir
                 </h3>
 
-                <p className="text-sm text-purple-200/60 mb-8 leading-relaxed">
+                <p className="text-sm text-purple-200/60 mb-5 md:mb-8 leading-relaxed">
                   Setiap informasi yang ditambahkan, setiap pertanyaan yang dijawab, setiap diskusi yang dimoderasi — semua itu adalah kontribusi nyata untuk komunitas Masisir yang lebih baik.
                 </p>
 
@@ -93,7 +93,7 @@ const AppreciationSection = () => {
                 </ul>
 
                 {/* Amal jariyah note */}
-                <div className="mt-8 flex items-center gap-3 bg-pink-900/20 border border-pink-500/20 rounded-2xl p-4">
+                <div className="mt-5 md:mt-8 flex items-center gap-3 bg-pink-900/20 border border-pink-500/20 rounded-2xl p-3 md:p-4">
                   <Heart size={18} className="text-pink-400 flex-shrink-0" />
                   <p className="text-xs text-pink-200/70 leading-relaxed">
                     Dan bagi yang percaya — setiap ilmu yang bermanfaat adalah amal yang terus mengalir, insyaAllah.
@@ -111,7 +111,7 @@ const AppreciationSection = () => {
               return (
                 <div
                   key={i}
-                  className={`group relative rounded-2xl p-5 flex flex-col gap-3 border transition-all duration-300 hover:-translate-y-1 ${
+                  className={`group relative rounded-2xl p-4 flex flex-col gap-2 border transition-all duration-300 hover:-translate-y-1 ${
                     isPurple
                       ? 'bg-[#150e2e] border-purple-500/15 hover:border-purple-500/35'
                       : 'bg-[#081820] border-cyan-500/12 hover:border-cyan-500/30'

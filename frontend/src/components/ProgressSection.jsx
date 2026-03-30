@@ -77,7 +77,7 @@ const ProgressSection = () => {
             </span>
           </div>
 
-          <h2 className="mb-4 text-4xl font-bold tracking-tight text-white md:text-5xl">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight text-white md:text-5xl">
             AINA Bukan Konsep.
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
@@ -98,8 +98,8 @@ const ProgressSection = () => {
             { value: '4', label: 'Fase Pengembangan', color: 'text-purple-400' },
             { value: '∞', label: 'Ruang untuk Berkembang', color: 'text-violet-400' },
           ].map((stat, i) => (
-            <div key={i} className="flex flex-col items-center bg-[#0a0a12] border border-white/8 rounded-2xl px-8 py-5 min-w-[140px]">
-              <span className={`text-3xl font-bold ${stat.color}`}>{stat.value}</span>
+            <div key={i} className="flex flex-col items-center bg-[#0a0a12] border border-white/8 rounded-2xl px-4 py-3 md:px-8 md:py-5 min-w-[100px] md:min-w-[140px]">
+              <span className={`text-2xl md:text-3xl font-bold ${stat.color}`}>{stat.value}</span>
               <span className="text-xs text-slate-500 mt-1 text-center">{stat.label}</span>
             </div>
           ))}
@@ -121,7 +121,7 @@ const ProgressSection = () => {
                   key={i}
                   className="group relative overflow-hidden rounded-2xl border border-white/8 bg-[#0a0a12]/80 backdrop-blur-md transition-all duration-300 hover:border-purple-500/25 hover:bg-[#0f0f1a]"
                 >
-                  <CardContent className="relative flex flex-col gap-4 p-6">
+                  <CardContent className="relative flex flex-col gap-3 p-4 md:p-6">
                     {/* Top row */}
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-3">

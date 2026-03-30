@@ -69,14 +69,14 @@ const ClosingSection = () => {
       <div className="max-w-7xl mx-auto relative z-10 px-4 md:px-6">
         
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 relative z-20">
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-purple-900/20 border border-purple-500/30 backdrop-blur-md shadow-[0_0_20px_-5px_rgba(168,85,247,0.5)]">
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-purple-900/20 border border-purple-500/30 backdrop-blur-md shadow-[0_0_20px_-5px_rgba(168,85,247,0.5)]">
             <Sparkles size={14} className="text-cyan-400 animate-pulse" />
             <span className="text-xs font-bold text-purple-200 uppercase tracking-widest">
               Bergabung & Berkontribusi
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+          <h2 className="text-3xl md:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight tracking-tight">
             AINA Dibangun Serius —{" "}
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-white to-cyan-400">
