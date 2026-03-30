@@ -12,17 +12,13 @@ import {
   GraduationCap,
   Wallet,
   Plane,
-  Search,
   Bell,
   Settings,
   MoreHorizontal,
   User,
-  FileText,
   CheckCircle,
-  Lock,
+  GitMerge,
 } from "lucide-react";
-
-// --- Components Kecil untuk UI Dashboard ---
 
 const SidebarItem = ({ icon: Icon, active = false }) => (
   <div
@@ -52,8 +48,6 @@ const StatCard = ({ title, value, sub, color }) => (
   </div>
 );
 
-// --- Navbar ---
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -64,9 +58,8 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Link WhatsApp yang sudah di-encode
   const waLink =
-    "https://wa.me/6281311506025?text=Halo%20Daru,%20saya%20tertarik%20untuk%20menjadi%20investor%20AINA.";
+    "https://wa.me/6281311506025?text=Halo%20Daru,%20saya%20ingin%20berkontribusi%20untuk%20AINA.";
 
   return (
     <nav
@@ -77,7 +70,6 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo AINA */}
         <div className="flex items-center gap-3 relative z-50">
           <img
             src="/AIGHYPT MEYUALA.png"
@@ -94,9 +86,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Center Menu */}
         <div className="hidden md:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full px-2 py-1.5 backdrop-blur-md">
-          {["Masalah", "Solusi", "Roadmap", "Market", "Investasi"].map(
+          {["Masalah", "Solusi", "Fitur", "Roadmap", "Kolaborasi"].map(
             (item) => (
               <button
                 key={item}
@@ -108,24 +99,20 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Desktop Right Actions */}
         <div className="hidden md:flex items-center gap-4">
           <button className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
-            Masuk
+            Tentang
           </button>
-
-          {/* TOMBOL INVESTOR DESKTOP */}
           <a
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-slate-200 transition-colors shadow-[0_0_20px_-5px_rgba(255,255,255,0.3)] flex items-center gap-2"
           >
-            Jadi Investor <ArrowRight size={14} />
+            Dukung AINA <ArrowRight size={14} />
           </a>
         </div>
 
-        {/* Mobile Toggle */}
         <button
           className="md:hidden text-white relative z-50 p-2"
           onClick={() => setIsOpen(!isOpen)}
@@ -134,14 +121,13 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       <div
         className={`absolute top-full left-0 right-0 bg-[#050509]/95 border-b border-white/10 backdrop-blur-xl transition-all duration-300 md:hidden overflow-hidden origin-top ${
           isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="flex flex-col px-6 py-4 gap-2">
-          {["Masalah", "Solusi", "Roadmap", "Market", "Investasi"].map(
+          {["Masalah", "Solusi", "Fitur", "Roadmap", "Kolaborasi"].map(
             (item) => (
               <button
                 key={item}
@@ -152,18 +138,13 @@ const Navbar = () => {
             )
           )}
           <div className="pt-2 mt-2 border-t border-white/5 flex flex-col gap-3">
-            <button className="w-full py-3 text-center text-slate-300 font-medium hover:text-white">
-              Masuk
-            </button>
-
-            {/* TOMBOL INVESTOR MOBILE */}
             <a
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full block text-center py-3 bg-purple-600 text-white font-bold rounded-xl shadow-lg shadow-purple-900/20"
             >
-              Jadi Investor
+              Dukung AINA
             </a>
           </div>
         </div>
@@ -172,11 +153,8 @@ const Navbar = () => {
   );
 };
 
-// --- HERO SECTION + CHAT DEMO ---
-
 const HeroSection = () => {
-  // --- CHAT LOGIC ---
-  const apiKey = "AIzaSyADgeUhg6V6an4ueQ2E38spPoiv5y0vA-U"; // TODO: sebaiknya pindah ke env nanti
+  const apiKey = "AIzaSyADgeUhg6V6an4ueQ2E38spPoiv5y0vA-U";
 
   const [messages, setMessages] = useState([
     {
@@ -189,8 +167,6 @@ const HeroSection = () => {
   const [chatCount, setChatCount] = useState(0);
   const MAX_CHATS = 3;
   const messagesEndRef = useRef(null);
-
-  // Ref for Dashboard Section
   const dashboardRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -205,7 +181,6 @@ const HeroSection = () => {
   };
 
   useEffect(() => {
-    // Hanya scroll kalau pesan lebih dari 1 (artinya user sudah mulai chat)
     if (messages.length > 1) {
       scrollToBottom();
     }
@@ -228,9 +203,7 @@ const HeroSection = () => {
         `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             contents: [{ parts: [{ text: userMessage }] }],
             systemInstruction: { parts: [{ text: systemInstruction }] },
@@ -261,13 +234,11 @@ const HeroSection = () => {
     if (e.key === "Enter") handleSendMessage();
   };
 
-  // WhatsApp Link Helper for Chat Limit
   const waLinkChat =
-    "https://wa.me/6281311506025?text=Halo%20Daru,%20saya%20ingin%20bergabung%20waitlist%20AINA.";
+    "https://wa.me/6281311506025?text=Halo%20Daru,%20saya%20ingin%20bergabung%20komunitas%20AINA.";
 
   return (
     <section className="relative min-h-screen bg-[#050509] overflow-hidden pt-28 pb-20 px-4 md:px-6 flex flex-col items-center">
-      {/* Inject Font Futuristic */}
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
@@ -275,18 +246,11 @@ const HeroSection = () => {
             font-family: 'Orbitron', sans-serif;
             letter-spacing: 0.05em;
           }
-          /* Custom Scrollbar for Chat */
-          .scrollbar-hide::-webkit-scrollbar {
-              display: none;
-          }
-          .scrollbar-hide {
-              -ms-overflow-style: none;
-              scrollbar-width: none;
-          }
+          .scrollbar-hide::-webkit-scrollbar { display: none; }
+          .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
         `}
       </style>
 
-      {/* --- Ambient Background --- */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-purple-900/20 rounded-full blur-[120px] opacity-60" />
         <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-cyan-900/10 rounded-full blur-[100px] opacity-50" />
@@ -294,30 +258,32 @@ const HeroSection = () => {
 
       <Navbar />
 
-      {/* --- Main Content (Centered) --- */}
       <div className="relative z-10 max-w-5xl mx-auto text-center mb-12 md:mb-24">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-purple-500/30 backdrop-blur-sm mb-6 md:mb-8 animate-fade-in-up shadow-[0_0_15px_-5px_rgba(168,85,247,0.5)]">
           <Sparkles size={12} className="text-cyan-400" />
           <span className="text-[10px] md:text-xs font-bold text-purple-200 tracking-wide">
-            THE FUTURE OF MASISIR
+            DIGITAL SYSTEM FOR MASISIR
           </span>
         </div>
 
-        {/* Headline with Futuristic Font */}
+        {/* Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.1] font-futuristic uppercase">
-          AINA <br className="md:hidden" />
+          AINA{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-cyan-300">
-            PROPOSAL PROJECT
+            AI ASSISTANT
+          </span>
+          <br />
+          <span className="text-2xl md:text-3xl lg:text-4xl text-slate-300 font-normal normal-case" style={{ fontFamily: "sans-serif", letterSpacing: "0.01em" }}>
+            Bukan AI biasa — sistem yang dirancang untuk Masisir.
           </span>
         </h1>
 
         {/* Subtext */}
         <p className="text-base md:text-xl text-slate-400 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-4">
-          Asisten AI yang memudahkan hidup Masisir.{" "}
-          <br className="hidden md:block" />
+          AINA membantu mahasiswa Indonesia di Mesir mengurus birokrasi, akademik, dan kehidupan sehari-hari —{" "}
           <span className="text-slate-200 font-medium">
-            agar energi fokus membangun ilmu dan masa depan.
+            dalam satu sistem yang memahami konteks Masisir secara mendalam.
           </span>
         </p>
 
@@ -327,7 +293,7 @@ const HeroSection = () => {
             onClick={scrollToDashboard}
             className="w-full sm:w-auto px-8 py-4 bg-white text-[#050509] rounded-full font-bold shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_-5px_rgba(168,85,247,0.4)] hover:scale-105 transition-all transform relative overflow-hidden group"
           >
-            <span className="relative z-10">Lihat Proposal</span>
+            <span className="relative z-10">Lihat Fitur AINA</span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-100 to-cyan-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
 
@@ -338,7 +304,7 @@ const HeroSection = () => {
             <div className="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-purple-500 group-hover:border-purple-500 transition-all">
               <Play size={10} fill="currentColor" className="ml-0.5" />
             </div>
-            <span>Demo AINA</span>
+            <span>Coba Demo AINA</span>
           </button>
         </div>
 
@@ -361,17 +327,15 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* --- Product Visual (The Dashboard) --- */}
+      {/* Product Visual (Dashboard) */}
       <div
         ref={dashboardRef}
         className="relative w-full max-w-6xl mx-auto md:perspective-[2000px] group px-2 md:px-0"
       >
-        {/* Glow behind the dashboard */}
         <div className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent blur-3xl -z-10 translate-y-20 scale-90" />
 
-        {/* The Dashboard Interface Container */}
         <div className="bg-[#0a0a0f] rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl shadow-black/50 overflow-hidden transform md:rotate-x-12 transition-transform duration-700 ease-out md:hover:rotate-x-0 md:hover:translate-y-[-10px]">
-          {/* Window Controls Header */}
+          {/* Window Controls */}
           <div className="h-10 md:h-12 bg-[#13131a] border-b border-white/5 flex items-center justify-between px-4 md:px-6">
             <div className="flex gap-1.5 md:gap-2">
               <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
@@ -381,7 +345,7 @@ const HeroSection = () => {
             <div className="flex items-center gap-2 px-3 py-1 bg-black/40 rounded-lg border border-white/5 hidden sm:flex">
               <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
               <span className="text-[10px] text-slate-400 font-mono">
-                aina-dashboard.app
+                aina.masisir.app
               </span>
             </div>
             <div className="flex gap-3 md:gap-4 text-slate-500">
@@ -390,7 +354,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* App Content Layout */}
+          {/* App Content */}
           <div className="flex flex-col md:flex-row h-auto md:h-[600px]">
             {/* Sidebar */}
             <div className="hidden md:flex w-20 border-r border-white/5 bg-[#0e0e12] flex-col items-center py-6 gap-4">
@@ -406,9 +370,8 @@ const HeroSection = () => {
 
             {/* Main Area */}
             <div className="flex-1 bg-[#050509] p-4 md:p-8 flex flex-col md:flex-row gap-6 overflow-hidden">
-              {/* Left Column: Stats */}
+              {/* Left: Stats */}
               <div className="flex-1 flex flex-col gap-4 md:gap-6">
-                {/* Greeting */}
                 <div className="flex flex-row justify-between items-end gap-2">
                   <div>
                     <h2 className="text-xl md:text-2xl font-bold text-white">
@@ -426,7 +389,6 @@ const HeroSection = () => {
                   </button>
                 </div>
 
-                {/* Charts */}
                 <div className="grid grid-cols-2 gap-3 md:gap-4">
                   <StatCard
                     title="Sisa Tabungan"
@@ -442,7 +404,6 @@ const HeroSection = () => {
                   />
                 </div>
 
-                {/* Active Projects */}
                 <div className="bg-[#13131a] rounded-xl border border-white/5 p-4 md:p-5 flex-1">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="text-white font-semibold text-sm md:text-base">
@@ -452,32 +413,18 @@ const HeroSection = () => {
                   </div>
                   <div className="space-y-2 md:space-y-3">
                     {[
-                      {
-                        title: "Ijroat termin 2 Syariah",
-                        tag: "Academic",
-                        time: "Priority",
-                      },
-                      {
-                        title: "Bimbel Ushul Fiqh di Sabi",
-                        tag: "Study",
-                        time: "5h ago",
-                      },
-                      {
-                        title: "Rapat Organisasi",
-                        tag: "Meeting",
-                        time: "Tomorrow",
-                      },
+                      { title: "Ijroat termin 2 Syariah", tag: "Academic", time: "Priority" },
+                      { title: "Bimbel Ushul Fiqh di Sabi", tag: "Study", time: "5h ago" },
+                      { title: "Rapat Organisasi", tag: "Meeting", time: "Tomorrow" },
                     ].map((task, i) => (
                       <div
                         key={i}
-                        className="flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg:white/10 cursor-pointer transition-colors group border border-transparent hover:border-white/5"
+                        className="flex items-center justify-between p-3 rounded-xl bg-white/5 cursor-pointer transition-colors group border border-transparent hover:border-white/5"
                       >
                         <div className="flex items-center gap-3">
                           <div
                             className={`w-2 h-2 rounded-full ${
-                              i === 0
-                                ? "bg-purple-500 animate-pulse"
-                                : "bg-slate-600"
+                              i === 0 ? "bg-purple-500 animate-pulse" : "bg-slate-600"
                             }`}
                           ></div>
                           <span className="text-xs md:text-sm text-slate-300 group-hover:text-white truncate max-w-[150px] md:max-w-none">
@@ -493,9 +440,8 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              {/* Right Column: LIVE Chat Interface */}
+              {/* Right: Live Chat */}
               <div className="w-full md:w-[350px] bg-[#0e0e12] rounded-xl md:rounded-2xl border border-white/5 flex flex-col shadow-xl min-h-[400px] md:min-h-0 relative">
-                {/* Chat Header */}
                 <div className="p-3 md:p-4 border-b border-white/5 flex items-center justify-between bg-[#13131a]/50">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center border border-white/10">
@@ -518,7 +464,6 @@ const HeroSection = () => {
                   </div>
                 </div>
 
-                {/* Chat Messages Area */}
                 <div
                   className="flex-1 p-3 md:p-4 space-y-4 overflow-y-auto scrollbar-hide relative bg-[#0e0e12]"
                   style={{ maxHeight: "400px" }}
@@ -526,9 +471,7 @@ const HeroSection = () => {
                   {messages.map((msg, index) => (
                     <div
                       key={index}
-                      className={`flex gap-3 ${
-                        msg.role === "user" ? "flex-row-reverse" : ""
-                      }`}
+                      className={`flex gap-3 ${msg.role === "user" ? "flex-row-reverse" : ""}`}
                     >
                       {msg.role === "model" && (
                         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center border border-white/10 flex-shrink-0">
@@ -540,14 +483,12 @@ const HeroSection = () => {
                           <User size={14} className="text-white" />
                         </div>
                       )}
-
                       <div
-                        className={`p-3 rounded-2xl text-xs md:text-sm shadow-sm max-w-[85%] border 
-                             ${
-                               msg.role === "user"
-                                 ? "bg-gradient-to-r from-purple-600 to-purple-500 rounded-tr-none text-white border-purple-400/20"
-                                 : "bg-[#1a1a24] rounded-tl-none text-slate-300 border-white/5"
-                             }`}
+                        className={`p-3 rounded-2xl text-xs md:text-sm shadow-sm max-w-[85%] border ${
+                          msg.role === "user"
+                            ? "bg-gradient-to-r from-purple-600 to-purple-500 rounded-tr-none text-white border-purple-400/20"
+                            : "bg-[#1a1a24] rounded-tl-none text-slate-300 border-white/5"
+                        }`}
                       >
                         <p className="leading-relaxed">{msg.text}</p>
                       </div>
@@ -559,65 +500,58 @@ const HeroSection = () => {
                       <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center border border-white/10 flex-shrink-0">
                         <Bot size={14} className="text-white" />
                       </div>
-                      <div className="bg-[#1a1a24] p-3 rounded-2xl rounded-tl-none border border-white/5">
-                        <div className="flex gap-1">
-                          <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce"></span>
-                          <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce delay-75"></span>
-                          <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce delay-150"></span>
-                        </div>
+                      <div className="p-3 rounded-2xl rounded-tl-none bg-[#1a1a24] border border-white/5 flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></span>
+                        <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce" style={{ animationDelay: "150ms" }}></span>
+                        <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce" style={{ animationDelay: "300ms" }}></span>
                       </div>
+                    </div>
+                  )}
+
+                  {chatCount >= MAX_CHATS && (
+                    <div className="p-4 rounded-2xl bg-purple-900/20 border border-purple-500/30 text-center">
+                      <p className="text-xs text-purple-300 mb-2 font-medium">
+                        Demo selesai! Tertarik bergabung komunitas AINA?
+                      </p>
+                      <a
+                        href={waLinkChat}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block text-[10px] px-4 py-2 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-500 transition-colors"
+                      >
+                        Gabung Komunitas →
+                      </a>
                     </div>
                   )}
 
                   <div ref={messagesEndRef} />
                 </div>
 
-                {/* Chat Input Area */}
-                <div className="p-3 border-t border-white/5 bg-[#13131a]/30 relative">
-                  {chatCount >= MAX_CHATS ? (
-                    <div className="absolute inset-0 bg-[#0e0e12]/80 backdrop-blur-sm flex flex-col items-center justify-center text-center p-4 z-10">
-                      <Lock className="text-purple-500 mb-2" size={20} />
-                      <p className="text-white font-bold text-sm mb-1">
-                        Demo Selesai
-                      </p>
-                      <p className="text-slate-400 text-xs mb-3">
-                        Mau lanjut ngobrol sama AINA? Yuk gabung jadi investor!
-                      </p>
-                      <a
-                        href={waLinkChat}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white text-black text-xs font-bold px-4 py-2 rounded-full hover:scale-105 transition-transform inline-block"
+                <div className="p-3 md:p-4 border-t border-white/5 bg-[#13131a]/50">
+                  {chatCount < MAX_CHATS ? (
+                    <div className="flex items-center gap-2 bg-[#050509] border border-white/10 rounded-xl px-3 py-2 focus-within:border-purple-500/50 transition-colors">
+                      <input
+                        type="text"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        onKeyPress={handleKeyPress}
+                        placeholder="Tanya AINA soal Visa, Azhar..."
+                        className="bg-transparent text-xs md:text-sm text-white placeholder-slate-500 flex-1 outline-none"
+                      />
+                      <button
+                        onClick={handleSendMessage}
+                        disabled={!input.trim() || isLoading}
+                        className="w-7 h-7 rounded-lg bg-purple-600 flex items-center justify-center hover:bg-purple-500 transition-colors disabled:opacity-40"
                       >
-                        Join Waitlist
-                      </a>
+                        <Send size={12} className="text-white" />
+                      </button>
                     </div>
-                  ) : null}
-
-                  <div className="bg-[#1a1a24] rounded-full px-4 py-2.5 flex items-center gap-2 border border-white/5 focus-within:border-purple-500/50 transition-colors">
-                    <input
-                      type="text"
-                      value={input}
-                      onChange={(e) => setInput(e.target.value)}
-                      onKeyPress={handleKeyPress}
-                      placeholder={
-                        chatCount >= MAX_CHATS
-                          ? "Limit tercapai..."
-                          : "Tanya AINA..."
-                      }
-                      disabled={chatCount >= MAX_CHATS || isLoading}
-                      className="bg-transparent w-full text-xs text-white outline-none placeholder-slate-600 disabled:cursor-not-allowed"
-                    />
-                    <button
-                      onClick={handleSendMessage}
-                      disabled={
-                        !input.trim() || chatCount >= MAX_CHATS || isLoading
-                      }
-                      className="w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center hover:bg-purple-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      <Send size={12} className="text-white ml-0.5" />
-                    </button>
-                  </div>
+                  ) : (
+                    <div className="flex items-center justify-center gap-2 text-slate-500 text-[10px]">
+                      <CheckCircle size={12} className="text-emerald-500" />
+                      Demo selesai
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
