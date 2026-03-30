@@ -46,10 +46,10 @@ const tiers = [
     tier: 'Corporate',
     icon: Building2,
     color: 'purple',
-    monthly: 3000000,
-    annual: 25000000,
-    desc: 'Untuk organisasi yang ingin hadir secara signifikan di ekosistem Masisir.',
+    customPricing: true,
+    desc: 'Paket kemitraan strategis dengan harga yang disesuaikan skala dan kebutuhan organisasi kamu.',
     benefits: [
+      'Harga mulai Rp 2.500.000 — disesuaikan skala & durasi',
       'Banner di semua halaman kunci (Beranda, AI Chat, Knowledge, Komunitas)',
       'Status "Partner Resmi AINA" di seluruh ekosistem',
       'Unlimited announcements + featured placement',
@@ -111,8 +111,8 @@ const PricingSection = () => {
           {tiers.map((pkg) => {
             const Icon = pkg.icon;
             const isCyan = pkg.color === 'cyan';
-            const price = isAnnual ? pkg.annual : pkg.monthly;
-            const savedAmount = pkg.monthly * 12 - pkg.annual;
+            const price = pkg.customPricing ? null : (isAnnual ? pkg.annual : pkg.monthly);
+            const savedAmount = pkg.customPricing ? null : (pkg.monthly * 12 - pkg.annual);
 
             return (
               <div
@@ -139,15 +139,24 @@ const PricingSection = () => {
                 </div>
 
                 {/* Price */}
-                <div className="mb-1">
-                  <span className="text-2xl font-black text-white font-display">{formatRupiah(price)}</span>
-                  <span className="text-xs text-muted-foreground ml-1">{isAnnual ? '/tahun' : '/bulan'}</span>
-                </div>
-                {isAnnual && (
-                  <p className="text-[10px] text-emerald-400 font-semibold mb-1">Hemat {formatRupiah(savedAmount)} vs bulanan</p>
-                )}
-                {!isAnnual && (
-                  <p className="text-[10px] text-muted-foreground/50 mb-1">atau {formatRupiah(pkg.annual)}/tahun</p>
+                {pkg.customPricing ? (
+                  <div className="mb-1">
+                    <span className="text-2xl font-black text-white font-display">Harga Kustom</span>
+                    <p className="text-[10px] text-purple-400/70 font-medium mt-0.5">Disesuaikan skala & kebutuhan</p>
+                  </div>
+                ) : (
+                  <>
+                    <div className="mb-1">
+                      <span className="text-2xl font-black text-white font-display">{formatRupiah(price)}</span>
+                      <span className="text-xs text-muted-foreground ml-1">{isAnnual ? '/tahun' : '/bulan'}</span>
+                    </div>
+                    {isAnnual && (
+                      <p className="text-[10px] text-emerald-400 font-semibold mb-1">Hemat {formatRupiah(savedAmount)} vs bulanan</p>
+                    )}
+                    {!isAnnual && (
+                      <p className="text-[10px] text-muted-foreground/50 mb-1">atau {formatRupiah(pkg.annual)}/tahun</p>
+                    )}
+                  </>
                 )}
 
                 <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed mb-4 mt-1">{pkg.desc}</p>
