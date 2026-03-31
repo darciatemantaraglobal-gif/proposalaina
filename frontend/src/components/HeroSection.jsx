@@ -133,16 +133,16 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen bg-[#03020a] overflow-hidden pt-16 pb-20 md:pt-20 md:pb-28 px-6 md:px-8 flex flex-col items-center justify-center">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Deep space nebula — main glow */}
-        <div className="absolute top-[-35%] left-1/2 -translate-x-1/2 w-[1100px] h-[750px] rounded-full blur-[170px]" style={{ background: 'hsl(258 65% 18% / 0.70)' }} />
-        {/* Left nebula arm */}
-        <div className="absolute top-[5%] left-[25%] w-[450px] h-[320px] rounded-full blur-[110px]" style={{ background: 'hsl(265 55% 22% / 0.40)' }} />
-        {/* Right nebula arm — cool blue tint */}
-        <div className="absolute top-[10%] right-[20%] w-[350px] h-[250px] rounded-full blur-[90px]" style={{ background: 'hsl(240 55% 18% / 0.30)' }} />
-        {/* Deep core — small bright center */}
-        <div className="absolute top-[8%] left-1/2 -translate-x-1/2 w-[280px] h-[220px] rounded-full blur-[60px]" style={{ background: 'hsl(268 60% 28% / 0.35)' }} />
-        {/* Bottom space depth */}
-        <div className="absolute bottom-[-15%] left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full blur-[160px]" style={{ background: 'hsl(255 60% 15% / 0.45)' }} />
+        {/* Deep space nebula — main glow (visible on all screens, smaller blur on mobile) */}
+        <div className="absolute top-[-30%] left-1/2 -translate-x-1/2 w-[600px] md:w-[1100px] h-[500px] md:h-[750px] rounded-full blur-[80px] md:blur-[170px]" style={{ background: 'hsl(258 65% 18% / 0.70)' }} />
+        {/* Deep core — center (all screens) */}
+        <div className="absolute top-[5%] left-1/2 -translate-x-1/2 w-[200px] md:w-[280px] h-[160px] md:h-[220px] rounded-full blur-[40px] md:blur-[60px]" style={{ background: 'hsl(268 60% 28% / 0.35)' }} />
+        {/* Left nebula arm — desktop only */}
+        <div className="hidden md:block absolute top-[5%] left-[25%] w-[450px] h-[320px] rounded-full blur-[110px]" style={{ background: 'hsl(265 55% 22% / 0.40)' }} />
+        {/* Right nebula arm — desktop only */}
+        <div className="hidden md:block absolute top-[10%] right-[20%] w-[350px] h-[250px] rounded-full blur-[90px]" style={{ background: 'hsl(240 55% 18% / 0.30)' }} />
+        {/* Bottom space depth — desktop only */}
+        <div className="hidden md:block absolute bottom-[-15%] left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full blur-[160px]" style={{ background: 'hsl(255 60% 15% / 0.45)' }} />
         {/* Starfield dot grid */}
         <div className="absolute inset-0 dot-grid opacity-50" />
         {/* Faint vignette */}
