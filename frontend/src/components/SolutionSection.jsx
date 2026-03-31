@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, MessageSquare, BookOpen, Newspaper, LayoutDashboard, Users2, Bookmark, ShieldCheck } from 'lucide-react';
+import { MessageSquare, BookOpen, Newspaper, LayoutDashboard, Users2, Bookmark } from 'lucide-react';
 
 const pillars = [
   { icon: MessageSquare, title: 'AI Assistant', desc: 'Jawaban berbasis knowledge Masisir, bukan AI generik.', color: 'purple' },
@@ -16,40 +16,10 @@ const SolutionSection = () => (
     <div className="pointer-events-none absolute right-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full blur-[140px]" style={{ background: 'hsl(270 60% 55% / 0.07)' }} />
 
     <div className="relative z-10 max-w-6xl mx-auto">
-      <div className="flex flex-col lg:flex-row gap-8 md:gap-14 items-start">
+      <div className="flex flex-col gap-8">
 
-        {/* LEFT: System status card */}
-        <div className="w-full lg:w-[280px] flex-shrink-0">
-          <div className="bg-[#0f0f18]/80 backdrop-blur-xl border border-purple-500/25 rounded-2xl overflow-hidden glow-purple-sm">
-            <div className="p-3 space-y-2">
-              {pillars.map((p, i) => {
-                const Icon = p.icon;
-                return (
-                  <div key={i} className="flex items-center justify-between bg-[#13121f]/80 rounded-xl px-3 py-2 border border-purple-500/12 hover:border-purple-500/25 transition-colors">
-                    <div className="flex items-center gap-2.5">
-                      <Icon size={12} className={i % 2 === 0 ? 'text-purple-400' : 'text-cyan-400'} />
-                      <span className="text-xs text-foreground/80 font-medium">{p.title}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 size={10} className="text-emerald-400" />
-                      <span className="text-[9px] text-emerald-400 font-bold">LIVE</span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="px-4 py-3 border-t border-purple-500/15 bg-[#13121f]/40">
-              <div className="flex items-start gap-2">
-                <ShieldCheck size={12} className="text-purple-400 flex-shrink-0 mt-0.5" />
-                <p className="text-[10px] text-muted-foreground leading-snug">Setiap jawaban disertai sumber dan confidence level.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* RIGHT: Heading + pillars grid */}
-        <div className="flex-1">
+        {/* Heading + pillars grid */}
+        <div className="w-full">
           <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/5 px-3 py-1 mb-3 backdrop-blur-sm">
             <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-purple-300">Solusi</span>
           </div>
