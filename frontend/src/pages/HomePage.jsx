@@ -15,33 +15,25 @@ const AppreciationSection = lazy(() => import('../components/AppreciationSection
 const ClosingSection = lazy(() => import('../components/ClosingSection'));
 const Footer = lazy(() => import('../components/Footer'));
 
-const SectionFallback = () => (
-  <div className="w-full py-20 flex items-center justify-center">
-    <div className="w-6 h-6 rounded-full border-2 border-purple-500/40 border-t-purple-400 animate-spin" />
+const S = ({ children }) => <Suspense fallback={null}>{children}</Suspense>;
+
+const HomePage = () => (
+  <div className="min-h-screen bg-[#0a0a0f]">
+    <HeroSection />
+    <S><ProblemSection /></S>
+    <S><SolutionSection /></S>
+    <S><WhyAINASection /></S>
+    <S><FeaturesSection /></S>
+    <S><HowItWorksSection /></S>
+    <S><SystemArchitectureSection /></S>
+    <S><ProgressSection /></S>
+    <S><RoadmapSection /></S>
+    <S><FundingSection /></S>
+    <S><PricingSection /></S>
+    <S><AppreciationSection /></S>
+    <S><ClosingSection /></S>
+    <S><Footer /></S>
   </div>
 );
-
-const HomePage = () => {
-  return (
-    <div className="min-h-screen bg-[#0a0a0f]">
-      <HeroSection />
-      <Suspense fallback={<SectionFallback />}>
-        <ProblemSection />
-        <SolutionSection />
-        <WhyAINASection />
-        <FeaturesSection />
-        <HowItWorksSection />
-        <SystemArchitectureSection />
-        <ProgressSection />
-        <RoadmapSection />
-        <FundingSection />
-        <PricingSection />
-        <AppreciationSection />
-        <ClosingSection />
-        <Footer />
-      </Suspense>
-    </div>
-  );
-};
 
 export default HomePage;
