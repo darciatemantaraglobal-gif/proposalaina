@@ -39,11 +39,16 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-5 flex items-center justify-between">
         <div className="flex items-center gap-2.5 relative z-50">
-          <img
-            src="/AIGHYPT MEYUALA.png"
-            alt="AINA Logo"
-            className="h-8 w-auto object-contain hover:scale-105 transition-transform duration-300"
-          />
+          <picture>
+            <source srcSet="/logo.webp" type="image/webp" />
+            <img
+              src="/AIGHYPT MEYUALA.png"
+              alt="AINA Logo"
+              width="32"
+              height="32"
+              className="h-8 w-auto object-contain hover:scale-105 transition-transform duration-300"
+            />
+          </picture>
           <div className="flex flex-col">
             <span className="text-base font-bold tracking-wider text-white leading-none">
               AINA
@@ -158,13 +163,19 @@ const HeroSection = () => {
           <span className="relative text-[10px] tracking-[0.2em] uppercase text-purple-300 font-bold">Proposal Program</span>
         </div>
 
-        {/* Hero PNG */}
-        <img
-          src="/aina-hero.png"
-          alt="AINA — Asisten Pintar Khusus Mahasiswa Indonesia di Mesir"
-          className="w-full max-w-xs md:max-w-sm lg:max-w-md mx-auto mb-10 md:mb-12 select-none pointer-events-none"
-          draggable={false}
-        />
+        {/* Hero image */}
+        <picture>
+          <source srcSet="/aina-hero.webp" type="image/webp" />
+          <img
+            src="/aina-hero-opt.png"
+            alt="AINA — Asisten Pintar Khusus Mahasiswa Indonesia di Mesir"
+            width="900"
+            height="568"
+            className="w-full max-w-xs md:max-w-sm lg:max-w-md mx-auto mb-10 md:mb-12 select-none pointer-events-none"
+            draggable={false}
+            fetchPriority="high"
+          />
+        </picture>
 
         {/* CTA */}
         <a

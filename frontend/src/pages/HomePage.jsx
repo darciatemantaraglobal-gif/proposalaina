@@ -1,36 +1,45 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import HeroSection from '../components/HeroSection';
-import ProblemSection from '../components/ProblemSection';
-import SolutionSection from '../components/SolutionSection';
-import WhyAINASection from '../components/WhyAINASection';
-import FeaturesSection from '../components/FeaturesSection';
-import HowItWorksSection from '../components/HowItWorksSection';
-import SystemArchitectureSection from '../components/SystemArchitectureSection';
-import ProgressSection from '../components/ProgressSection';
-import RoadmapSection from '../components/RoadmapSection';
-import FundingSection from '../components/FundingSection';
-import PricingSection from '../components/PricingSection';
-import AppreciationSection from '../components/AppreciationSection';
-import ClosingSection from '../components/ClosingSection';
-import Footer from '../components/Footer';
+
+const ProblemSection = lazy(() => import('../components/ProblemSection'));
+const SolutionSection = lazy(() => import('../components/SolutionSection'));
+const WhyAINASection = lazy(() => import('../components/WhyAINASection'));
+const FeaturesSection = lazy(() => import('../components/FeaturesSection'));
+const HowItWorksSection = lazy(() => import('../components/HowItWorksSection'));
+const SystemArchitectureSection = lazy(() => import('../components/SystemArchitectureSection'));
+const ProgressSection = lazy(() => import('../components/ProgressSection'));
+const RoadmapSection = lazy(() => import('../components/RoadmapSection'));
+const FundingSection = lazy(() => import('../components/FundingSection'));
+const PricingSection = lazy(() => import('../components/PricingSection'));
+const AppreciationSection = lazy(() => import('../components/AppreciationSection'));
+const ClosingSection = lazy(() => import('../components/ClosingSection'));
+const Footer = lazy(() => import('../components/Footer'));
+
+const SectionFallback = () => (
+  <div className="w-full py-20 flex items-center justify-center">
+    <div className="w-6 h-6 rounded-full border-2 border-purple-500/40 border-t-purple-400 animate-spin" />
+  </div>
+);
 
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-[#0a0a0f]">
       <HeroSection />
-      <ProblemSection />
-      <SolutionSection />
-      <WhyAINASection />
-      <FeaturesSection />
-      <HowItWorksSection />
-      <SystemArchitectureSection />
-      <ProgressSection />
-      <RoadmapSection />
-      <FundingSection />
-      <PricingSection />
-      <AppreciationSection />
-      <ClosingSection />
-      <Footer />
+      <Suspense fallback={<SectionFallback />}>
+        <ProblemSection />
+        <SolutionSection />
+        <WhyAINASection />
+        <FeaturesSection />
+        <HowItWorksSection />
+        <SystemArchitectureSection />
+        <ProgressSection />
+        <RoadmapSection />
+        <FundingSection />
+        <PricingSection />
+        <AppreciationSection />
+        <ClosingSection />
+        <Footer />
+      </Suspense>
     </div>
   );
 };
