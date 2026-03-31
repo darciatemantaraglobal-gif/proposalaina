@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot, Sparkles, CheckCircle2, MessageSquare, BookOpen, Newspaper, LayoutDashboard, Users2, Bookmark, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, MessageSquare, BookOpen, Newspaper, LayoutDashboard, Users2, Bookmark, ShieldCheck } from 'lucide-react';
 
 const pillars = [
   { icon: MessageSquare, title: 'AI Assistant', desc: 'Jawaban berbasis knowledge Masisir, bukan AI generik.', color: 'purple' },
@@ -21,22 +21,6 @@ const SolutionSection = () => (
         {/* LEFT: System status card */}
         <div className="w-full lg:w-[280px] flex-shrink-0">
           <div className="bg-[#0f0f18]/80 backdrop-blur-xl border border-purple-500/25 rounded-2xl overflow-hidden glow-purple-sm">
-            <div className="px-4 py-3 border-b border-purple-500/15 flex items-center justify-between bg-[#13121f]/60">
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-gradient-purple flex items-center justify-center shadow-lg shadow-purple-500/30">
-                  <Bot size={14} className="text-white" />
-                </div>
-                <div>
-                  <p className="text-white font-bold text-xs font-display">AINA System</p>
-                  <p className="text-emerald-400 text-[10px] flex items-center gap-1 font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse inline-block" />
-                    Aktif & Berjalan
-                  </p>
-                </div>
-              </div>
-              <Sparkles size={13} className="text-purple-400 opacity-60" />
-            </div>
-
             <div className="p-3 space-y-2">
               {pillars.map((p, i) => {
                 const Icon = p.icon;
